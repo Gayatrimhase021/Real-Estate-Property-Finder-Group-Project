@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "title": "Laptop",
+    "description": "High performance laptop for coding.",
+    "price": 55000,
+    "image": "/images/laptop.jpg"
+  }
+]
