@@ -1,6 +1,11 @@
+import About from "./views/About/About";
+
+
+
 function App () {
-  return(
-    <h1>hello</h1>
-  );
+
+  return<About />;
+   
+  
 }
 export default App;
