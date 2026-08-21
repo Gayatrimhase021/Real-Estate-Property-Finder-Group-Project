@@ -79,7 +79,55 @@
   background: #d97706;
   transform: translateY(-2px);
 }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
+  text-decoration: none;
+  color: inherit;
+
+  margin-top: 22px;
+
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #fff7ed;
+  color: #f59e0b;
+
+  transition: 0.1s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.contact-item h4 {
+  margin: 0 0 5px;
+  color: #1f2937;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #6b7280;
+}
 
 /* ABOUT INTRO */
 

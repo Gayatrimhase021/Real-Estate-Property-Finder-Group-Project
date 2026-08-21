@@ -460,59 +460,75 @@ const About = () => {
 
           <div className="contact-info">
 
-            <h3>
-              Get In Touch
-            </h3>
+  <h3>
+    Get In Touch
+  </h3>
 
-            <p>
-              Have a question about a property?
-              Send us a message.
-            </p>
-
-
-            <div className="contact-item">
-
-              <div className="contact-icon">
-                <MapPin size={21} />
-              </div>
-
-              <div>
-                <h4>Location</h4>
-                <p>Pune, Maharashtra</p>
-              </div>
-
-            </div>
+  <p>
+    Have a question about a property?
+    Send us a message.
+  </p>
 
 
-            <div className="contact-item">
+  {/* LOCATION */}
 
-              <div className="contact-icon">
-                <Mail size={21} />
-              </div>
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Pune,Maharashtra"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-item"
+  >
 
-              <div>
-                <h4>Email</h4>
-                <p>support@homefinder.com</p>
-              </div>
+    <div className="contact-icon">
+      <MapPin size={22} />
+    </div>
 
-            </div>
+    <div>
+      <h4>Location</h4>
+      <p>Pune, Maharashtra</p>
+    </div>
+
+  </a>
 
 
-            <div className="contact-item">
+  {/* EMAIL */}
 
-              <div className="contact-icon">
-                <Phone size={21} />
-              </div>
+  <a
+    href="mailto:support@homefinder.com"
+    className="contact-item"
+  >
 
-              <div>
-                <h4>Phone</h4>
-                <p>+91 XXXXX XXXXX</p>
-              </div>
+    <div className="contact-icon">
+      <Mail size={22} />
+    </div>
 
-            </div>
+    <div>
+      <h4>Email</h4>
+      <p>support@homefinder.com</p>
+    </div>
 
-          </div>
+  </a>
 
+
+  {/* PHONE */}
+
+  <a
+    href="tel:+919999999999"
+    className="contact-item"
+  >
+
+    <div className="contact-icon">
+      <Phone size={22} />
+    </div>
+
+    <div>
+      <h4>Phone</h4>
+      <p>+91 99999 99999</p>
+    </div>
+
+  </a>
+
+</div>
 
           {/* Contact Form */}
 
