@@ -1020,32 +1020,35 @@ body {
 /*  CONTACT PROPERTY EXPERT  */
 
 .agent-section {
-  width: 80%;
-  padding: 30px 6%;
+  width: 100%;
+  padding: 50px 6%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 120px;
-  color: #d7cccc;
+  background: #ffffff;
 }
-
-
-/* AGENT CARD  */
 
 .agent-card {
   width: 100%;
-  height: 0%;
-  max-width: 1000px;
-  padding: 40px 70px;
+  min-height: 420;
+  overflow: hidden;
+  padding: 45px 50px;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
   text-align: left;
-  margin-left: 0px;
 }
 
 
-/* ICON */
+/* LEFT CONTENT */
+
+.agent-content {
+  width: 90%;
+}
 
 .agent-icon {
   width: 52px;
@@ -1054,17 +1057,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   background: #fff1e7;
   border-radius: 50%;
   font-size: 26px;
 }
+
 .agent-icon svg {
-  width:26px;
-  height:26px;
-  color:#121212;
+  width: 26px;
+  height: 26px;
+  color: #121212;
 }
 
-/* SMALL TITLE  */
+
+/* SMALL TITLE */
 
 .agent-small-title {
   margin: 0 0 10px;
@@ -1076,7 +1082,7 @@ body {
 }
 
 
-/*  HEADING  */
+/* HEADING */
 
 .agent-card h2 {
   margin: 0 0 18px;
@@ -1088,30 +1094,34 @@ body {
 }
 
 
-/*   HIGHLIGHT TEXT  */
+/* HIGHLIGHT */
 
 .agent-highlight {
   margin: 0 0 12px;
+
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
+
   color: #333;
 }
 
 
-/* =========== DESCRIPTION =========== */
+/* DESCRIPTION */
 
 .agent-description {
-  max-width: 720px;
+  max-width: 520px;
   margin: 0 0 10px;
+
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 1.7;
+
   color: #777;
 }
 
 
-/* ========== BUTTONS ============ */
+/* BUTTONS */
 
 .agent-buttons {
   display: flex;
@@ -1120,17 +1130,21 @@ body {
 }
 
 
-/* ======== PRIMARY BUTTON  ======== */
+/* PRIMARY BUTTON */
 
 .agent-primary-btn {
   padding: 13px 24px;
+
   border: none;
   border-radius: 6px;
+
   background: #f47c21;
   color: #ffffff;
+
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
+
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1146,17 +1160,21 @@ body {
 }
 
 
-/* ========== SECONDARY BUTTON ============ */
+/* SECONDARY BUTTON */
 
 .agent-secondary-btn {
   padding: 13px 24px;
+
   border: 1px solid #e47520;
   border-radius: 6px;
+
   background: #ffffff;
   color: #c9824b;
+
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
+
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1173,36 +1191,60 @@ body {
 }
 
 
-/* =========== TABLET =========== */
+/* =========================================
+   PROPERTY EXPERT VIDEO
+========================================= */
 
-@media (max-width: 768px) {
+.agent-video {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #eeeeee;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
 
-  .agent-section {
-    padding: 55px 5%;
+.agent-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 
-  }
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
 
   .agent-card {
-    padding: 45px 35px;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 40px;
   }
 
-  .agent-card h2 {
-    font-size: 34px;
+  .agent-video {
+    height: 350px;
   }
 
 }
 
-/* ========= MOBILE ============ */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 600px) {
 
   .agent-section {
-    padding: 40px 20px;
-    margin-left: 35px;
+    padding: 50px 20px;
   }
 
   .agent-card {
     padding: 30px 25px;
+    border-radius: 16px;
   }
 
   .agent-card h2 {
@@ -1226,8 +1268,54 @@ body {
     width: 100%;
   }
 
+  .agent-video {
+    height: 260px;
+    border-radius: 14px;
+  }
+
 }
 
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .agent-card {
+    padding: 25px 20px;
+  }
+
+  .agent-card h2 {
+    font-size: 26px;
+  }
+
+  .agent-video {
+    height: 230px;
+  }
+
+}
+
+
+body.dark-mode .agent-card h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .agent-highlight {
+  color: #eeeeee;
+}
+
+body.dark-mode .agent-description {
+  color: #aaaaaa;
+}
+
+body.dark-mode .agent-card {
+  background: #1e1e1e;
+}
+
+body.dark-mode .agent-video {
+  background: #222222;
+}
 /* DAY / NIGHT THEME */
 
 body {

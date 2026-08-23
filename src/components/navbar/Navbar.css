@@ -14,9 +14,9 @@
   height: 75px;
 }
 
-/* ====== */
+
 /* LOGO */
-/* ===== */
+
 
 .navbar-logo {
   display: flex;
@@ -130,7 +130,6 @@ body.dark-mode .theme-btn {
   color: #ffffff !important;
 }
 
-
 /* MOBILE */
 
 .hamburger-btn {
@@ -153,7 +152,7 @@ body.dark-mode .theme-btn {
   }
 
   .navbar-logo {
-    font-size: 21px;
+    font-size: 28px;
   }
 
   .navbar-links {

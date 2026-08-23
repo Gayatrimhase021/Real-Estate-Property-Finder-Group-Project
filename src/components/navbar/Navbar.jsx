@@ -11,7 +11,6 @@ function Navbar() {
   // Day / Night
   const [darkMode, setDarkMode] = useState(false);
 
-
   // ===// DAY / NIGHT // =====//
   const toggleTheme = () => {
 
@@ -21,7 +20,6 @@ function Navbar() {
         "dark-mode",
         newMode
       );
-
       return newMode;
     });
   };
@@ -35,8 +33,6 @@ function Navbar() {
   return (
 
     <nav className="navbar">
-
-      {/* ===== LOGO ====== */}
 
       <div
         className="navbar-logo"
@@ -82,7 +78,6 @@ function Navbar() {
           Login
         </button>
 
-
         {/* Desktop Theme */}
 
         <button
@@ -92,7 +87,7 @@ function Navbar() {
         </button>
       </div>
 
-      {/* ================= HAMBURGER ================= */}
+      {/* ========= HAMBURGER ========= */}
 
       <button
         className="hamburger-btn"
@@ -100,10 +95,10 @@ function Navbar() {
         }
         aria-label="Toggle menu"
       >
-        {menuOpen ? <FiHome/> : <FiMenu/>}
+        {menuOpen ? <FiHome /> : <FiMenu />}
       </button>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* ========= MOBILE MENU ============= */}
 
       <div
         className={
@@ -150,7 +145,7 @@ function Navbar() {
           Login
         </button>
 
-        {/* ================= MOBILE THEME ================= */}
+        {/* ======= MOBILE THEME ======== */}
 
         <button
           className="mobile-theme-btn"

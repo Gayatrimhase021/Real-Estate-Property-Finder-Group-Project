@@ -12,7 +12,7 @@ import {
   PropertyCard,
   SearchFromMap,
   WhyCard,
-} from "../../components/Card";
+} from "../../components/Homecard";
 import { FiMessageCircle } from "react-icons/fi";
 
 
@@ -61,29 +61,19 @@ function Home() {
 
   return (
     <main className="home">
-
-
       {/* ================= HERO ================= */}
-
-      <HeroSlider
-        slides={homedata.slides}
-      />
+      <HeroSlider slides={homedata.slides} />
 
       {/* ========= EXPLORE BY CITIES ========= */}
-
       <section className="explore-cities">
         <div className="cities-heading">
-          <h2>
-            Explore by Cities
-          </h2>
+          <h2>Explore by Cities</h2>
           <span>
-            Discover properties in some of the
-            most popular cities.
+            Discover properties in some of the most popular cities.
           </span>
         </div>
 
         <div className="cities-grid">
-
           {cities.map((city, index) => (
             <CityCard
               key={city.name}
@@ -95,31 +85,24 @@ function Home() {
               large={index === 0}
             />
           ))}
-
         </div>
       </section>
-      {/* ========= SEARCH FROM MAP =========== */}
 
+      {/* ========= SEARCH FROM MAP =========== */}
       <SearchFromMap
         propertyTypes={propertyTypes}
         mapProperties={mapProperties}
       />
 
       {/* =========== FEATURED PROPERTIE ========== */}
-
       <section className="featured-properties">
-
-        <h2>
-          Featured Properties
-        </h2>
+        <h2>Featured Properties</h2>
 
         <p className="section-subtitle">
           Discover our handpicked selection of premium properties.
         </p>
 
-
         <div className="featured-container">
-
           {properties.map((property) => {
             const imageSrc = property.image?.startsWith("/")
               ? property.image
@@ -138,46 +121,39 @@ function Home() {
               />
             );
           })}
-
         </div>
-
       </section>
 
       {/* ========= CONTACT PROPERTY EXPERT ========== */}
-
       <section className="agent-section">
 
         <div className="agent-card">
 
+          <div className="agent-content">
+
           <div className="agent-icon">
-            <FiMessageCircle/>
+            <FiMessageCircle />
           </div>
 
-          <p className="agent-small-title">
-            NESTFINDER SUPPORT
-          </p>
+          <p className="agent-small-title">NESTFINDER SUPPORT</p>
 
-          <h2>
-            Talk to your property expert today!
-          </h2>
+          <h2>Talk to your property expert today!</h2>
 
           <p className="agent-highlight">
             Ready to find a home that truly fits your needs?
           </p>
 
           <p className="agent-description">
-            Our trusted property experts make your property
-            search simple, safe and stress-free.
+            Our trusted property experts make your property search simple, safe and
+            stress-free.
           </p>
 
           <p className="agent-description">
-            Start your search today and get helpful guidance
-            from our experienced team.
+            Start your search today and get helpful guidance from our experienced
+            team.
           </p>
 
           <div className="agent-buttons">
-
-            {/* Explore Properties */}
             <button
               className="agent-primary-btn"
               onClick={() => navigate("/about")}
@@ -186,8 +162,6 @@ function Home() {
               <span>→</span>
             </button>
 
-
-            {/* Contact Us → About */}
             <button
               className="agent-secondary-btn"
               onClick={() => navigate("/about")}
@@ -195,32 +169,29 @@ function Home() {
               Send Message
               <span>→</span>
             </button>
-
           </div>
         </div>
+
+        <div className="agent-video">
+          <video autoPlay muted loop playsInline>
+            <source src="/property-expert.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
       </section>
 
       {/* ========= WHY CHOOSE US ========== */}
-
       <section className="why-choose-us">
-
         <div className="why-header">
-
-          <p className="why-small-title">
-            WHY CHOOSE NESTFINDER?
-          </p>
+          <p className="why-small-title">WHY CHOOSE NESTFINDER?</p>
 
           <p className="why-subtitle">
-            We make your property search simple,
-            safe and stress-free.
+            We make your property search simple, safe and stress-free.
           </p>
-
         </div>
 
         <div className="why-container">
-
           {whyChooseUs.map((item) => (
-
             <WhyCard
               key={item.title}
               icon={item.icon}
