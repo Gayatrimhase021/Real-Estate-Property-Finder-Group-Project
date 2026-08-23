@@ -12,10 +12,10 @@ import {
   ArrowRight
 } from "lucide-react";
 
-import property1 from "../../assets/property1.jpg";
-import property2 from "../../assets/property2.jpg";
-import property3 from "../../assets/property3.jpg";
-import property4 from "../../assets/property4.jpg";
+import property1 from "../../assets/morden apartment.jpg";
+import property2 from "../../assets/family villa.jpg";
+import property3 from "../../assets/family house.jpg";
+import property4 from "../../assets/city apartment.jpg";
 
 import "./Wishlist.css";
 
