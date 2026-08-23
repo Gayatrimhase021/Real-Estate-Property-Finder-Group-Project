@@ -61,10 +61,11 @@ function Home() {
 
   return (
     <main className="home">
-      {/* ================= HERO ================= */}
+      {/* HERO  */}
       <HeroSlider slides={homedata.slides} />
 
-      {/* ========= EXPLORE BY CITIES ========= */}
+      {/* EXPLORE BY CITIES */}
+
       <section className="explore-cities">
         <div className="cities-heading">
           <h2>Explore by Cities</h2>
@@ -88,13 +89,15 @@ function Home() {
         </div>
       </section>
 
-      {/* ========= SEARCH FROM MAP =========== */}
+      {/* SEARCH FROM */}
+
       <SearchFromMap
         propertyTypes={propertyTypes}
         mapProperties={mapProperties}
       />
 
-      {/* =========== FEATURED PROPERTIE ========== */}
+      {/* FEATURED PROPERTIE  */}
+
       <section className="featured-properties">
         <h2>Featured Properties</h2>
 
@@ -124,63 +127,63 @@ function Home() {
         </div>
       </section>
 
-      {/* ========= CONTACT PROPERTY EXPERT ========== */}
+      {/*  CONTACT PROPERTY EXPERT  */}
       <section className="agent-section">
 
         <div className="agent-card">
 
           <div className="agent-content">
 
-          <div className="agent-icon">
-            <FiMessageCircle />
+            <div className="agent-icon">
+              <FiMessageCircle />
+            </div>
+
+            <p className="agent-small-title">NESTFINDER SUPPORT</p>
+
+            <h2>Talk to your property expert today!</h2>
+
+            <p className="agent-highlight">
+              Ready to find a home that truly fits your needs?
+            </p>
+
+            <p className="agent-description">
+              Our trusted property experts make your property search simple, safe and
+              stress-free.
+            </p>
+
+            <p className="agent-description">
+              Start your search today and get helpful guidance from our experienced
+              team.
+            </p>
+
+            <div className="agent-buttons">
+              <button
+                className="agent-primary-btn"
+                onClick={() => navigate("/about")}
+              >
+                Book a Free Consultation
+                <span>→</span>
+              </button>
+
+              <button
+                className="agent-secondary-btn"
+                onClick={() => navigate("/about")}
+              >
+                Send Message
+                <span>→</span>
+              </button>
+            </div>
           </div>
 
-          <p className="agent-small-title">NESTFINDER SUPPORT</p>
-
-          <h2>Talk to your property expert today!</h2>
-
-          <p className="agent-highlight">
-            Ready to find a home that truly fits your needs?
-          </p>
-
-          <p className="agent-description">
-            Our trusted property experts make your property search simple, safe and
-            stress-free.
-          </p>
-
-          <p className="agent-description">
-            Start your search today and get helpful guidance from our experienced
-            team.
-          </p>
-
-          <div className="agent-buttons">
-            <button
-              className="agent-primary-btn"
-              onClick={() => navigate("/about")}
-            >
-              Book a Free Consultation
-              <span>→</span>
-            </button>
-
-            <button
-              className="agent-secondary-btn"
-              onClick={() => navigate("/about")}
-            >
-              Send Message
-              <span>→</span>
-            </button>
+          <div className="agent-video">
+            <video autoPlay muted loop playsInline>
+              <source src="/property-expert.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
-
-        <div className="agent-video">
-          <video autoPlay muted loop playsInline>
-            <source src="/property-expert.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
       </section>
 
-      {/* ========= WHY CHOOSE US ========== */}
+      {/* WHY CHOOSE US  */}
       <section className="why-choose-us">
         <div className="why-header">
           <p className="why-small-title">WHY CHOOSE NESTFINDER?</p>

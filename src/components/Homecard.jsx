@@ -21,7 +21,7 @@ import {
 
 import "leaflet/dist/leaflet.css";
 
-// =============== NAVBAR ==============
+{/* NAVBAR */ }
 
 export function Navbar() {
   const navigate = useNavigate();
@@ -76,7 +76,7 @@ export function Navbar() {
   );
 }
 
-// =============// HERO SLIDER  // =============
+// HERO SLIDER  // 
 
 export function HeroSlider({ slides }) {
 
@@ -106,9 +106,7 @@ export function HeroSlider({ slides }) {
       (prev) =>
         (prev - 1 + slides.length) % slides.length
     );
-
   };
-
 
   // Next
   const nextSlide = () => {
@@ -129,9 +127,7 @@ export function HeroSlider({ slides }) {
           `url(${slides[currentSlide].image})`
       }}
     >
-
       <div className="hero-overlay"></div>
-
 
       {/* Previous */}
       <button
@@ -141,7 +137,6 @@ export function HeroSlider({ slides }) {
         &#10094;
       </button>
 
-
       {/* Next */}
       <button
         className="slider-btn next-btn"
@@ -150,7 +145,6 @@ export function HeroSlider({ slides }) {
         &#10095;
       </button>
 
-
       {/* Hero Content */}
       <div className="hero-content">
 
@@ -158,9 +152,7 @@ export function HeroSlider({ slides }) {
           FIND YOUR PERFECT PLACE
         </p>
 
-        <h1>
-          {slides[currentSlide].title}
-        </h1>
+        <h1>  {slides[currentSlide].title}  </h1>
 
         <p className="hero-description">
           Discover beautiful properties in the best
@@ -320,15 +312,12 @@ export function CityCard({
         >
           Explore →
         </button>
-
       </div>
-
     </div>
   );
 }
 
-
-// ======= // PROPERTY CARD // ========
+// PROPERTY CARD // 
 
 export function PropertyCard({
   id,
@@ -372,50 +361,46 @@ export function PropertyCard({
         <p> ☆ Rating: {rating}  </p>
 
 
-       <button
-  className="wishlist-btn"
-  onClick={() => {
-    const wishlist =
-      JSON.parse(localStorage.getItem("wishlist")) || [];
+        <button
+          className="wishlist-btn"
+          onClick={() => {
+            const wishlist =
+              JSON.parse(localStorage.getItem("wishlist")) || [];
 
-    const property = {
-      id,
-      image,
-      title,
-      type,
-      city,
-      price,
-      rating,
-    };
+            const property = {
+              id,
+              image,
+              title,
+              type,
+              city,
+              price,
+              rating,
+            };
 
-    const alreadyAdded = wishlist.some(
-      (item) => item.id === id
-    );
+            const alreadyAdded = wishlist.some(
+              (item) => item.id === id
+            );
 
-    if (!alreadyAdded) {
-      localStorage.setItem(
-        "wishlist",
-        JSON.stringify([...wishlist, property])
-      );
+            if (!alreadyAdded) {
+              localStorage.setItem(
+                "wishlist",
+                JSON.stringify([...wishlist, property])
+              );
 
-      alert("Successfully added to Wishlist ❤️");
-    } else {
-      alert("Already added to Wishlist ❤️");
-    }
-  }}
->
-  <FiHeart /> Add to Wishlist
-</button>
+              alert("Successfully added to Wishlist ❤️");
+            } else {
+              alert("Already added to Wishlist ❤️");
+            }
+          }}
+        >
+          <FiHeart /> Add to Wishlist
+        </button>
       </div>
-
     </div>
   );
 }
 
-
-// =====================================================
-// SEARCH FROM MAP
-// =====================================================
+// SEARCH FROM MAP // 
 
 
 export function SearchFromMap({
@@ -565,7 +550,7 @@ export function SearchFromMap({
   );
 }
 
-// =========== // WHY CARD// ===========
+// WHY CARD//
 
 export function WhyCard({
   icon,

@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ============  HERO =============== */
+/*  HERO  */
 
 .hero {
   position: relative;
@@ -69,10 +69,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
-
-/* =========================================
-   HERO PROPERTY SEARCH BAR
-========================================= */
+/*  HERO PROPERTY SEARCH BAR */
 
 .hero-filter-bar {
   width: 100%;
@@ -151,15 +148,11 @@ body {
 
   .hero-filter-bar {
     max-width: 700px;
-
     grid-template-columns:
       repeat(3, 1fr);
-
     border-radius: 20px;
   }
-
 }
-
 
 /* MOBILE */
 
@@ -318,8 +311,8 @@ body {
 /*  EXPLORE CITIES  */
 
 .explore-cities {
-  padding: 30px 6%;
-  background: #ffffff;
+  padding: 25px 6%;
+  background: #f9f8f8;
 }
 
 .cities-heading {
@@ -329,12 +322,12 @@ body {
 
 .cities-heading h2 {
   margin: 0 0 12px;
-  font-size: 42px;
+  font-size: 37px;
   color: #222;
 }
 
 .cities-heading span {
-  font-size: 16px;
+  font-size: 17px;
   color: #777;
 }
 
@@ -389,12 +382,12 @@ body {
 
 .city-content h3 {
   margin: 0 0 5px;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .city-content p {
   margin: 0 0 13px;
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(248, 243, 243);
 }
 
@@ -438,7 +431,7 @@ body {
 .featured-properties h2 {
   text-align: center;
   font-family: "Playfair Display", serif;
-  font-size: 44px;
+  font-size: 37px;
   font-weight: 600;
   color: #17324d;
   margin-bottom: 8px;
@@ -497,7 +490,7 @@ body {
   top: 14px;
   right: 14px;
   padding: 7px 13px;
-  background: #f58b38;
+  background: #e0d345;
   color: #222;
   border-radius: 20px;
   font-size: 13px;
@@ -540,7 +533,7 @@ body {
 .wishlist-btn:hover {
   background: #5c041c;
   transform: translateY(-2px);
-   border: 1px solid rgb(32, 2, 12);
+  border: 1px solid rgb(32, 2, 12);
   transition: border 0.6s ease;
 }
 
@@ -548,6 +541,7 @@ body {
 .wishlist-btn:active {
   transform: scale(0.97);
 }
+
 /*  SEARCH FROM MAP  */
 
 .search-map-section {
@@ -669,352 +663,6 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 18px;
-}
-
-/*  WHY CHOOSE US  */
-
-.why-choose-us {
-  padding: 5px 5%;
-  background: #faf9f6;
-}
-
-.why-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 45px;
-}
-
-.why-small-title {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #c9824b;
-  margin-bottom: 10px;
-}
-
-.why-subtitle {
-  font-size: 15px;
-  color: #777;
-  line-height: 1.7;
-}
-
-.why-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-bottom: 18px;
-}
-
-.why-card {
-  background: #ffffff;
-  padding: 35px 25px;
-  text-align: center;
-  border-radius: 16px;
-  border: 1px solid #eeeeee;
-  transition: all 0.3s ease;
-}
-
-.why-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
-
-.why-icon {
-  width: 65px;
-  height: 65px;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff1e7;
-  border-radius: 50%;
-  font-size: 30px;
-}
-
-.why-card h3 {
-  font-size: 17px;
-  color: #222;
-  margin-bottom: 12px;
-}
-
-.why-card p {
-  font-size: 13px;
-  color: #777;
-  line-height: 1.7;
-  margin: 0;
-}
-
-
-/*  TABLET  */
-
-@media (max-width: 1100px) {
-
-  .featured-container {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .why-container {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 900px) {
-
-  .cities-grid {
-    height: auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 350px 250px 250px;
-  }
-
-  .city-large {
-    grid-column: 1 / 3;
-    grid-row: auto;
-  }
-
-  .search-map-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .map-text {
-    text-align: center;
-  }
-
-  .map-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .map-search-box {
-    margin: auto;
-  }
-
-  .map-preview {
-    height: 380px;
-  }
-
-}
-
-/* MOBILE  */
-
-@media (max-width: 600px) {
-
-  .navbar {
-    padding: 0 20px;
-  }
-
-  .navbar-links {
-    gap: 10px;
-  }
-
-  .navbar-links button {
-    font-size: 12px;
-  }
-
-  .hero {
-    height: 70vh;
-
-    min-height: 550px;
-  }
-
-  .hero-content {
-    max-width: 90%;
-  }
-
-  .hero-content h1 {
-    font-size: 48px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .slider-btn {
-    width: 42px;
-    height: 42px;
-
-    font-size: 20px;
-  }
-
-  .prev-btn {
-    left: 15px;
-  }
-
-  .next-btn {
-    right: 15px;
-  }
-
-  .trust-section {
-    margin-top: 30px;
-
-    gap: 20px;
-  }
-
-
-  .explore-cities {
-    padding: 60px 20px;
-  }
-
-  .cities-heading h2 {
-    font-size: 32px;
-  }
-
-  .cities-heading span {
-    font-size: 14px;
-  }
-
-  .cities-grid {
-    grid-template-columns: 1fr;
-
-    grid-template-rows: none;
-
-    gap: 15px;
-  }
-
-  .city-card {
-    height: 250px;
-  }
-
-  .city-large {
-    grid-column: auto;
-  }
-
-  .city-large .city-content h3 {
-    font-size: 25px;
-  }
-
-
-  .featured-properties {
-    padding: 60px 5%;
-  }
-
-  .featured-properties h2 {
-    font-size: 34px;
-  }
-
-  .featured-container {
-    grid-template-columns: 1fr;
-  }
-
-
-  .search-map-section {
-    padding: 60px 20px;
-  }
-
-  .map-text h2 {
-    font-size: 34px;
-  }
-
-  .map-description {
-    font-size: 14px;
-  }
-
-  .map-preview {
-    height: 300px;
-
-    border-radius: 12px;
-  }
-
-  .map-marker {
-    font-size: 24px;
-  }
-
-  .price-tag {
-    padding: 5px 8px;
-
-    font-size: 10px;
-  }
-
-
-  .why-choose-us {
-    padding: 60px 5%;
-  }
-
-  .why-container {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-/*  SMALL MOBILE   */
-
-@media (max-width: 480px) {
-
-  .hero {
-    height: 75vh;
-
-    min-height: 520px;
-  }
-
-  .hero-small-text {
-    font-size: 11px;
-
-    letter-spacing: 2px;
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-  .hero-description {
-    font-size: 14px;
-
-    line-height: 1.5;
-  }
-
-  .explore-btn {
-    padding: 13px 22px;
-
-    font-size: 14px;
-  }
-
-  .trust-section {
-    gap: 14px;
-  }
-
-  .stars {
-    font-size: 15px;
-  }
-
-  .rating strong,
-  .trusted strong {
-    font-size: 15px;
-  }
-
-  .rating p,
-  .trusted p {
-    font-size: 11px;
-  }
-
-  .divider {
-    height: 32px;
-  }
-
-  .slider-btn {
-    width: 36px;
-    height: 36px;
-
-    font-size: 18px;
-  }
-
-  .prev-btn {
-    left: 10px;
-  }
-
-  .next-btn {
-    right: 10px;
-  }
-
-  .slider-dots {
-    bottom: 20px;
-  }
-
 }
 
 /*  CONTACT PROPERTY EXPERT  */
@@ -1191,9 +839,7 @@ body {
 }
 
 
-/* =========================================
-   PROPERTY EXPERT VIDEO
-========================================= */
+/* ========= PROPERTY EXPERT VIDEO  ===============*/
 
 .agent-video {
   width: 100%;
@@ -1213,9 +859,352 @@ body {
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/*  WHY CHOOSE US  */
+
+.why-choose-us {
+  padding: 5px 5%;
+  background: #faf9f6;
+}
+
+.why-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 45px;
+}
+
+.why-small-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c9824b;
+  margin-bottom: 10px;
+}
+
+.why-subtitle {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.7;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 18px;
+}
+
+.why-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid #eeeeee;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.why-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff1e7;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.why-card h3 {
+  font-size: 17px;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* mediaQuery /*
+/*  TABLET  */
+
+@media (max-width: 1100px) {
+
+  .featured-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .why-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .cities-grid {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 350px 250px 250px;
+  }
+
+  .city-large {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .search-map-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-text {
+    text-align: center;
+  }
+
+  .map-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .map-search-box {
+    margin: auto;
+  }
+
+  .map-preview {
+    height: 380px;
+  }
+
+}
+
+/* MOBILE  */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-links {
+    gap: 10px;
+  }
+
+  .navbar-links button {
+    font-size: 12px;
+  }
+
+  .hero {
+    height: 70vh;
+
+    min-height: 550px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .slider-btn {
+    width: 42px;
+    height: 42px;
+
+    font-size: 20px;
+  }
+
+  .prev-btn {
+    left: 15px;
+  }
+
+  .next-btn {
+    right: 15px;
+  }
+
+  .trust-section {
+    margin-top: 30px;
+
+    gap: 20px;
+  }
+
+
+  .explore-cities {
+    padding: 60px 20px;
+  }
+
+  .cities-heading h2 {
+    font-size: 32px;
+  }
+
+  .cities-heading span {
+    font-size: 14px;
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: none;
+
+    gap: 15px;
+  }
+
+  .city-card {
+    height: 250px;
+  }
+
+  .city-large {
+    grid-column: auto;
+  }
+
+  .city-large .city-content h3 {
+    font-size: 21px;
+  }
+
+
+  .featured-properties {
+    padding: 60px 5%;
+  }
+
+  .featured-properties h2 {
+    font-size: 10px;
+  }
+
+  .featured-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .search-map-section {
+    padding: 60px 20px;
+  }
+
+  .map-text h2 {
+    font-size: 34px;
+  }
+
+  .map-description {
+    font-size: 14px;
+  }
+
+  .map-preview {
+    height: 300px;
+
+    border-radius: 12px;
+  }
+
+  .map-marker {
+    font-size: 24px;
+  }
+
+  .price-tag {
+    padding: 5px 8px;
+
+    font-size: 10px;
+  }
+
+
+  .why-choose-us {
+    padding: 60px 5%;
+  }
+
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/*  SMALL MOBILE   */
+
+@media (max-width: 480px) {
+
+  .hero {
+    height: 75vh;
+
+    min-height: 520px;
+  }
+
+  .hero-small-text {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+  .explore-btn {
+    padding: 13px 22px;
+
+    font-size: 14px;
+  }
+
+  .trust-section {
+    gap: 14px;
+  }
+
+  .stars {
+    font-size: 15px;
+  }
+
+  .rating strong,
+  .trusted strong {
+    font-size: 15px;
+  }
+
+  .rating p,
+  .trusted p {
+    font-size: 11px;
+  }
+
+  .divider {
+    height: 32px;
+  }
+
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+
+    font-size: 18px;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .slider-dots {
+    bottom: 20px;
+  }
+}
+
+/* TABLET  */
 
 @media (max-width: 900px) {
 
@@ -1228,13 +1217,9 @@ body {
   .agent-video {
     height: 350px;
   }
-
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE  */
 
 @media (max-width: 600px) {
 
@@ -1272,13 +1257,9 @@ body {
     height: 260px;
     border-radius: 14px;
   }
-
 }
 
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* SMALL MOBILE  */
 
 @media (max-width: 480px) {
 
@@ -1297,25 +1278,6 @@ body {
 }
 
 
-body.dark-mode .agent-card h2 {
-  color: #ffffff;
-}
-
-body.dark-mode .agent-highlight {
-  color: #eeeeee;
-}
-
-body.dark-mode .agent-description {
-  color: #aaaaaa;
-}
-
-body.dark-mode .agent-card {
-  background: #1e1e1e;
-}
-
-body.dark-mode .agent-video {
-  background: #222222;
-}
 /* DAY / NIGHT THEME */
 
 body {
@@ -1487,8 +1449,29 @@ body.dark-mode .agent-description {
 }
 
 /* Theme button in dark mode */
+/*agent section*/
 
 body.dark-mode .theme-btn {
   background: #333333 !important;
   color: #ffffff !important;
+}
+
+body.dark-mode .agent-card h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .agent-highlight {
+  color: #eeeeee;
+}
+
+body.dark-mode .agent-description {
+  color: #aaaaaa;
+}
+
+body.dark-mode .agent-card {
+  background: #1e1e1e;
+}
+
+body.dark-mode .agent-video {
+  background: #222222;
 }

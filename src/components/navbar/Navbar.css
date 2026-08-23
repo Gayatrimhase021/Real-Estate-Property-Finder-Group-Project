@@ -14,9 +14,7 @@
   height: 75px;
 }
 
-
 /* LOGO */
-
 
 .navbar-logo {
   display: flex;
@@ -65,15 +63,15 @@
     transform 0.2s ease;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .navbar-links button svg {
   font-size: 17px;
-  width:30px;
-  
+  width: 30px;
 }
+
 .navbar-links button:hover {
   color: #c9824b;
   transform: translateY(-1px);
-
 }
 
 /* DAY / NIGHT BUTTON */
@@ -111,16 +109,13 @@ body.dark-mode .navbar-logo {
   color: #ffffff;
 }
 
-
 body.dark-mode .navbar-links button {
   color: #eeeeee;
 }
 
-
 body.dark-mode .navbar-links button:hover {
   color: #e09a62;
 }
-
 
 /* DARK MODE BUTTON */
 
@@ -130,19 +125,18 @@ body.dark-mode .theme-btn {
   color: #ffffff !important;
 }
 
-/* MOBILE */
+/* DARK MODE */
 
-.hamburger-btn {
-  display: none;
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  cursor: pointer;
-  color: #222;
+body.dark-mode .mobile-menu {
+  background: #1e1e1e;
 }
 
-.mobile-menu {
-  display: none;
+body.dark-mode .mobile-menu button {
+  color: white;
+}
+
+body.dark-mode .hamburger-btn {
+  color: white;
 }
 
 @media (max-width: 600px) {
@@ -219,16 +213,17 @@ body.dark-mode .theme-btn {
   }
 }
 
-/* DARK MODE */
+/* MOBILE */
 
-body.dark-mode .mobile-menu {
-  background: #1e1e1e;
+.hamburger-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #222;
 }
 
-body.dark-mode .mobile-menu button {
-  color: white;
-}
-
-body.dark-mode .hamburger-btn {
-  color: white;
+.mobile-menu {
+  display: none;
 }
