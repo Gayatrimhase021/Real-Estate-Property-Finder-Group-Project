@@ -1,0 +1,148 @@
+/* =========== FOOTER  =========== */
+
+.footer {
+  width: 100%;
+  background: #4e3211;
+  color: white;
+}
+
+/* Main Container */
+
+.footer-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 55px 5%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: 55px;
+
+}
+
+/* ========= BRAND ============ */
+
+.footer-brand h2 {
+  margin: 0 0 18px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+  .footer-brand h2 svg {
+    display: block;
+    width: 36px;
+    height: 26px;
+  }
+
+    .footer-brand p {
+      max-width: 390px;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+
+    /* ===== COLUMN ======== */
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+        padding-left: 50px;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+    }
+
+    .footer-column a {
+      width: fit-content;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    .footer-column a svg {
+      width: fit-content;
+      color: rgba(247, 99, 7, 0.75);
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      font-size: 19px;
+      width: 30px;
+      transition: 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #c9824b;
+      transform: translateX(3px);
+    }
+
+
+    /* =======  CONTACT ========= */
+
+    .contact-column a {
+      margin: 0;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* ========= BOTTOM  =========*/
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 18px 5%;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+
+    /* ======== TABLET ============ */
+
+    @media (max-width: 900px) {
+
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+    }
+
+    /* ======= MOBILE  ========*/
+
+    @media (max-width: 600px) {
+
+      .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 45px 25px;
+
+        gap: 35px;
+      }
+
+      .footer-brand p {
+        max-width: 100%;
+      }
+
+      .footer-bottom {
+        padding: 16px 20px;
+      }
+
+    }
