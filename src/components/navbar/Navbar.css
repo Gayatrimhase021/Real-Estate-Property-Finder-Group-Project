@@ -23,18 +23,18 @@
   font-weight: 800;
   cursor: pointer;
   transition: color 0.3s ease;
-  color: white;
+  color: rgb(250, 248, 248);
   gap: 9px;
 }
 
 .navbar-logo svg {
   font-size: 40px;
-  color: rgb(220, 211, 207);
+  color: rgb(245, 244, 244);
 }
 
 .navbar-logo img {
-  width: 150px;
-  height: 50px;
+  width: 140px;
+  height: 45px;
   object-fit: contain;
   display: block;
 }
@@ -105,6 +105,20 @@
   transform: scale(1.08) !important;
 }
 
+.hamburger-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #222;
+}
+
+
+.mobile-menu {
+  display: none;
+}
+
 /* DARK MODE NAVBAR */
 
 body.dark-mode .navbar {
@@ -163,6 +177,7 @@ body.dark-mode .hamburger-btn {
   .navbar-links button {
     font-size: 12px;
     padding: 6px 3px;
+
   }
 
   .theme-btn {
@@ -220,17 +235,4 @@ body.dark-mode .hamburger-btn {
   }
 }
 
-/* MOBILE */
 
-.hamburger-btn {
-  display: none;
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  cursor: pointer;
-  color: #222;
-}
-
-.mobile-menu {
-  display: none;
-}
