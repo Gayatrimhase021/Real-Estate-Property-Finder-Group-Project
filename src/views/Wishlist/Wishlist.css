@@ -381,33 +381,24 @@ cursor: pointer;
 }
 
 
-/* BUTTON */
 
 .view-btn {
   width: 100%;
-
   margin-top: 18px;
-
-  padding: 12px;
-
+padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-
   border: none;
   border-radius: 8px;
-
   background: #111827;
-
   color: white;
-
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .view-btn:hover {

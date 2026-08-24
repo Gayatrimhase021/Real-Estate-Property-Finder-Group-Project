@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import {
   Search,
   Heart,
@@ -114,12 +115,8 @@ const Wishlist = () => {
 
   return (
     <div className="wishlist-page">
-
-      {/* HERO */}
-
-      <section className="wishlist-hero">
-
-        <div className="wishlist-hero-content">
+ <section className="wishlist-hero">
+          <div className="wishlist-hero-content">
 
           <div className="wishlist-icon">
             <Heart size={28} fill="currentColor" />
@@ -140,9 +137,6 @@ const Wishlist = () => {
 
       </section>
 
-
-      {/* WISHLIST */}
-
       <section className="wishlist-content">
 
         <div className="wishlist-heading">
@@ -161,10 +155,6 @@ const Wishlist = () => {
           </div>
 
         </div>
-
-
-        {/* SEARCH + FILTER */}
-
         <div className="filter-bar">
 
           <div className="search-box">
@@ -179,8 +169,7 @@ const Wishlist = () => {
                 setSearch(e.target.value)
               }
             />
-
-            {search && (
+                {search && (
               <button
                 onClick={() => setSearch("")}
               >
@@ -189,9 +178,7 @@ const Wishlist = () => {
             )}
 
           </div>
-
-
-          <div className="filter-box">
+               <div className="filter-box">
 
             <SlidersHorizontal size={18} />
 
@@ -271,7 +258,7 @@ const Wishlist = () => {
         </p>
 
 
-        {/* CARDS */}
+    
 
         {filteredProperties.length > 0 ? (
 
@@ -358,11 +345,10 @@ const Wishlist = () => {
                   </div>
 
 
-                  <button className="view-btn">
-                    View Property
-                    <ArrowRight size={17} />
-                  </button>
-
+            <Link to="/properties" className="view-btn">
+            View Property
+            <ArrowRight size={17}/>
+            </Link>
                 </div>
 
               </div>

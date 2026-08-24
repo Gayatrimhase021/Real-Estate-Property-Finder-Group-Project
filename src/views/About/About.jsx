@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./About.css";
 
 
@@ -8,12 +9,10 @@ import member1 from "../../assets/member1.jpg";
 import member2 from "../../assets/member2.jpg";
 import member3 from "../../assets/member3.jpg";
 import member4 from "../../assets/member4.jpg";
-import{Search,Heart,ShieldCheck,Smartphone,Home,Zap,Users,Phone,MapPin,Mail,ArrowRight,Send,CheckCircle} from"lucide-react";
+import { Search, Heart, ShieldCheck, Smartphone, Home, Zap, Users, Phone, MapPin, Mail, ArrowRight, Send, CheckCircle } from "lucide-react";
 const About = () => {
   return (
     <div className="about-page">
-
-      {/* HERO SECTION */}
 
       <section className="about-hero">
 
@@ -33,18 +32,14 @@ const About = () => {
             compare and save properties that match
             your lifestyle and budget.
           </p>
-
-          <button className="about-btn">
-            Explore Properties
-            <ArrowRight size={18} />
-          </button>
+              
+          <Link to="/properties" className="about-btn">
+          Explore Properties
+          </Link>
 
         </div>
 
       </section>
-
-
-      {/* ABOUT US */}
 
       <section className="about-intro">
 
@@ -77,9 +72,6 @@ const About = () => {
             a property, our platform helps you find useful
             property information in one place.
           </p>
-
-
-          {/* FEATURES */}
 
           <div className="about-features">
 
@@ -156,9 +148,6 @@ const About = () => {
 
       </section>
 
-
-      {/* STATS */}
-
       <section className="about-stats">
 
         <div className="stat-card">
@@ -182,9 +171,6 @@ const About = () => {
         </div>
 
       </section>
-
-
-      {/* WHY CHOOSE US */}
 
       <section className="why-us">
 
@@ -284,9 +270,6 @@ const About = () => {
 
       </section>
 
-
-      {/* HOW IT WORKS */}
-
       <section className="how-section">
 
         <div className="how-heading">
@@ -374,9 +357,6 @@ const About = () => {
 
       </section>
 
-
-      {/* TEAM SECTION */}
-
       <section className="team-section">
 
         <div className="team-heading">
@@ -402,21 +382,21 @@ const About = () => {
           <TeamCard
             image={member1}
             name="Member 1"
-            role="Frontend Developer"
+            role="Developer"
             description="Works on the frontend development of the project."
           />
 
           <TeamCard
             image={member2}
             name="Member 2"
-            role="React Developer"
+            role=" Developer"
             description="Works on React components and functionality."
           />
 
           <TeamCard
             image={member3}
             name="Member 3"
-            role="UI Designer"
+            role="Developer"
             description="Works on the user interface and design."
           />
 
@@ -430,9 +410,6 @@ const About = () => {
         </div>
 
       </section>
-
-
-      {/* CONTACT SECTION */}
 
       <section className="contact-section">
 
@@ -460,77 +437,71 @@ const About = () => {
 
           <div className="contact-info">
 
-  <h3>
-    Get In Touch
-  </h3>
+            <h3>
+              Get In Touch
+            </h3>
 
-  <p>
-    Have a question about a property?
-    Send us a message.
-  </p>
+            <p>
+              Have a question about a property?
+              Send us a message.
+            </p>
 
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Pune,Maharashtra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-item"
+            >
 
-  {/* LOCATION */}
+              <div className="contact-icon">
+                <MapPin size={22} />
+              </div>
 
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=Pune,Maharashtra"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="contact-item"
-  >
+              <div>
+                <h4>Location</h4>
+                <p>Pune, Maharashtra</p>
+              </div>
 
-    <div className="contact-icon">
-      <MapPin size={22} />
-    </div>
+            </a>
 
-    <div>
-      <h4>Location</h4>
-      <p>Pune, Maharashtra</p>
-    </div>
+            <a
+              href="mailto:support@homefinder.com"
+              className="contact-item"
+            >
 
-  </a>
+              <div className="contact-icon">
+                <Mail size={22} />
+              </div>
 
+              <div>
+                <h4>Email</h4>
+                <p>support@homefinder.com</p>
+              </div>
 
-  {/* EMAIL */}
-
-  <a
-    href="mailto:support@homefinder.com"
-    className="contact-item"
-  >
-
-    <div className="contact-icon">
-      <Mail size={22} />
-    </div>
-
-    <div>
-      <h4>Email</h4>
-      <p>support@homefinder.com</p>
-    </div>
-
-  </a>
+            </a>
 
 
-  {/* PHONE */}
+            {/* PHONE */}
 
-  <a
-    href="tel:+919999999999"
-    className="contact-item"
-  >
+            <a
+              href="tel:+919999999999"
+              className="contact-item"
+            >
 
-    <div className="contact-icon">
-      <Phone size={22} />
-    </div>
+              <div className="contact-icon">
+                <Phone size={22} />
+              </div>
 
-    <div>
-      <h4>Phone</h4>
-      <p>+91 99999 99999</p>
-    </div>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 99999 99999</p>
+              </div>
 
-  </a>
+            </a>
 
-</div>
+          </div>
 
-          {/* Contact Form */}
+
 
           <form className="contact-form">
 
@@ -616,7 +587,7 @@ const About = () => {
               type="submit"
               className="contact-btn"
             >
-              Send Message 
+              Send Message
               <Send size={17} />
             </button>
 
@@ -627,7 +598,7 @@ const About = () => {
       </section>
 
 
-      {/* CTA */}
+
 
       <section className="about-cta">
 
@@ -640,10 +611,11 @@ const About = () => {
           the perfect place for you.
         </p>
 
-        <button>
-          Browse Properties 
-          <ArrowRight size={18} />
-        </button>
+        <Link to="/properties" className="about-btn">
+          Browse Properties
+         
+          </Link>
+       
 
       </section>
 
