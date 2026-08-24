@@ -19,7 +19,6 @@ import { FiMessageCircle } from "react-icons/fi";
 function Home() {
   const navigate = useNavigate();
 
-
   const [properties, setProperties] =
     useState([]);
 
@@ -159,12 +158,22 @@ function Home() {
             <div className="agent-buttons">
               <button
                 className="agent-primary-btn"
-                onClick={() => navigate("/about")}
+                onClick={() => {
+
+                  const user = localStorage.getItem("user");
+
+                  if (!user) {
+                    alert("Please login first to book a consultation 🔐");
+                    navigate("/login");
+                    return;
+                  }
+
+                  navigate("/about");
+                }}
               >
                 Book a Free Consultation
                 <span>→</span>
               </button>
-
               <button
                 className="agent-secondary-btn"
                 onClick={() => navigate("/about")}

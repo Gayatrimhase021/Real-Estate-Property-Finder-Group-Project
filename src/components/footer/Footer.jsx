@@ -57,7 +57,6 @@ function Footer() {
           </a>
 
         </div>
-
       </div>
 
       {/* Bottom */}

@@ -364,6 +364,17 @@ export function PropertyCard({
         <button
           className="wishlist-btn"
           onClick={() => {
+
+            // Check if user is logged in
+            const user = localStorage.getItem("user");
+
+            if (!user) {
+              alert("Please login first to add property to Wishlist 🔐");
+              navigate("/login");
+              return;
+            }
+
+            // Get existing wishlist
             const wishlist =
               JSON.parse(localStorage.getItem("wishlist")) || [];
 
@@ -377,19 +388,27 @@ export function PropertyCard({
               rating,
             };
 
+            // Check duplicate
             const alreadyAdded = wishlist.some(
               (item) => item.id === id
             );
 
             if (!alreadyAdded) {
+
               localStorage.setItem(
                 "wishlist",
-                JSON.stringify([...wishlist, property])
+                JSON.stringify([
+                  ...wishlist,
+                  property
+                ])
               );
 
               alert("Successfully added to Wishlist ❤️");
+
             } else {
+
               alert("Already added to Wishlist ❤️");
+
             }
           }}
         >
@@ -401,7 +420,6 @@ export function PropertyCard({
 }
 
 // SEARCH FROM MAP // 
-
 
 export function SearchFromMap({
   propertyTypes,

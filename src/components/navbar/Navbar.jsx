@@ -11,7 +11,7 @@ function Navbar() {
   // Day / Night
   const [darkMode, setDarkMode] = useState(false);
 
-  // ===// DAY / NIGHT // =====//
+  // DAY / NIGHT // 
   const toggleTheme = () => {
 
     setDarkMode((prev) => {
@@ -24,14 +24,13 @@ function Navbar() {
     });
   };
 
-  // =========// CLOSE MENU// =====//
+  // CLOSE MENU// 
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
   return (
-
     <nav className="navbar">
 
       <div
@@ -42,7 +41,7 @@ function Navbar() {
         NestFinder
       </div>
 
-      {/* ===== DESKTOP MENU ===== */}
+      {/* DESKTOP MENU */}
 
       <div className="navbar-links">
 
