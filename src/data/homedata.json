@@ -26,45 +26,43 @@
       "title": "Make Your Dream Home Real"
     }
   ],
-
   "cities": [
     {
       "id": 1,
       "name": "Mumbai",
       "image": "/mumbai.jpeg",
-      "properties":"980+ Properties",
+      "properties": "980+ Properties",
       "price": "₹45L onwards"
     },
     {
       "id": 2,
       "name": "Pune",
       "image": "/pune.jpeg",
-      "properties":"490+ Properties",
-       "price":"₹30L onwards"
+      "properties": "490+ Properties",
+      "price": "₹30L onwards"
     },
     {
       "id": 3,
       "name": "Nashik",
       "image": "/nashik.jpeg",
-      "properties":"680+ Properties",
-       "price":"₹28L onwards"
+      "properties": "680+ Properties",
+      "price": "₹28L onwards"
     },
     {
       "id": 4,
       "name": "Ahilyanagar",
       "image": "/ahilyanagaro.jpeg",
-      "properties":"255+ Properties",
-       "price":"₹37L onwards"
+      "properties": "255+ Properties",
+      "price": "₹37L onwards"
     },
     {
       "id": 5,
       "name": "Nagpur",
       "image": "/nagpur.jpeg",
-      "properties":"590+ Properties",
-       "price":"₹28L onwards"
+      "properties": "590+ Properties",
+      "price": "₹28L onwards"
     }
   ],
-
   "properties": [
     {
       "id": 1,
@@ -86,7 +84,6 @@
     },
     {
       "id": 3,
-
       "image": "/rowbanglotwo.jpeg",
       "type": "House",
       "city": "Nashik",
@@ -103,7 +100,6 @@
       "rating": "4.1"
     }
   ],
-
   "features": [
     {
       "id": 1,
