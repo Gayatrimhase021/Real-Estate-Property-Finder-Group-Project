@@ -15,7 +15,6 @@ import {
 } from "../../components/Homecard";
 import { FiMessageCircle } from "react-icons/fi";
 
-
 function Home() {
   const navigate = useNavigate();
 
