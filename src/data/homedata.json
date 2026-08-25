@@ -1,0 +1,129 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "image": "/villaone.jpeg",
+      "title": "Find Your Dream Property"
+    },
+    {
+      "id": 2,
+      "image": "/villathree.jpeg",
+      "title": "Find a Place You’ll Love"
+    },
+    {
+      "id": 3,
+      "image": "/rowbanglothree.jpeg",
+      "title": "Your Dream Home Awaits"
+    },
+    {
+      "id": 4,
+      "image": "/rowbangloone.jpeg",
+      "title": "Discover Beautiful Homes"
+    },
+    {
+      "id": 5,
+      "image": "/villafour.jpeg",
+      "title": "Make Your Dream Home Real"
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "name": "Mumbai",
+      "image": "/mumbai.jpeg",
+      "properties": "980+ Properties",
+      "price": "₹45L onwards"
+    },
+    {
+      "id": 2,
+      "name": "Pune",
+      "image": "/pune.jpeg",
+      "properties": "490+ Properties",
+      "price": "₹30L onwards"
+    },
+    {
+      "id": 3,
+      "name": "Nashik",
+      "image": "/nashik.jpeg",
+      "properties": "680+ Properties",
+      "price": "₹28L onwards"
+    },
+    {
+      "id": 4,
+      "name": "Ahilyanagar",
+      "image": "/ahilyanagaro.jpeg",
+      "properties": "255+ Properties",
+      "price": "₹37L onwards"
+    },
+    {
+      "id": 5,
+      "name": "Nagpur",
+      "image": "/nagpur.jpeg",
+      "properties": "590+ Properties",
+      "price": "₹28L onwards"
+    }
+  ],
+  "properties": [
+    {
+      "id": 1,
+      "name": "Modern Apartment",
+      "image": "/plottwo.jpeg",
+      "type": "Apartment",
+      "city": "Mumbai",
+      "price": "₹45,00,000",
+      "rating": "3.8"
+    },
+    {
+      "id": 2,
+      "name": "Luxury Villa",
+      "image": "/villaone.jpeg",
+      "type": "Villa",
+      "city": "Pune",
+      "price": "₹59,15,335",
+      "rating": "4.3"
+    },
+    {
+      "id": 3,
+      "image": "/rowbanglotwo.jpeg",
+      "type": "House",
+      "city": "Nashik",
+      "price": "₹62,00,000",
+      "rating": "4.5"
+    },
+    {
+      "id": 4,
+      "name": "Premium 2 BHK",
+      "image": "/villathree.jpeg",
+      "type": "villa",
+      "city": "Nagpur",
+      "price": "₹38,50,000",
+      "rating": "4.1"
+    }
+  ],
+  "features": [
+    {
+      "id": 1,
+      "icon": "🏠",
+      "title": "Verified Properties",
+      "description": "Browse trusted and verified properties with accurate information."
+    },
+    {
+      "id": 2,
+      "icon": "🔍",
+      "title": "Easy Property Search",
+      "description": "Find your ideal home easily using our simple property search."
+    },
+    {
+      "id": 3,
+      "icon": "🤝",
+      "title": "Trusted Support",
+      "description": "Get helpful guidance and support throughout your property journey."
+    },
+    {
+      "id": 4,
+      "icon": "💰",
+      "title": "Best Value",
+      "description": "Discover properties that match your requirements and budget."
+    }
+  ]
+}

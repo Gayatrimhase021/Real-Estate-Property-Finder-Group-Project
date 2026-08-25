@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Laptop",
-    "description": "High performance laptop for coding.",
+    "title": "Modern Apartment",
+    "description": "A stylish property with modern finishes and great city access.",
     "price": 55000,
-    "image": "/images/laptop.jpg"
+    "image": "/plot.jpeg"
   }
 ]
