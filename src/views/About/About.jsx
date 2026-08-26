@@ -383,21 +383,21 @@ const About = () => {
             image={member1}
             name="Member 1"
             role="Developer"
-            description="Works on the frontend development of the project."
+            description="Works on developing and improving the project."
           />
 
           <TeamCard
             image={member2}
             name="Member 2"
             role=" Developer"
-            description="Works on React components and functionality."
+            description="Works on developing and improving the project."
           />
 
           <TeamCard
             image={member3}
             name="Member 3"
             role="Developer"
-            description="Works on the user interface and design."
+            description="Works on developing and improving the project."
           />
 
           <TeamCard
@@ -432,12 +432,8 @@ const About = () => {
 
 
         <div className="contact-container">
-
-          {/* Contact Information */}
-
           <div className="contact-info">
-
-            <h3>
+                <h3>
               Get In Touch
             </h3>
 
@@ -479,10 +475,6 @@ const About = () => {
               </div>
 
             </a>
-
-
-            {/* PHONE */}
-
             <a
               href="tel:+919999999999"
               className="contact-item"

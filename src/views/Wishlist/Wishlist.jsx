@@ -1,381 +1,321 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
 import {
-  Search,
   Heart,
-  MapPin,
-  BedDouble,
-  Bath,
-  Maximize,
-  IndianRupee,
-  X,
+  Search,
   SlidersHorizontal,
-  ArrowRight
+  ChevronDown,
+  ArrowRight,
 } from "lucide-react";
 
-import property1 from "../../assets/morden apartment.jpg";
-import property2 from "../../assets/family villa.jpg";
-import property3 from "../../assets/family house.jpg";
-import property4 from "../../assets/city apartment.jpg";
+import { Link } from "react-router-dom";
 
 import "./Wishlist.css";
 
 const Wishlist = () => {
-
-  const [properties, setProperties] = useState([
-    {
-      id: 1,
-      title: "Modern Luxury Apartment",
-      location: "Kothrud, Pune",
-      type: "Apartment",
-      price: 4500000,
-      beds: 2,
-      baths: 2,
-      area: "1050",
-      image: property1
-    },
-    {
-      id: 2,
-      title: "Beautiful Family Villa",
-      location: "Baner, Pune",
-      type: "Villa",
-      price: 8500000,
-      beds: 3,
-      baths: 3,
-      area: "1850",
-      image: property2
-    },
-    {
-      id: 3,
-      title: "Spacious Family House",
-      location: "Wakad, Pune",
-      type: "House",
-      price: 6200000,
-      beds: 3,
-      baths: 2,
-      area: "1500",
-      image: property3
-    },
-    {
-      id: 4,
-      title: "Premium City Apartment",
-      location: "Viman Nagar, Pune",
-      type: "Apartment",
-      price: 7200000,
-      beds: 2,
-      baths: 2,
-      area: "1200",
-      image: property4
-    }
-  ]);
-
   const [search, setSearch] = useState("");
-  const [type, setType] = useState("All");
-  const [sort, setSort] = useState("default");
 
-  const removeProperty = (id) => {
-    setProperties(
-      properties.filter((property) => property.id !== id)
-    );
+  const [propertyType, setPropertyType] = useState("All Properties");
+
+  const [sortOption, setSortOption] = useState("Sort By");
+
+  const [showFilter, setShowFilter] = useState(false);
+
+  const [showSort, setShowSort] = useState(false);
+
+
+  const handleFilter = (type) => {
+    setPropertyType(type);
+    setShowFilter(false);
   };
 
-  let filteredProperties = properties.filter((property) => {
 
-    const searchMatch =
-      property.title
-        .toLowerCase()
-        .includes(search.toLowerCase()) ||
-      property.location
-        .toLowerCase()
-        .includes(search.toLowerCase());
-
-    const typeMatch =
-      type === "All" || property.type === type;
-
-    return searchMatch && typeMatch;
-  });
-
-  if (sort === "low") {
-    filteredProperties.sort(
-      (a, b) => a.price - b.price
-    );
-  }
-
-  if (sort === "high") {
-    filteredProperties.sort(
-      (a, b) => b.price - a.price
-    );
-  }
-
-  const clearFilters = () => {
-    setSearch("");
-    setType("All");
-    setSort("default");
+  const handleSort = (option) => {
+    setSortOption(option);
+    setShowSort(false);
   };
+
 
   return (
     <div className="wishlist-page">
- <section className="wishlist-hero">
+
+      {/* ================= HERO SECTION ================= */}
+
+      <section className="wishlist-hero">
+
+        <div className="wishlist-overlay">
+
           <div className="wishlist-hero-content">
 
-          <div className="wishlist-icon">
-            <Heart size={28} fill="currentColor" />
+            <div className="hero-heart">
+
+              <Heart
+                size={28}
+                fill="white"
+                color="white"
+              />
+
+            </div>
+
+
+            <p className="hero-label">
+              YOUR SAVED PROPERTIES
+            </p>
+
+
+            <h1>
+              My <span>Wishlist</span>
+            </h1>
+
+
+            <p className="hero-description">
+              Save your favorite properties and find your perfect home easily.
+            </p>
+
           </div>
-
-          <span>YOUR SAVED PROPERTIES</span>
-
-          <h1>
-            My <strong>Wishlist</strong>
-          </h1>
-
-          <p>
-            Save your favorite properties and find
-            your perfect home easily.
-          </p>
 
         </div>
 
       </section>
 
-      <section className="wishlist-content">
 
-        <div className="wishlist-heading">
+      {/* ================= SAVED PROPERTIES ================= */}
+
+      <section className="saved-section">
+
+
+        {/* HEADING */}
+
+        <div className="saved-header">
 
           <div>
-            <span className="section-label">
-              MY FAVORITES
-            </span>
 
-            <h2>Saved Properties</h2>
+            <p className="saved-label">
+              MY FAVORITES
+            </p>
+
+            <h2>
+              Saved Properties
+            </h2>
+
           </div>
 
+
           <div className="property-count">
-            <Heart size={18} fill="currentColor" />
-            {properties.length} Properties
+
+            <Heart
+              size={18}
+              fill="#e69a3c"
+              color="#e69a3c"
+            />
+
+            <span>
+              0 Properties
+            </span>
+
           </div>
 
         </div>
-        <div className="filter-bar">
+
+
+        {/* ================= SEARCH + FILTER ================= */}
+
+        <div className="wishlist-controls">
+
+
+          {/* SEARCH */}
 
           <div className="search-box">
 
-            <Search size={19} />
+            <Search size={20} />
 
             <input
               type="text"
-              placeholder="Search property or location..."
+              placeholder="Search properties..."
               value={search}
-              onChange={(e) =>
-                setSearch(e.target.value)
-              }
+              onChange={(e) => setSearch(e.target.value)}
             />
-                {search && (
-              <button
-                onClick={() => setSearch("")}
-              >
-                <X size={17} />
-              </button>
-            )}
-
-          </div>
-               <div className="filter-box">
-
-            <SlidersHorizontal size={18} />
-
-            <select
-              value={type}
-              onChange={(e) =>
-                setType(e.target.value)
-              }
-            >
-              <option value="All">
-                All Types
-              </option>
-
-              <option value="Apartment">
-                Apartment
-              </option>
-
-              <option value="Villa">
-                Villa
-              </option>
-
-              <option value="House">
-                House
-              </option>
-            </select>
 
           </div>
 
 
-          <div className="filter-box">
+          {/* PROPERTY FILTER */}
 
-            <select
-              value={sort}
-              onChange={(e) =>
-                setSort(e.target.value)
-              }
-            >
-              <option value="default">
-                Sort By
-              </option>
-
-              <option value="low">
-                Price: Low to High
-              </option>
-
-              <option value="high">
-                Price: High to Low
-              </option>
-            </select>
-
-          </div>
-
-
-          {(search ||
-            type !== "All" ||
-            sort !== "default") && (
+          <div className="dropdown-container">
 
             <button
-              className="clear-btn"
-              onClick={clearFilters}
+              className="filter-box"
+              onClick={() => {
+                setShowFilter(!showFilter);
+                setShowSort(false);
+              }}
             >
-              <X size={16} />
-              Clear
+
+              <SlidersHorizontal size={19} />
+
+              <span>
+                {propertyType}
+              </span>
+
+              <ChevronDown
+                size={18}
+                className={showFilter ? "rotate-icon" : ""}
+              />
+
             </button>
 
-          )}
+
+            <div
+              className={`dropdown-menu ${
+                showFilter ? "show-dropdown" : ""
+              }`}
+            >
+
+              <button
+                onClick={() =>
+                  handleFilter("All Properties")
+                }
+              >
+                All Properties
+              </button>
+
+              <button
+                onClick={() =>
+                  handleFilter("Apartment")
+                }
+              >
+                Apartment
+              </button>
+
+              <button
+                onClick={() =>
+                  handleFilter("House")
+                }
+              >
+                House
+              </button>
+
+              <button
+                onClick={() =>
+                  handleFilter("Villa")
+                }
+              >
+                Villa
+              </button>
+
+              <button
+                onClick={() =>
+                  handleFilter("Plot")
+                }
+              >
+                Plot
+              </button>
+
+            </div>
+
+          </div>
+
+
+          {/* SORT */}
+
+          <div className="dropdown-container">
+
+            <button
+              className="sort-box"
+              onClick={() => {
+                setShowSort(!showSort);
+                setShowFilter(false);
+              }}
+            >
+
+              <span>
+                {sortOption}
+              </span>
+
+              <ChevronDown
+                size={18}
+                className={showSort ? "rotate-icon" : ""}
+              />
+
+            </button>
+
+
+            <div
+              className={`dropdown-menu sort-dropdown ${
+                showSort ? "show-dropdown" : ""
+              }`}
+            >
+
+              <button
+                onClick={() =>
+                  handleSort("Newest")
+                }
+              >
+                Newest
+              </button>
+
+              <button
+                onClick={() =>
+                  handleSort("Price: Low to High")
+                }
+              >
+                Price: Low to High
+              </button>
+
+              <button
+                onClick={() =>
+                  handleSort("Price: High to Low")
+                }
+              >
+                Price: High to Low
+              </button>
+
+            </div>
+
+          </div>
 
         </div>
 
 
-        <p className="result-text">
-          Showing{" "}
-          <strong>
-            {filteredProperties.length}
-          </strong>{" "}
-          saved properties
-        </p>
+        {/* ================= EMPTY WISHLIST CARD ================= */}
+
+        <div className="empty-wishlist-card">
 
 
-    
+          {/* RED HEART */}
 
-        {filteredProperties.length > 0 ? (
+          <div className="empty-heart">
 
-          <div className="wishlist-grid">
-
-            {filteredProperties.map((property) => (
-
-              <div
-                className="wishlist-card"
-                key={property.id}
-              >
-
-                <div className="wishlist-image">
-
-                  <img
-                    src={property.image}
-                    alt={property.title}
-                  />
-
-                  <span className="property-type">
-                    {property.type}
-                  </span>
-
-                  <button
-                    className="remove-btn"
-                    onClick={() =>
-                      removeProperty(property.id)
-                    }
-                  >
-                    <Heart
-                      size={20}
-                      fill="currentColor"
-                    />
-                  </button>
-
-                </div>
-
-
-                <div className="wishlist-card-content">
-
-                  <h3>
-                    {property.title}
-                  </h3>
-
-                  <div className="location">
-
-                    <MapPin size={16} />
-
-                    <span>
-                      {property.location}
-                    </span>
-
-                  </div>
-
-
-                  <div className="price">
-
-                    <IndianRupee size={18} />
-
-                    <strong>
-                      ₹{property.price.toLocaleString("en-IN")}
-                    </strong>
-
-                  </div>
-
-
-                  <div className="property-details">
-
-                    <span>
-                      <BedDouble size={17} />
-                      {property.beds} Beds
-                    </span>
-
-                    <span>
-                      <Bath size={17} />
-                      {property.baths} Baths
-                    </span>
-
-                    <span>
-                      <Maximize size={17} />
-                      {property.area} sq.ft
-                    </span>
-
-                  </div>
-
-
-            <Link to="/properties" className="view-btn">
-            View Property
-            <ArrowRight size={17}/>
-            </Link>
-                </div>
-
-              </div>
-
-            ))}
+            <Heart
+              size={58}
+              color="#e75b67"
+              strokeWidth={2}
+            />
 
           </div>
 
-        ) : (
 
-          <div className="empty-wishlist">
+          <h3>
+            Your Wishlist is Empty
+          </h3>
 
-            <Heart size={42} />
 
-            <h3>No Properties Found</h3>
+          <p>
+            Explore properties and save your favorite ones here.
+          </p>
 
-            <p>
-              Try changing your search or filter.
-            </p>
 
-            <button onClick={clearFilters}>
-              Clear Filters
-            </button>
+          <Link
+            to="/properties"
+            className="browse-btn"
+          >
 
-          </div>
+            Browse Properties
 
-        )}
+            <ArrowRight size={21} />
+
+          </Link>
+
+        </div>
 
       </section>
 

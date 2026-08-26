@@ -1,3 +1,7 @@
+body.dark-mode.home{
+  background:#121212;
+  color: white;
+}
 .about-page {
   width: 100%;
   background: #ffffff;
@@ -5,7 +9,6 @@
 }
 
 
-/* HERO */
 
 .about-hero {
   min-height: 500px;
@@ -130,7 +133,7 @@
   color: #6b7280;
 }
 
-/* ABOUT INTRO */
+
 
 .about-intro {
   padding: 90px 8%;
@@ -437,7 +440,7 @@ right: 18px;
 }
 
 
-/* FORM */
+
 
 .contact-form {
   width: 100%;
@@ -498,7 +501,7 @@ right: 18px;
 }
 
 
-/* CTA */
+
 
 .about-cta {
   margin: 70px 8%;
@@ -611,8 +614,7 @@ right: 18px;
   .about-cta {
     margin: 40px 6%;
   }
-
-  .about-cta h2 {
+ .about-cta h2 {
     font-size: 28px;
   }
 }
