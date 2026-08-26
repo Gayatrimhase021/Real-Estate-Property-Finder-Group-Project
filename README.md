@@ -27,4 +27,12 @@ that helps users discover properties for buying and renting.
 - React Icons
 - Vite
 
+## 👥 Contributors
+
+<p align="center">
+  <img src="./src/assets/member1.jpg" width="120" height="120" />
+  <img src="./src/assets/member2.jpg" width="120" height="120" />
+  <img src="./src/assets/member3.jpg" width="120" height="120" />
+  <img src="./src/assets/member4.jpg" width="120" height="120" />
+</p>
 
