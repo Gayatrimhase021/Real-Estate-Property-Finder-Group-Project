@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./About.css";
+import { useEffect } from "react";
 
-
-import TeamCard from "../../components/TeamCard/TeamCard";
+import TeamCard from "../../components/teamcard/teamcard";
 
 import member1 from "../../assets/member1.jpg";
 import member2 from "../../assets/member2.jpg";
@@ -11,7 +11,17 @@ import member3 from "../../assets/member3.jpg";
 import member4 from "../../assets/member4.jpg";
 import { Search, Heart, ShieldCheck, Smartphone, Home, Zap, Users, Phone, MapPin, Mail, ArrowRight, Send, CheckCircle } from "lucide-react";
 const About = () => {
+
+  useEffect(() => {
+    if (window.location.hash === "#consultation") {
+      document.getElementById("consultation")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   return (
+
     <div className="about-page">
 
       <section className="about-hero">
@@ -32,9 +42,9 @@ const About = () => {
             compare and save properties that match
             your lifestyle and budget.
           </p>
-              
+
           <Link to="/properties" className="about-btn">
-          Explore Properties
+            Explore Properties
           </Link>
 
         </div>
@@ -411,7 +421,7 @@ const About = () => {
 
       </section>
 
-      <section className="contact-section">
+      <section className="contact-section" id="consultation">
 
         <div className="contact-heading">
 
@@ -433,7 +443,7 @@ const About = () => {
 
         <div className="contact-container">
           <div className="contact-info">
-                <h3>
+            <h3>
               Get In Touch
             </h3>
 
@@ -461,7 +471,7 @@ const About = () => {
             </a>
 
             <a
-              href="mailto:support@homefinder.com"
+              href="mailto:tanishkaadhav30@gmail.com"
               className="contact-item"
             >
 
@@ -605,9 +615,9 @@ const About = () => {
 
         <Link to="/properties" className="about-btn">
           Browse Properties
-         
-          </Link>
-       
+
+        </Link>
+
 
       </section>
 

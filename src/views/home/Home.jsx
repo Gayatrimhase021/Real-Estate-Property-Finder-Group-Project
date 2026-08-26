@@ -12,7 +12,7 @@ import {
   PropertyCard,
   SearchFromMap,
   WhyCard,
-} from "../../components/Homecard";
+} from "../../components/homecard/Homecard";
 import { FiMessageCircle } from "react-icons/fi";
 
 function Home() {
@@ -161,13 +161,13 @@ function Home() {
 
                   const user = localStorage.getItem("user");
 
-                  if (!user) {
-                    alert("Please login first to book a consultation 🔐");
-                    navigate("/login");
-                    return;
-                  }
+                  /*  if (!user) {
+                        alert("Please login first to book a consultation 🔐");
+                        navigate("/login");
+                        return;
+                      } */
 
-                  navigate("/about");
+                  navigate("/about#consultation");
                 }}
               >
                 Book a Free Consultation
@@ -175,7 +175,7 @@ function Home() {
               </button>
               <button
                 className="agent-secondary-btn"
-                onClick={() => navigate("/about")}
+                onClick={() => navigate("/about#consultation")}
               >
                 Send Message
                 <span>→</span>

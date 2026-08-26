@@ -11,19 +11,13 @@ import Home from "./views/home/Home";
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
+      
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/wishlist" element={<Wishlist />} />
-      </Routes>
-
-      <Navbar />
-
-      <Routes>
-
-        <Route path="/" element={<Home />} />
-
         <Route path="*" element={<NotFound />} />
-
       </Routes>
 
       <Footer />
