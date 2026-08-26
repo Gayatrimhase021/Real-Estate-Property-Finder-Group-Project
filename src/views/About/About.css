@@ -1,0 +1,620 @@
+body.dark-mode.home{
+  background:#121212;
+  color: white;
+}
+.about-page {
+  width: 100%;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+
+
+.about-hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.78),
+      rgba(15, 23, 42, 0.78)
+    ),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80")
+    center / cover;
+}
+
+.about-hero-content {
+  max-width: 700px;
+  color: white;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.about-hero h1 {
+  font-size: 55px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.about-hero h1 span,
+.about-text h2 span,
+.why-heading h2 span,
+.how-heading h2 span,
+.team-heading h2 span,
+.contact-heading h2 span {
+  color: #f59e0b;
+}
+
+.about-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #e5e7eb;
+  max-width: 600px;
+}
+
+.about-btn,
+.about-cta button,
+.contact-btn {
+  margin-top: 20px;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  background: #f59e0b;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.about-btn:hover,
+.about-cta button:hover,
+.contact-btn:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  text-decoration: none;
+  color: inherit;
+
+  margin-top: 22px;
+
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #fff7ed;
+  color: #f59e0b;
+
+  transition: 0.1s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.contact-item h4 {
+  margin: 0 0 5px;
+  color: #1f2937;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #6b7280;
+}
+
+
+
+.about-intro {
+  padding: 90px 8%;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 70px;
+  align-items: center;
+}
+
+.about-image-box {
+  height: 480px;
+
+  border-radius: 25px;
+
+  background:
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80")
+    center / cover;
+
+  position: relative;
+}
+
+.about-image-card {
+  position: absolute;
+
+  bottom: 25px;
+  right: -25px;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  font-size: 45px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.section-label {
+  color: #f59e0b;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.about-text h2,
+.why-heading h2,
+.how-heading h2,
+.team-heading h2,
+.contact-heading h2 {
+  font-size: 40px;
+  line-height: 1.2;
+ margin: 12px 0 20px;
+}
+.about-text > p,
+.why-heading > p,
+.team-heading > p,
+.contact-heading > p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+.about-features {
+  margin-top: 30px;
+ display: grid;
+   grid-template-columns: 1fr 1fr;
+ gap: 20px;
+}
+.feature-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.feature-icon {
+  min-width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #fff7ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+.feature-item h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.feature-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+.about-stats {
+  padding: 50px 8%;
+  background: #f8fafc;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.stat-card {
+  text-align: center;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.06);
+}
+.stat-card h2 {
+  margin: 0;
+  font-size: 35px;
+  color: #f59e0b;
+}
+.stat-card p {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+.why-us {
+  padding: 90px 8%;
+}
+.why-heading {
+  text-align: center;
+ max-width: 700px;
+  margin: auto;
+}
+.why-cards {
+  margin-top: 50px;
+ display: grid;
+grid-template-columns: repeat(4, 1fr);
+ gap: 22px;
+}
+.why-card {
+  padding: 30px 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+transition: 0.3s;
+}
+.why-card:hover {
+  transform: translateY(-8px);
+ box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.why-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7ed;
+  border-radius: 14px;
+  font-size: 25px;
+}
+.why-card h3 {
+  margin: 20px 0 10px;
+}
+.why-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.how-section {
+  padding: 90px 8%;
+background: #f8fafc;
+}
+
+.how-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+.steps-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step-card {
+  position: relative;
+  background: white;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+right: 18px;
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 700;
+}
+.step-icon {
+  width: 65px;
+ height: 65px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7ed;
+  border-radius: 50%;
+  font-size: 28px;
+}
+.step-card h3 {
+  margin: 18px 0 10px;
+}
+.step-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.team-section {
+  padding: 90px 8%;
+}
+.team-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.contact-section {
+  padding: 90px 8%;
+  background: #f8fafc;
+}
+.contact-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  background: white;
+  padding: 40px;
+
+  border-radius: 20px;
+
+  border: 1px solid #e5e7eb;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+
+  margin-top: 0;
+}
+
+.contact-info > p {
+  color: #6b7280;
+
+  line-height: 1.6;
+}
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.contact-icon {
+  width: 45px;
+
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fff7ed;
+
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.contact-item h4 {
+  margin: 0 0 5px;
+}
+
+.contact-item p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+
+
+.contact-form {
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f59e0b;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-btn {
+  margin-top: 0;
+}
+
+
+
+
+.about-cta {
+  margin: 70px 8%;
+
+  padding: 70px 30px;
+
+  text-align: center;
+
+  border-radius: 25px;
+
+  background: #111827;
+
+  color: white;
+}
+
+.about-cta h2 {
+  font-size: 36px;
+
+  margin: 0 0 12px;
+}
+
+.about-cta p {
+  color: #d1d5db;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .why-cards,
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .about-hero {
+    min-height: 450px;
+
+    padding: 50px 6%;
+  }
+
+  .about-hero h1 {
+    font-size: 38px;
+  }
+
+  .about-intro,
+  .why-us,
+  .how-section,
+  .team-section,
+  .contact-section {
+    padding: 60px 6%;
+  }
+
+  .about-image-box {
+    height: 350px;
+  }
+
+  .about-image-card {
+    right: 15px;
+  }
+
+  .about-text h2,
+  .why-heading h2,
+  .how-heading h2,
+  .team-heading h2,
+  .contact-heading h2 {
+    font-size: 30px;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .why-cards,
+  .team-grid,
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 40px 6%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    padding: 25px;
+  }
+
+  .about-cta {
+    margin: 40px 6%;
+  }
+ .about-cta h2 {
+    font-size: 28px;
+  }
+}
