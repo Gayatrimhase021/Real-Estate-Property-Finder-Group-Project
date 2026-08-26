@@ -389,7 +389,7 @@ const About = () => {
           <TeamCard
             image={member2}
             name="Member 2"
-            role=" Developer"
+            role="Developer"
             description="Works on developing and improving the project."
           />
 
