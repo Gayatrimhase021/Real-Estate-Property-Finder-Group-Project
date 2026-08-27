@@ -366,13 +366,13 @@ export function PropertyCard({
           onClick={() => {
 
             // Check if user is logged in
-            const user = localStorage.getItem("user");
+           const user = localStorage.getItem("user");
 
             if (!user) {
               alert("Please login first to add property to Wishlist 🔐");
               navigate("/login");
               return;
-            }
+            } 
 
             // Get existing wishlist
             const wishlist =

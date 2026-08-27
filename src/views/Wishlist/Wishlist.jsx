@@ -22,18 +22,15 @@ const Wishlist = () => {
 
   const [showSort, setShowSort] = useState(false);
 
-
   const handleFilter = (type) => {
     setPropertyType(type);
     setShowFilter(false);
   };
 
-
   const handleSort = (option) => {
     setSortOption(option);
     setShowSort(false);
   };
-
 
   return (
     <div className="wishlist-page">
@@ -99,9 +96,7 @@ const Wishlist = () => {
 
           </div>
 
-
           <div className="property-count">
-
             <Heart
               size={18}
               fill="#e69a3c"
@@ -113,14 +108,11 @@ const Wishlist = () => {
             </span>
 
           </div>
-
         </div>
-
 
         {/* ================= SEARCH + FILTER ================= */}
 
         <div className="wishlist-controls">
-
 
           {/* SEARCH */}
 
@@ -165,9 +157,8 @@ const Wishlist = () => {
 
 
             <div
-              className={`dropdown-menu ${
-                showFilter ? "show-dropdown" : ""
-              }`}
+              className={`dropdown-menu ${showFilter ? "show-dropdown" : ""
+                }`}
             >
 
               <button
@@ -214,7 +205,6 @@ const Wishlist = () => {
 
           </div>
 
-
           {/* SORT */}
 
           <div className="dropdown-container">
@@ -238,11 +228,9 @@ const Wishlist = () => {
 
             </button>
 
-
             <div
-              className={`dropdown-menu sort-dropdown ${
-                showSort ? "show-dropdown" : ""
-              }`}
+              className={`dropdown-menu sort-dropdown ${showSort ? "show-dropdown" : ""
+                }`}
             >
 
               <button
@@ -280,7 +268,6 @@ const Wishlist = () => {
 
         <div className="empty-wishlist-card">
 
-
           {/* RED HEART */}
 
           <div className="empty-heart">
@@ -293,16 +280,13 @@ const Wishlist = () => {
 
           </div>
 
-
           <h3>
             Your Wishlist is Empty
           </h3>
 
-
           <p>
             Explore properties and save your favorite ones here.
           </p>
-
 
           <Link
             to="/properties"
@@ -316,9 +300,7 @@ const Wishlist = () => {
           </Link>
 
         </div>
-
       </section>
-
     </div>
   );
 };
