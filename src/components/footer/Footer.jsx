@@ -27,7 +27,7 @@ function Footer() {
           <Link to="/">Home</Link>
           <Link to="/properties">Properties</Link>
           <Link to="/wishlist">Wishlist</Link>
-          <Link to="/about">About</Link>
+          <Link to="/card">Card</Link>
 
         </div>
 
@@ -50,7 +50,7 @@ function Footer() {
             <FiMessageCircle />
             Email Us</a>
 
-          <a href="tel:+919209039114"><FiPhoneCall /> Call Us</a>
+          <a  href="tel:+919999999999"><FiPhoneCall /> Call Us</a>
 
           <a href="https://maps.app.goo.gl/Ece1sgJRdGnsWjRR9" target="_blank" rel="noopener noreferrer">
             <FiMapPin /> Location

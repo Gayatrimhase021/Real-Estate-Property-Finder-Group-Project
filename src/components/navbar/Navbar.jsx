@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { FiHome, FiHeart, FiInfo, FiLogIn } from "react-icons/fi";
+import { FiHome, FiHeart, FiInfo, FiLogIn, FiShoppingCart } from "react-icons/fi";
 import { FiMenu, FiSun, FiMoon } from "react-icons/fi";
 
 function Navbar() {
@@ -52,18 +52,22 @@ function Navbar() {
         </button>
 
         <button
-          onClick={() => navigate("/properties")} >
-          <FiHome />
-          Properties
-        </button>
-
-
-        <button
           onClick={() => navigate("/about")} >
           <FiInfo />
           About
         </button>
 
+        <button
+          onClick={() => navigate("/properties")} >
+          <FiHome />
+          Properties
+        </button>
+
+        <button
+          onClick={() => navigate("/card")} >
+          <FiShoppingCart />
+          Card
+        </button>
 
         <button
           onClick={() => navigate("/Wishlist")} >
@@ -125,6 +129,25 @@ function Navbar() {
         >
           Properties
         </button>
+
+        <button
+          onClick={() => {
+            navigate("/card");
+            closeMenu();
+          }}
+        >
+          Card
+        </button>
+
+        <button
+          onClick={() => {
+            navigate("/wishlist");
+            closeMenu();
+          }}
+        >
+          Wishlist
+        </button>
+
 
         <button
           onClick={() => {

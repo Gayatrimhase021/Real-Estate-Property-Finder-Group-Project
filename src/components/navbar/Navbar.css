@@ -44,7 +44,7 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 65px;
+  gap: 43px;
 }
 
 /* NORMAL BUTTONS */
@@ -210,7 +210,7 @@ body.dark-mode .hamburger-btn {
     width: 100%;
     display: none;
     flex-direction: column;
-    background: rgb(250, 249, 249);
+    background: rgb(249, 247, 247);
     padding: 15px 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     z-index: 1000;
