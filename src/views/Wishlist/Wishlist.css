@@ -37,13 +37,9 @@
 .hero-heart {
   width: 62px;
   height: 62px;
-
   margin: 0 auto 18px;
-
   border-radius: 50%;
-
-  background: #e69a3c;
-
+  background: #ed6821;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +50,7 @@
 .hero-label {
   margin: 0 0 12px;
 
-  color: #e8b36d;
+  color: #ec9017;
 
   font-size: 12px;
 
@@ -76,7 +72,7 @@
 
 
 .wishlist-hero h1 span {
-  color: #e9a650;
+  color: #fc663d;
 }
 
 
