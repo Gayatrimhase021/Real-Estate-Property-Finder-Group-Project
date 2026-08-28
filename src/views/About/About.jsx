@@ -440,7 +440,6 @@ const About = () => {
 
         </div>
 
-
         <div className="contact-container">
           <div className="contact-info">
             <h3>

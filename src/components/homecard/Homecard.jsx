@@ -9,7 +9,8 @@ import {
   FiSearch,
   FiStar,
   FiHeart,
-  FiMessageCircle
+  FiMessageCircle,
+  FiHeadphones
 } from "react-icons/fi";
 
 import {
@@ -24,7 +25,9 @@ import "leaflet/dist/leaflet.css";
 {/* NAVBAR */ }
 
 export function Navbar() {
+  c
   const navigate = useNavigate();
+
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -67,7 +70,7 @@ export function Navbar() {
           onClick={toggleTheme}
           aria-label="Toggle theme"
         >
-          {darkMode ? "☀️" : "🌙"}
+          {darkMode ? <FiSun /> : <FiMoon />}
         </button>
 
       </div>
@@ -220,7 +223,7 @@ export function HeroSlider({ slides }) {
           <div className="rating">
 
             <span className="stars">
-              ★★★★★
+              <FiStar />  <FiStar />  <FiStar /> <FiStar />  <FiStar />
             </span>
 
             <div>
@@ -310,14 +313,14 @@ export function CityCard({
             )
           }
         >
-          Explore →
+          <FiSearch /> Explore
         </button>
       </div>
     </div>
   );
 }
 
-// PROPERTY CARD // 
+// PROPERTY CARD //
 
 export function PropertyCard({
   id,
@@ -328,8 +331,72 @@ export function PropertyCard({
   price,
   rating,
 }) {
-
   const navigate = useNavigate();
+
+  const handleWishlist = () => {
+
+    // =========================
+    // CHECK LOGIN
+    // =========================
+
+    const user = localStorage.getItem("user");
+
+    if (!user) {
+      alert("Please login first to add property to Wishlist.");
+      navigate("/login");
+      return;
+    }
+
+    // =========================
+    // GET EXISTING WISHLIST
+    // =========================
+
+    const wishlist =
+      JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    // =========================
+    // PROPERTY DATA
+    // =========================
+
+    const property = {
+      id,
+      image,
+      title,
+      type,
+      city,
+      price,
+      rating,
+    };
+
+    // =========================
+    // CHECK DUPLICATE
+    // =========================
+
+    const alreadyAdded = wishlist.some(
+      (item) => item.id === id
+    );
+
+    if (alreadyAdded) {
+      alert("Already added to Wishlist.");
+      return;
+    }
+
+    // =========================
+    // ADD TO WISHLIST
+    // =========================
+
+    const updatedWishlist = [
+      ...wishlist,
+      property,
+    ];
+
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify(updatedWishlist)
+    );
+
+    alert("Successfully added to Wishlist ");
+  };
 
   return (
     <div className="property-card">
@@ -342,79 +409,44 @@ export function PropertyCard({
         />
 
         <span className="rating-badge">
-          ☆ {rating}
+          <FiStar /> {rating}
         </span>
 
       </div>
-
 
       <div className="property-info">
 
         <h3>{title}</h3>
 
-        <p>  🏢 Type: {type}  </p>
+        <p style={{ fontSize: "15px" }}>
+          <FiHome /> Type: {type}
+        </p>
 
-        <p> <FiMapPin /> City: {city} </p>
+        <p>
+          <FiMapPin /> City: {city}
+        </p>
 
-        <p>  ₹ Price: {price}   </p>
+        <p>
+          <FiDollarSign /> Price: {price}
+        </p>
 
-        <p> ☆ Rating: {rating}  </p>
+        <p>
+          <FiStar /> Rating: {rating}
+        </p>
 
+        {/* =========================
+            ADD TO WISHLIST
+        ========================= */}
 
         <button
           className="wishlist-btn"
-          onClick={() => {
-
-            // Check if user is logged in
-           const user = localStorage.getItem("user");
-
-            if (!user) {
-              alert("Please login first to add property to Wishlist 🔐");
-              navigate("/login");
-              return;
-            } 
-
-            // Get existing wishlist
-            const wishlist =
-              JSON.parse(localStorage.getItem("wishlist")) || [];
-
-            const property = {
-              id,
-              image,
-              title,
-              type,
-              city,
-              price,
-              rating,
-            };
-
-            // Check duplicate
-            const alreadyAdded = wishlist.some(
-              (item) => item.id === id
-            );
-
-            if (!alreadyAdded) {
-
-              localStorage.setItem(
-                "wishlist",
-                JSON.stringify([
-                  ...wishlist,
-                  property
-                ])
-              );
-
-              alert("Successfully added to Wishlist ❤️");
-
-            } else {
-
-              alert("Already added to Wishlist ❤️");
-
-            }
-          }}
+          onClick={handleWishlist}
         >
           <FiHeart /> Add to Wishlist
         </button>
+
       </div>
+
     </div>
   );
 }
@@ -509,8 +541,9 @@ export function SearchFromMap({
               className="map-search-btn"
               type="submit"
             >
+              <span className="starss" > <FiSearch /> </span>
               Search Properties
-              <span>→</span>
+
             </button>
 
           </form>
@@ -569,7 +602,12 @@ export function SearchFromMap({
 }
 
 // WHY CARD//
-
+const iconMap = {
+  home: <FiHome />,
+  search: <FiSearch />,
+  support: <FiHeadphones />,
+  value: <FiDollarSign />
+}
 export function WhyCard({
   icon,
   title,
@@ -577,10 +615,11 @@ export function WhyCard({
 }) {
 
   return (
+
     <div className="why-card">
 
       <div className="why-icon">
-        {icon}
+        {iconMap[icon] || icon}
       </div>
 
       <h3>

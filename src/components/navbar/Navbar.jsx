@@ -1,37 +1,70 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { FiHome, FiHeart, FiInfo, FiLogIn, FiShoppingCart } from "react-icons/fi";
-import { FiMenu, FiSun, FiMoon } from "react-icons/fi";
+
+import {
+  FiHome,
+  FiHeart,
+  FiInfo,
+  FiLogIn,
+  FiLogOut,
+  FiShoppingCart,
+  FiMenu,
+  FiSun,
+  FiMoon,
+} from "react-icons/fi";
 
 function Navbar() {
   const navigate = useNavigate();
+
   // Hamburger
   const [menuOpen, setMenuOpen] = useState(false);
+
   // Day / Night
   const [darkMode, setDarkMode] = useState(false);
 
-  // DAY / NIGHT // 
-  const toggleTheme = () => {
+  // Login Status
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("isLoggedIn") === "true"
+  );
 
+  // =========================
+  // DAY / NIGHT
+  // =========================
+  const toggleTheme = () => {
     setDarkMode((prev) => {
       const newMode = !prev;
-      document.body.classList.toggle(
-        "dark-mode",
-        newMode
-      );
+
+      document.body.classList.toggle("dark-mode", newMode);
+
       return newMode;
     });
   };
 
-  // CLOSE MENU// 
+  // =========================
+  // LOGOUT
+  // =========================
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
 
+    setIsLoggedIn(false);
+
+    navigate("/login");
+
+    setMenuOpen(false);
+  };
+
+  // =========================
+  // CLOSE MENU
+  // =========================
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
   return (
     <nav className="navbar">
+
+      {/* ================= LOGO ================= */}
 
       <div
         className="navbar-logo"
@@ -41,75 +74,74 @@ function Navbar() {
         NestFinder
       </div>
 
-      {/* DESKTOP MENU */}
-
       <div className="navbar-links">
 
-        <button
-          onClick={() => navigate("/")} >
+        <button onClick={() => navigate("/")}>
           <FiHome />
           Home
         </button>
 
-        <button
-          onClick={() => navigate("/about")} >
+        <button onClick={() => navigate("/about")}>
           <FiInfo />
           About
         </button>
 
-        <button
-          onClick={() => navigate("/properties")} >
+        <button onClick={() => navigate("/properties")}>
           <FiHome />
           Properties
         </button>
 
-        <button
-          onClick={() => navigate("/card")} >
+        <button onClick={() => navigate("/card")}>
           <FiShoppingCart />
           Card
         </button>
 
-        <button
-          onClick={() => navigate("/Wishlist")} >
+        <button onClick={() => navigate("/Wishlist")}>
           <FiHeart />
           Wishlist
         </button>
 
-        <button
-          onClick={() => navigate("/Login")} >
-          <FiLogIn />
-          Login
-        </button>
+        {/* ================= LOGIN / LOGOUT ================= */}
 
-        {/* Desktop Theme */}
+        {isLoggedIn ? (
+          <button onClick={handleLogout}>
+            <FiLogOut />
+            Logout
+          </button>
+        ) : (
+          <button onClick={() => navigate("/login")}>
+            <FiLogIn />
+            Login
+          </button>
+        )}
+
+        {/* ================= DESKTOP THEME ================= */}
 
         <button
           className="theme-btn"
-          onClick={toggleTheme} >
+          onClick={toggleTheme}
+        >
           {darkMode ? <FiSun /> : <FiMoon />}
         </button>
+
       </div>
 
-      {/* ========= HAMBURGER ========= */}
+      {/* ================= HAMBURGER ================= */}
 
       <button
         className="hamburger-btn"
-        onClick={() => setMenuOpen(!menuOpen)
-        }
+        onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
         {menuOpen ? <FiHome /> : <FiMenu />}
       </button>
 
-      {/* ========= MOBILE MENU ============= */}
+      {/* ================= MOBILE MENU ================= */}
 
       <div
-        className={
-          `mobile-menu ${menuOpen
-            ? "mobile-menu-open"
-            : ""
-          }`
-        }
+        className={`mobile-menu ${
+          menuOpen ? "mobile-menu-open" : ""
+        }`}
       >
 
         <button
@@ -148,7 +180,6 @@ function Navbar() {
           Wishlist
         </button>
 
-
         <button
           onClick={() => {
             navigate("/about");
@@ -158,16 +189,28 @@ function Navbar() {
           About
         </button>
 
-        <button
-          onClick={() => {
-            navigate("/login");
-            closeMenu();
-          }}
-        >
-          Login
-        </button>
+        {/* ================= MOBILE LOGIN / LOGOUT ================= */}
 
-        {/* ======= MOBILE THEME ======== */}
+        {isLoggedIn ? (
+          <button
+            onClick={handleLogout}
+          >
+            <FiLogOut />
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              navigate("/login");
+              closeMenu();
+            }}
+          >
+            <FiLogIn />
+            Login
+          </button>
+        )}
+
+        {/* ================= MOBILE THEME ================= */}
 
         <button
           className="mobile-theme-btn"
@@ -177,7 +220,9 @@ function Navbar() {
             ? "☀️ Day Mode"
             : "🌙 Night Mode"}
         </button>
+
       </div>
+
     </nav>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Heart,
   Search,
@@ -22,15 +22,94 @@ const Wishlist = () => {
 
   const [showSort, setShowSort] = useState(false);
 
+  // =========================
+  // GET WISHLIST
+  // =========================
+
+  const [wishlist, setWishlist] = useState(() => {
+    const savedWishlist = localStorage.getItem("wishlist");
+
+    return savedWishlist
+      ? JSON.parse(savedWishlist)
+      : [];
+  });
+
+  // =========================
+  // FILTER
+  // =========================
+
   const handleFilter = (type) => {
     setPropertyType(type);
     setShowFilter(false);
   };
 
+  // =========================
+  // SORT
+  // =========================
+
   const handleSort = (option) => {
     setSortOption(option);
     setShowSort(false);
   };
+
+  // =========================
+  // REMOVE PROPERTY
+  // =========================
+
+  const removeFromWishlist = (id) => {
+    const updatedWishlist = wishlist.filter(
+      (property) => property.id !== id
+    );
+
+    setWishlist(updatedWishlist);
+
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify(updatedWishlist)
+    );
+  };
+
+  // =========================
+  // SEARCH + FILTER
+  // =========================
+
+  let displayedProperties = wishlist.filter((property) => {
+    const text = search.toLowerCase();
+
+    const matchesSearch =
+      property.title?.toLowerCase().includes(text) ||
+      property.name?.toLowerCase().includes(text) ||
+      property.city?.toLowerCase().includes(text) ||
+      property.location?.toLowerCase().includes(text);
+
+    const matchesFilter =
+      propertyType === "All Properties" ||
+      property.type === propertyType;
+
+    return matchesSearch && matchesFilter;
+  });
+
+  // =========================
+  // SORT
+  // =========================
+
+  if (sortOption === "Price: Low to High") {
+    displayedProperties.sort(
+      (a, b) =>
+        Number(a.price) - Number(b.price)
+    );
+  }
+
+  if (sortOption === "Price: High to Low") {
+    displayedProperties.sort(
+      (a, b) =>
+        Number(b.price) - Number(a.price)
+    );
+  }
+
+  if (sortOption === "Newest") {
+    displayedProperties.reverse();
+  }
 
   return (
     <div className="wishlist-page">
@@ -53,16 +132,13 @@ const Wishlist = () => {
 
             </div>
 
-
             <p className="hero-label">
               YOUR SAVED PROPERTIES
             </p>
 
-
             <h1>
               My <span>Wishlist</span>
             </h1>
-
 
             <p className="hero-description">
               Save your favorite properties and find your perfect home easily.
@@ -78,7 +154,6 @@ const Wishlist = () => {
       {/* ================= SAVED PROPERTIES ================= */}
 
       <section className="saved-section">
-
 
         {/* HEADING */}
 
@@ -97,18 +172,24 @@ const Wishlist = () => {
           </div>
 
           <div className="property-count">
+
             <Heart
               size={18}
               fill="#e69a3c"
-              color="#e69a3c"
+              color="#fb9314"
             />
 
             <span>
-              0 Properties
+              {wishlist.length}{" "}
+              {wishlist.length === 1
+                ? "Property"
+                : "Properties"}
             </span>
 
           </div>
+
         </div>
+
 
         {/* ================= SEARCH + FILTER ================= */}
 
@@ -124,7 +205,9 @@ const Wishlist = () => {
               type="text"
               placeholder="Search properties..."
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) =>
+                setSearch(e.target.value)
+              }
             />
 
           </div>
@@ -150,15 +233,22 @@ const Wishlist = () => {
 
               <ChevronDown
                 size={18}
-                className={showFilter ? "rotate-icon" : ""}
+                className={
+                  showFilter
+                    ? "rotate-icon"
+                    : ""
+                }
               />
 
             </button>
 
 
             <div
-              className={`dropdown-menu ${showFilter ? "show-dropdown" : ""
-                }`}
+              className={`dropdown-menu ${
+                showFilter
+                  ? "show-dropdown"
+                  : ""
+              }`}
             >
 
               <button
@@ -205,6 +295,7 @@ const Wishlist = () => {
 
           </div>
 
+
           {/* SORT */}
 
           <div className="dropdown-container">
@@ -223,14 +314,22 @@ const Wishlist = () => {
 
               <ChevronDown
                 size={18}
-                className={showSort ? "rotate-icon" : ""}
+                className={
+                  showSort
+                    ? "rotate-icon"
+                    : ""
+                }
               />
 
             </button>
 
+
             <div
-              className={`dropdown-menu sort-dropdown ${showSort ? "show-dropdown" : ""
-                }`}
+              className={`dropdown-menu sort-dropdown ${
+                showSort
+                  ? "show-dropdown"
+                  : ""
+              }`}
             >
 
               <button
@@ -243,7 +342,9 @@ const Wishlist = () => {
 
               <button
                 onClick={() =>
-                  handleSort("Price: Low to High")
+                  handleSort(
+                    "Price: Low to High"
+                  )
                 }
               >
                 Price: Low to High
@@ -251,7 +352,9 @@ const Wishlist = () => {
 
               <button
                 onClick={() =>
-                  handleSort("Price: High to Low")
+                  handleSort(
+                    "Price: High to Low"
+                  )
                 }
               >
                 Price: High to Low
@@ -264,43 +367,116 @@ const Wishlist = () => {
         </div>
 
 
-        {/* ================= EMPTY WISHLIST CARD ================= */}
+        {/* ================= SAVED PROPERTY CARDS ================= */}
 
-        <div className="empty-wishlist-card">
+        {displayedProperties.length > 0 ? (
 
-          {/* RED HEART */}
+          <div className="wishlist-properties">
 
-          <div className="empty-heart">
+            {displayedProperties.map((property) => (
 
-            <Heart
-              size={58}
-              color="#e75b67"
-              strokeWidth={2}
-            />
+              <div
+                className="wishlist-property-card"
+                key={property.id}
+              >
+
+                <div className="wishlist-property-image">
+
+                  <img
+                    src={property.image}
+                    alt={
+                      property.title ||
+                      property.name ||
+                      "Property"
+                    }
+                  />
+
+                  <button
+                    className="wishlist-remove-btn"
+                    onClick={() =>
+                      removeFromWishlist(property.id)
+                    }
+                  >
+                    <Heart
+                      size={20}
+                      fill="#e75b67"
+                      color="#e75b67"
+                    />
+                  </button>
+
+                </div>
+
+
+                <div className="wishlist-property-info">
+
+                  <p className="wishlist-property-type">
+                    {property.type}
+                  </p>
+
+                  <h3>
+                    {property.title ||
+                      property.name}
+                  </h3>
+
+                  <p>
+                    📍{" "}
+                    {property.city ||
+                      property.location}
+                  </p>
+
+                  <strong>
+                    {property.price}
+                  </strong>
+
+                </div>
+
+              </div>
+
+            ))}
 
           </div>
 
-          <h3>
-            Your Wishlist is Empty
-          </h3>
+        ) : (
 
-          <p>
-            Explore properties and save your favorite ones here.
-          </p>
+          /* ================= EMPTY WISHLIST ================= */
 
-          <Link
-            to="/properties"
-            className="browse-btn"
-          >
+          <div className="empty-wishlist-card">
 
-            Browse Properties
+            <div className="empty-heart">
 
-            <ArrowRight size={21} />
+              <Heart
+                size={58}
+                color="#e75b67"
+                strokeWidth={2}
+              />
 
-          </Link>
+            </div>
 
-        </div>
+            <h3>
+              Your Wishlist is Empty
+            </h3>
+
+            <p>
+              Explore properties and save your favorite ones here.
+            </p>
+
+            <Link
+              to="/properties"
+              className="browse-btn"
+            >
+
+              Browse Properties
+
+              <ArrowRight size={21} />
+
+            </Link>
+
+          </div>
+
+        )}
+
       </section>
+
     </div>
   );
 };

@@ -411,6 +411,125 @@
   box-shadow: 0 8px 20px rgba(230, 154, 60, 0.3);
 }
 
+/* Wishlist Property Cards */
+
+.wishlist-properties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.wishlist-property-card {
+  background: #ffffff;
+  border: 1px solid #ece9e4;
+  border-radius: 14px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.wishlist-property-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wishlist-property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wishlist-property-info {
+  padding: 16px;
+}
+
+.wishlist-property-info h3 {
+  margin: 6px 0 8px;
+  font-size: 20px;
+  color: #27364b;
+}
+
+.wishlist-property-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #7b8797;
+}
+
+.wishlist-property-info strong {
+  display: block;
+  margin-top: 12px;
+  color: #c9824b;
+  font-size: 17px;
+}
+
+.wishlist-property-type {
+  color: #b67a35 !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wishlist-remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+/* Dark Mode */
+
+body.dark-mode .wishlist-property-card {
+  background: #1e1e1e;
+  border-color: #333333;
+}
+
+body.dark-mode .wishlist-property-info h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .wishlist-property-info p {
+  color: #aaaaaa;
+}
+
+body.dark-mode .wishlist-remove-btn {
+  background: #292929;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .wishlist-properties {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wishlist-properties {
+    grid-template-columns: 1fr;
+  }
+
+  .wishlist-property-card {
+    max-width: 100%;
+  }
+}
 
 @media (max-width: 900px) {
 

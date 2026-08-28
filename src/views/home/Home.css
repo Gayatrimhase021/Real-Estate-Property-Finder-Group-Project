@@ -163,8 +163,18 @@ body {
 
 .stars {
   color: #ffd700;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 2px;
+}
+.starss {
+  color: #f1631d;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+.starss:hover {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 5px;
 }
 
 .rating strong,
@@ -644,7 +654,6 @@ body {
   text-align: left;
 }
 
-
 /* LEFT CONTENT */
 
 .agent-content {
@@ -666,7 +675,7 @@ body {
 .agent-icon svg {
   width: 26px;
   height: 26px;
-  color: #121212;
+  color: #78350b;
 }
 
 
@@ -680,7 +689,6 @@ body {
   letter-spacing: 2px;
   color: #ff8533;
 }
-
 
 /* HEADING */
 
@@ -702,7 +710,6 @@ body {
   font-weight: 500;
   color: #333;
 }
-
 
 /* DESCRIPTION */
 
@@ -748,7 +755,6 @@ body {
   transform: translateY(-2px);
 }
 
-
 /* SECONDARY BUTTON */
 
 .agent-secondary-btn {
@@ -775,7 +781,6 @@ body {
   transform: translateY(-2px);
 }
 
-
 /* ========= PROPERTY EXPERT VIDEO  ===============*/
 
 .agent-video {
@@ -794,7 +799,6 @@ body {
   display: block;
   object-fit: cover;
 }
-
 
 /*  WHY CHOOSE US  */
 
@@ -872,7 +876,9 @@ body {
   line-height: 1.7;
   margin: 0;
 }
-
+.why-icon svg {
+  color:rgb(251, 153, 17);
+}
 /* mediaQuery /*
 
 /* TABLET */
