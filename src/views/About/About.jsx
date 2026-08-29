@@ -1,7 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import "./About.css";
-
 
 import TeamCard from "../../components/TeamCard/TeamCard";
 
@@ -9,7 +8,22 @@ import member1 from "../../assets/member1.jpg";
 import member2 from "../../assets/member2.jpg";
 import member3 from "../../assets/member3.jpg";
 import member4 from "../../assets/member4.jpg";
-import { Search, Heart, ShieldCheck, Smartphone, Home, Zap, Users, Phone, MapPin, Mail, ArrowRight, Send, CheckCircle } from "lucide-react";
+
+import {
+  Search,
+  Heart,
+  ShieldCheck,
+  Smartphone,
+  Home,
+  Zap,
+  Users,
+  Phone,
+  MapPin,
+  Mail,
+  Send,
+  ShoppingCart
+} from "lucide-react";
+
 const About = () => {
   return (
     <div className="about-page">
@@ -32,9 +46,9 @@ const About = () => {
             compare and save properties that match
             your lifestyle and budget.
           </p>
-              
+
           <Link to="/properties" className="about-btn">
-          Explore Properties
+            Explore Properties
           </Link>
 
         </div>
@@ -48,7 +62,6 @@ const About = () => {
             🏡
           </div>
         </div>
-
 
         <div className="about-text">
 
@@ -91,7 +104,6 @@ const About = () => {
 
             </div>
 
-
             <div className="feature-item">
 
               <div className="feature-icon">
@@ -108,7 +120,6 @@ const About = () => {
 
             </div>
 
-
             <div className="feature-item">
 
               <div className="feature-icon">
@@ -124,7 +135,6 @@ const About = () => {
               </div>
 
             </div>
-
 
             <div className="feature-item">
 
@@ -192,7 +202,6 @@ const About = () => {
 
         </div>
 
-
         <div className="why-cards">
 
           <div className="why-card">
@@ -212,7 +221,6 @@ const About = () => {
 
           </div>
 
-
           <div className="why-card">
 
             <div className="why-icon">
@@ -230,7 +238,6 @@ const About = () => {
 
           </div>
 
-
           <div className="why-card">
 
             <div className="why-icon">
@@ -247,7 +254,6 @@ const About = () => {
             </p>
 
           </div>
-
 
           <div className="why-card">
 
@@ -280,11 +286,10 @@ const About = () => {
 
           <h2>
             Find Your Home in
-            <span> 3 Simple Steps</span>
+            <span> 4 Simple Steps</span>
           </h2>
 
         </div>
-
 
         <div className="steps-container">
 
@@ -309,7 +314,6 @@ const About = () => {
 
           </div>
 
-
           <div className="step-card">
 
             <div className="step-number">
@@ -331,7 +335,6 @@ const About = () => {
 
           </div>
 
-
           <div className="step-card">
 
             <div className="step-number">
@@ -349,6 +352,27 @@ const About = () => {
             <p>
               Get property details and
               contact the owner.
+            </p>
+
+          </div>
+
+          <div className="step-card">
+
+            <div className="step-number">
+              04
+            </div>
+
+            <div className="step-icon">
+              <ShoppingCart size={28} />
+            </div>
+
+            <h3>
+              Add to Cart
+            </h3>
+
+            <p>
+              Add your selected property
+              to your cart for easy access.
             </p>
 
           </div>
@@ -375,7 +399,6 @@ const About = () => {
           </p>
 
         </div>
-
 
         <div className="team-grid">
 
@@ -430,10 +453,11 @@ const About = () => {
 
         </div>
 
-
         <div className="contact-container">
+
           <div className="contact-info">
-                <h3>
+
+            <h3>
               Get In Touch
             </h3>
 
@@ -475,6 +499,7 @@ const About = () => {
               </div>
 
             </a>
+
             <a
               href="tel:+919999999999"
               className="contact-item"
@@ -493,8 +518,6 @@ const About = () => {
 
           </div>
 
-
-
           <form className="contact-form">
 
             <div className="form-row">
@@ -512,7 +535,6 @@ const About = () => {
 
               </div>
 
-
               <div className="form-group">
 
                 <label>
@@ -527,7 +549,6 @@ const About = () => {
               </div>
 
             </div>
-
 
             <div className="form-row">
 
@@ -544,7 +565,6 @@ const About = () => {
 
               </div>
 
-
               <div className="form-group">
 
                 <label>
@@ -560,7 +580,6 @@ const About = () => {
 
             </div>
 
-
             <div className="form-group">
 
               <label>
@@ -573,7 +592,6 @@ const About = () => {
               ></textarea>
 
             </div>
-
 
             <button
               type="submit"
@@ -589,9 +607,6 @@ const About = () => {
 
       </section>
 
-
-
-
       <section className="about-cta">
 
         <h2>
@@ -605,9 +620,7 @@ const About = () => {
 
         <Link to="/properties" className="about-btn">
           Browse Properties
-         
-          </Link>
-       
+        </Link>
 
       </section>
 
