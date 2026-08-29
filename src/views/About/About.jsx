@@ -21,7 +21,9 @@ import {
   MapPin,
   Mail,
   Send,
-  ShoppingCart
+  ShoppingCart,
+  ArrowRight,
+   
 } from "lucide-react";
 
 const About = () => {
@@ -49,6 +51,7 @@ const About = () => {
 
           <Link to="/properties" className="about-btn">
             Explore Properties
+            <ArrowRight size={18} />
           </Link>
 
         </div>
@@ -620,6 +623,7 @@ const About = () => {
 
         <Link to="/properties" className="about-btn">
           Browse Properties
+           <ArrowRight size={18} />
         </Link>
 
       </section>
