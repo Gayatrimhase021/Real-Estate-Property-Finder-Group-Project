@@ -86,7 +86,7 @@ export default function AuthPage() {
       } else if (isLogin && !rememberMe) {
         localStorage.removeItem("rememberedEmail");
       }
-window.dispatchEvent(new Event("loginStatusChanged"))
+      window.dispatchEvent(new Event("loginStatusChanged"))
       navigate("/properties");
     } finally {
       setSubmitting(false);
@@ -103,7 +103,7 @@ window.dispatchEvent(new Event("loginStatusChanged"))
 
     const googleUser = {
       name: "Google User",
-      email: `googleuser${Date.now()}@gmail.com`, 
+      email: `googleuser${Date.now()}@gmail.com`,
       via: "google",
       loggedInAt: new Date().toISOString(),
     };

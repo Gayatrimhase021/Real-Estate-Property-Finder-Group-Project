@@ -166,11 +166,13 @@ body {
   font-size: 15px;
   letter-spacing: 2px;
 }
+
 .starss {
   color: #f1631d;
   font-size: 20px;
   letter-spacing: 5px;
 }
+
 .starss:hover {
   color: white;
   font-size: 20px;
@@ -876,9 +878,11 @@ body {
   line-height: 1.7;
   margin: 0;
 }
+
 .why-icon svg {
-  color:rgb(251, 153, 17);
+  color: rgb(251, 153, 17);
 }
+
 /* mediaQuery /*
 
 /* TABLET */

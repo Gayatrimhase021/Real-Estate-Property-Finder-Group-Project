@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Link } from "react-router-dom"
 import "./About.css";
 import { useEffect } from "react";
 
 import TeamCard from "../../components/TeamCard/TeamCard";
-import TeamCard from "../../components/teamcard/teamcard";
 
 import member1 from "../../assets/member1.jpg";
 import member2 from "../../assets/member2.jpg";
@@ -26,7 +24,7 @@ import {
   Send,
   ShoppingCart,
   ArrowRight,
-   
+
 } from "lucide-react";
 
 const About = () => {
@@ -636,11 +634,8 @@ const About = () => {
 
         <Link to="/properties" className="about-btn">
           Browse Properties
-           <ArrowRight size={18} />
+          <ArrowRight size={18} />
         </Link>
-
-        </Link>
-
 
       </section>
 

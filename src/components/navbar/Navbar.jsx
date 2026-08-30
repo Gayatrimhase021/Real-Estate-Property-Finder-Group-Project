@@ -209,11 +209,10 @@ function Navbar() {
       {/* ================= MOBILE MENU ================= */}
 
       <div
-        className={`mobile-menu ${
-          menuOpen
+        className={`mobile-menu ${menuOpen
             ? "mobile-menu-open"
             : ""
-        }`}
+          }`}
       >
 
         <button
@@ -223,7 +222,7 @@ function Navbar() {
           }}
         >
           <FiHome />
-           Home
+          Home
         </button>
 
         <button
@@ -233,7 +232,7 @@ function Navbar() {
           }}
         >
           <FiHome />
-           Properties
+          Properties
         </button>
 
         <button
@@ -242,8 +241,8 @@ function Navbar() {
             closeMenu();
           }}
         >
-          <FiShoppingCart /> 
-           Card
+          <FiShoppingCart />
+          Card
         </button>
 
         <button
@@ -288,14 +287,14 @@ function Navbar() {
 
         {/* ================= MOBILE THEME ================= */}
 
-        <button 
+        <button
           className="mobile-theme-btn"
           onClick={toggleTheme}
         >
-          
+
           {darkMode
-            ? <FiSun/>
-            : <FiMoon/>}
+            ? <FiSun />
+            : <FiMoon />}
         </button>
 
       </div>

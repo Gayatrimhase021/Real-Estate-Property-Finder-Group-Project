@@ -32,23 +32,23 @@ import {
 import { FiMessageCircle } from "react-icons/fi";
 
 function Home() {
- 
-  const navigate = useNavigate();
- const imageMap = {
-  "villaone.jpeg": villaone,
-  "villathree.jpeg": villathree,
-  "rowbanglothree.jpeg": rowbanglothree,
-  "rowbangloone.jpeg": rowbangloone,
-  "villafour.jpeg": villafour,
-  "rowbanglotwo.jpeg": rowbanglotwo,
-  "plottwo.jpeg": plottwo,
 
-  "pune.jpeg": pune,
-  "mumbai.jpeg": mumbai,
-  "nashik.jpeg": nashik,
-  "nagpur.jpeg": nagpur,
-  "ahilyanagaro.jpeg": ahilyanagaro,
-};
+  const navigate = useNavigate();
+  const imageMap = {
+    "villaone.jpeg": villaone,
+    "villathree.jpeg": villathree,
+    "rowbanglothree.jpeg": rowbanglothree,
+    "rowbangloone.jpeg": rowbangloone,
+    "villafour.jpeg": villafour,
+    "rowbanglotwo.jpeg": rowbanglotwo,
+    "plottwo.jpeg": plottwo,
+
+    "pune.jpeg": pune,
+    "mumbai.jpeg": mumbai,
+    "nashik.jpeg": nashik,
+    "nagpur.jpeg": nagpur,
+    "ahilyanagaro.jpeg": ahilyanagaro,
+  };
 
   const [properties, setProperties] =
     useState([]);
@@ -92,7 +92,7 @@ function Home() {
   return (
     <main className="home">
       {/* HERO  */}
-      <HeroSlider slides={homedata.slides.map((slide) => ({...slide,image:imageMap[slide.image],}))}/>
+      <HeroSlider slides={homedata.slides.map((slide) => ({ ...slide, image: imageMap[slide.image], }))} />
 
       {/* EXPLORE BY CITIES */}
 
@@ -137,7 +137,7 @@ function Home() {
 
         <div className="featured-container">
           {properties.map((property) => {
-            
+
             return (
               <PropertyCard
                 key={property.id}
@@ -190,11 +190,11 @@ function Home() {
 
                   const user = localStorage.getItem("user");
 
-                   if (!user) {
-                        alert("Please login first to book a consultation ");
-                        navigate("/login");
-                        return;
-                      } 
+                  if (!user) {
+                    alert("Please login first to book a consultation ");
+                    navigate("/login");
+                    return;
+                  }
 
                   navigate("/about#consultation");
                 }}
