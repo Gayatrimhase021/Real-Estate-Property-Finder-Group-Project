@@ -8,11 +8,11 @@ import {
   FiSliders,
   FiSearch,
   FiStar,
-  FiHeart,
+ FiHeart ,
   FiMessageCircle,
   FiHeadphones
 } from "react-icons/fi";
-
+import { FaHeart } from "react-icons/fa";
 import {
   MapContainer,
   TileLayer,
@@ -28,6 +28,21 @@ export function Navbar() {
   c
   const navigate = useNavigate();
 
+
+useEffect(() => {
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (!user) return;
+
+  const wishlistKey = "wishlist_" + user.mobile;
+
+  const wishlist =
+    JSON.parse(localStorage.getItem(wishlistKey)) || [];
+
+  setIsWishlisted(
+    wishlist.some((item) => item.id === id)
+  );
+}, [id]);
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -319,9 +334,6 @@ export function CityCard({
     </div>
   );
 }
-
-// PROPERTY CARD //
-
 export function PropertyCard({
   id,
   image,
@@ -332,14 +344,27 @@ export function PropertyCard({
   rating,
 }) {
   const navigate = useNavigate();
+const [isWishlisted, setIsWishlisted] = useState(false);
+useEffect(() => {
+  const user = JSON.parse(
+    localStorage.getItem("currentUser")
+  );
 
+  if (!user) return;
+
+  const wishlistKey = "wishlist_" + user.mobile;
+
+  const wishlist =
+    JSON.parse(localStorage.getItem(wishlistKey)) || [];
+
+  setIsWishlisted(
+    wishlist.some((item) => item.id === id)
+  );
+}, [id]);
   const handleWishlist = () => {
-
-    // =========================
-    // CHECK LOGIN
-    // =========================
-
-    const user = localStorage.getItem("user");
+    const user = JSON.parse(
+      localStorage.getItem("currentUser")
+    );
 
     if (!user) {
       alert("Please login first to add property to Wishlist.");
@@ -347,16 +372,10 @@ export function PropertyCard({
       return;
     }
 
-    // =========================
-    // GET EXISTING WISHLIST
-    // =========================
+    const wishlistKey = "wishlist_" + user.mobile;
 
     const wishlist =
-      JSON.parse(localStorage.getItem("wishlist")) || [];
-
-    // =========================
-    // PROPERTY DATA
-    // =========================
+      JSON.parse(localStorage.getItem(wishlistKey)) || [];
 
     const property = {
       id,
@@ -368,87 +387,102 @@ export function PropertyCard({
       rating,
     };
 
-    // =========================
-    // CHECK DUPLICATE
-    // =========================
-
     const alreadyAdded = wishlist.some(
       (item) => item.id === id
     );
 
     if (alreadyAdded) {
-      alert("Already added to Wishlist.");
-      return;
-    }
+      const updatedWishlist = wishlist.filter(
+        (item) => item.id !== id
+      );
+localStorage.setItem(
+  wishlistKey,
+  JSON.stringify(updatedWishlist)
+);
 
-    // =========================
-    // ADD TO WISHLIST
-    // =========================
+setIsWishlisted(false);
+
+alert("Removed from Wishlist.");
+return;
+    }
 
     const updatedWishlist = [
       ...wishlist,
       property,
     ];
+localStorage.setItem(
+  wishlistKey,
+  JSON.stringify(updatedWishlist)
+);
 
-    localStorage.setItem(
-      "wishlist",
-      JSON.stringify(updatedWishlist)
-    );
+setIsWishlisted(true);
 
-    alert("Successfully added to Wishlist ");
+alert("Successfully added to Wishlist ❤️");
   };
 
   return (
-    <div className="property-card">
+  <div className="property-card">
 
-      <div className="property-image">
+    <div className="property-image-container">
+      <img
+        src={image}
+        alt={title}
+        className="property-image"
+      />
 
-        <img
-          src={image}
-          alt={title}
-        />
-
-        <span className="rating-badge">
-          <FiStar /> {rating}
-        </span>
-
-      </div>
-
-      <div className="property-info">
-
-        <h3>{title}</h3>
-
-        <p style={{ fontSize: "15px" }}>
-          <FiHome /> Type: {type}
-        </p>
-
-        <p>
-          <FiMapPin /> City: {city}
-        </p>
-
-        <p>
-          <FiDollarSign /> Price: {price}
-        </p>
-
-        <p>
-          <FiStar /> Rating: {rating}
-        </p>
-
-        {/* =========================
-            ADD TO WISHLIST
-        ========================= */}
-
-        <button
-          className="wishlist-btn"
-          onClick={handleWishlist}
-        >
-          <FiHeart /> Add to Wishlist
-        </button>
-
-      </div>
-
+    <button
+  className={`wishlist-btn ${
+    isWishlisted ? "wishlisted" : ""
+  }`}
+  onClick={handleWishlist}
+  aria-label="Add to Wishlist"
+>
+  {isWishlisted ? (
+    <FaHeart
+      className="wishlist-heart"
+      color="#dc2626"
+    />
+  ) : (
+    <FiHeart
+      className="wishlist-heart"
+      color="#444"
+    />
+  )}
+</button>
     </div>
-  );
+
+    <div className="property-content">
+      <h3>{title}</h3>
+
+      <div className="property-meta">
+  <p className="property-type">
+    {type}
+  </p>
+
+  <p className="property-city">
+    <FiMapPin />
+    {city}
+  </p>
+   <p className="property-rating">
+        ⭐ {rating}
+      </p>
+
+</div>
+
+      <p className="property-price">
+       Price :  {price}
+      </p>
+
+           <button
+        className="view-details-btn"
+        onClick={() => navigate(`/property/${id}`)}
+      >
+        View Details
+      </button>
+    </div>
+
+  </div>
+);
 }
 
 // SEARCH FROM MAP // 

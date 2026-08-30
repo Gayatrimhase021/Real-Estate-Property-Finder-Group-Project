@@ -448,13 +448,14 @@
 
   margin: 0 0 5px;
 }
-
 .wishlist-property-info h3 {
-  margin: 5px 0 7px;
+    margin: 5px 0 7px;
+    font-size: 17px;
+    color: #27364b;
 
-  font-size: 17px;
-
-  color: #27364b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .wishlist-property-info p {
@@ -832,4 +833,13 @@ body.dark-mode .browse-btn:hover {
   .wishlist-property-card {
     max-width: 300px;
   }
+}.wishlist-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wishlist-location svg {
+    flex-shrink: 0;
+    font-size: 13px;
 }

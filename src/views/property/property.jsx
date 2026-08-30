@@ -1,11 +1,22 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
+    MapContainer,
+    TileLayer
+} from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import {
     FaHouse,
     FaHouseChimney,
     FaBuilding,
-    FaKey
-} from "react-icons/fa6";
+    FaKey,
+    FaShieldHeart,
+    FaMagnifyingGlass,
+    FaLocationDot,
+      FaCompass,
+       FaArrowRight,
+    FaHandshake
+} from "react-icons/fa6"; 
 import {
     FaRegHeart,
     FaHeart
@@ -261,35 +272,261 @@ function Property() {
             "/cart"
         );
     };
-    return (
-        <div className="property-page">
-            {/* =================================================
-                HEADER
-            ================================================= */}
-            <div className="property-header">
-                <div>
-                    <h1>
-                        Find Your Perfect Property
-                    </h1>
-                    <p>
-                        Explore homes, villas,
-                        apartments and rental properties.
-                    </p>
+
+
+
+
+       return (
+    <div className="property-page">
+
+        <div className="property-header">
+
+            {/* ================================
+                LEFT CONTENT
+            ================================= */}
+
+            <div className="property-header-content">
+
+                <span className="property-header-label">
+                    <FaHouseChimney />
+                    NESTFINDER • PROPERTY COLLECTION
+                </span>
+
+                <h1>
+                    Find Your
+                    <span>Perfect Property</span>
+                </h1>
+
+                <p>
+                    Discover beautiful homes, villas and apartments
+                    in locations you'll love.
+                </p>
+
+
+                {/* STATS */}
+
+                <div className="property-header-stats">
+
+                    <div className="header-stat">
+                        <div className="header-stat-icon">
+                            <FaHouse />
+                        </div>
+
+                        <div>
+                            <strong>100+</strong>
+                            <span>Properties</span>
+                        </div>
+                    </div>
+
+
+                    <div className="header-stat">
+                        <div className="header-stat-icon">
+                            <FaLocationDot />
+                        </div>
+
+                        <div>
+                            <strong>8+</strong>
+                            <span>Locations</span>
+                        </div>
+                    </div>
+
+
+                    <div className="header-stat">
+                        <div className="header-stat-icon">
+                            <FaShieldHeart />
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Trusted</span>
+                        </div>
+                    </div>
+
                 </div>
+
+            </div>
+
+
+            {/* ================================
+                RIGHT SIDE VISUAL
+            ================================= */}
+
+            <div className="property-header-visual">
+
+                {/* Main visual */}
+
+                <div className="property-visual-image">
+
+                    <div className="visual-overlay"></div>
+
+                    <div className="visual-property-text">
+                        <span>DISCOVER</span>
+                        <strong>Your Next Home</strong>
+                    </div>
+
+                </div>
+
+
+                {/* White information panel */}
+
+                <div className="property-info-panel">
+
+                    <h2>Explore</h2>
+
+
+                    <div className="property-info-item">
+
+                        <div className="property-info-icon">
+                            <FaHouse />
+                        </div>
+
+                        <div>
+                            <strong>Beautiful Homes</strong>
+                            <span>Comfortable & modern</span>
+                        </div>
+
+                    </div>
+
+
+                    <div className="property-info-item">
+
+                        <div className="property-info-icon">
+                            <FaBuilding />
+                        </div>
+
+                        <div>
+                            <strong>Premium Apartments</strong>
+                            <span>Prime locations</span>
+                        </div>
+
+                    </div>
+
+
+                    <div className="property-info-item">
+
+                        <div className="property-info-icon">
+                            <FaHouseChimney />
+                        </div>
+
+                        <div>
+                            <strong>Luxury Villas</strong>
+                            <span>Space & elegance</span>
+                        </div>
+
+                    </div>
+
+
+                    <div className="property-info-item">
+
+                        <div className="property-info-icon">
+                            <FaLocationDot />
+                        </div>
+
+                        <div>
+                            <strong>Best Locations</strong>
+                            <span>Find your perfect area</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                {/* ================================
+                    WISHLIST BUTTON
+                ================================= */}
+
                 <button
                     className="wishlist-page-btn"
-                    onClick={() =>
-                        navigate(
-                            "/wishlist"
-                        )
-                    }
+                    onClick={() => navigate("/wishlist")}
                 >
                     <FaHeart />
-                    <span>
-                        Wishlist
-                    </span>
+                    <span>Wishlist</span>
                 </button>
+
             </div>
+
+        </div>
+      
+<section className="why-nestfinder">
+
+    <div className="why-nestfinder-header">
+        <span className="why-label">
+            WHY CHOOSE NESTFINDER?
+        </span>
+
+        <h2>
+            Making Property Search
+            <span> Simple &amp; Smarter</span>
+        </h2>
+
+        <p>
+            Find your dream property with confidence,
+            convenience and trusted information.
+        </p>
+    </div>
+
+    <div className="why-nestfinder-grid">
+
+        <div className="why-feature">
+            <div className="why-icon">
+                <FaShieldHeart />
+            </div>
+
+            <div>
+                <h3>Trusted Properties</h3>
+                <p>
+                    Explore carefully listed properties
+                    from trusted sources.
+                </p>
+            </div>
+        </div>
+
+        <div className="why-feature">
+            <div className="why-icon">
+                <FaMagnifyingGlass />
+            </div>
+
+            <div>
+                <h3>Easy Property Search</h3>
+                <p>
+                    Quickly discover homes that match
+                    your needs and preferences.
+                </p>
+            </div>
+        </div>
+
+        <div className="why-feature">
+            <div className="why-icon">
+                <FaLocationDot />
+            </div>
+
+            <div>
+                <h3>Prime Locations</h3>
+                <p>
+                    Discover properties across popular
+                    and convenient locations.
+                </p>
+            </div>
+        </div>
+
+        <div className="why-feature">
+            <div className="why-icon">
+                <FaHandshake />
+            </div>
+
+            <div>
+                <h3>Simple &amp; Reliable</h3>
+                <p>
+                    A smooth property experience from
+                    discovery to decision.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
             {/* =================================================
                 SEARCH
             ================================================= */}
@@ -304,10 +541,14 @@ function Property() {
                         )
                     }
                 />
-            </div>
+            </div>{/* =================================================
+    WHY CHOOSE NESTFINDER
+================================================= */}
+
             {/* =================================================
                 CATEGORY BUTTONS
             ================================================= */}
+            
             <div className="category-buttons">
                 <button
                     className={
@@ -477,7 +718,7 @@ function Property() {
                                     {/* =================================
                                         PRICE
                                     ================================= */}
-                                    <div className="price-box">
+                                    <div className="price-box">Price :
                                         {property.originalPrice && (
                                             <del>
                                                 ₹
@@ -527,7 +768,7 @@ function Property() {
                                                 )
                                             }
                                         >
-                                            🛒 Add To Cart
+                                         Add To Cart
                                         </button>
                                     </div>
                                 </div>
@@ -536,6 +777,139 @@ function Property() {
                     }
                 )}
             </div>
+            {/* =====================================================
+    EXPLORE LOCATIONS
+===================================================== */}
+
+<section className="explore-location-section">
+
+    {/* LEFT - MAP */}
+    <div className="location-map-wrapper">
+
+        <div className="location-map-header">
+            <div>
+                <span className="location-small-label">
+                    <FaLocationDot />
+                    DISCOVER LOCATIONS
+                </span>
+
+                <h2>Find Properties Near You</h2>
+            </div>
+
+            <div className="map-property-count">
+                <FaHouse />
+                <span>100+ Properties</span>
+            </div>
+        </div>
+
+        <div className="location-map">
+            <MapContainer
+                center={[18.5204, 73.8567]}
+                zoom={11}
+                scrollWheelZoom={false}
+                style={{
+                    width: "100%",
+                    height: "100%"
+                }}
+            >
+                <TileLayer
+                    attribution='&copy; OpenStreetMap contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+
+                {/* Your existing property markers can stay here */}
+            </MapContainer>
+        </div>
+
+    </div>
+
+
+    {/* RIGHT - CONTENT */}
+    <div className="location-info">
+
+        <span className="location-small-label">
+            <FaCompass />
+            EXPLORE THE CITY
+        </span>
+
+        <h2>
+            Explore
+            <span>Popular Locations</span>
+        </h2>
+
+        <p className="location-description">
+            Discover beautiful properties in some of the
+            most desirable and well-connected locations.
+        </p>
+
+
+        {/* LOCATIONS */}
+        <div className="popular-location-list">
+
+            <button className="popular-location-item">
+                <div className="location-item-icon">
+                    <FaLocationDot />
+                </div>
+
+                <div>
+                    <strong>Pune</strong>
+                    <span>45+ Properties</span>
+                </div>
+
+                <FaArrowRight />
+            </button>
+
+
+            <button className="popular-location-item">
+                <div className="location-item-icon">
+                    <FaLocationDot />
+                </div>
+
+                <div>
+                    <strong>Mumbai</strong>
+                    <span>30+ Properties</span>
+                </div>
+
+                <FaArrowRight />
+            </button>
+
+
+            <button className="popular-location-item">
+                <div className="location-item-icon">
+                    <FaLocationDot />
+                </div>
+
+                <div>
+                    <strong>Nashik</strong>
+                    <span>18+ Properties</span>
+                </div>
+
+                <FaArrowRight />
+            </button>
+
+
+            <button className="popular-location-item">
+                <div className="location-item-icon">
+                    <FaLocationDot />
+                </div>
+
+                <div>
+                    <strong>Nagpur</strong>
+                    <span>12+ Properties</span>
+                </div>
+
+                <FaArrowRight />
+            </button>
+
+        </div>
+
+
+        {/* STATS */}
+        
+
+    </div>
+
+</section>
         </div>
     );
 }

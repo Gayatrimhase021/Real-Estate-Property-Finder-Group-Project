@@ -106,7 +106,7 @@ const properties = [
     },
     {
         id: 6,
-        name: "Spacious 3 BHK Home in Hinjawadi",
+        name: "Spacious 3 BHK Modern Family Home in Hinjawadi",
         description: "Spacious 3 BHK residential home near Hinjawadi IT corridor. The property provides approximately 1350 sq.ft. area with three bedrooms, three bathrooms, modern kitchen, living room and parking.",
         originalPrice: 12500000,
         price: 11500000,
@@ -127,7 +127,7 @@ const properties = [
     },
     {
         id: 7,
-        name: "Modern 2 BHK Home in Wakad",
+        name: "Modern 2 BHK Comfortable Home in Wakad",
         description: "Modern 2 BHK residential home in Wakad with approximately 1000 sq.ft. built-up area. Designed for comfortable family living with spacious bedrooms, bathrooms, kitchen, living room and parking.",
         originalPrice: 9800000,
         price: 9200000,
@@ -169,7 +169,7 @@ const properties = [
     },
     {
         id: 9,
-        name: "Elegant 2 BHK Home in Katraj",
+        name: "Elegant 2 BHK Modern Family Home in Katraj",
         description: "Elegant 2 BHK home in Katraj with approximately 850 sq.ft. built-up area. Suitable for families and first-time home buyers with easy access to daily amenities and transportation.",
         originalPrice: 7500000,
         price: 6900000,
@@ -316,8 +316,8 @@ const properties = [
     },
     {
         id: 16,
-        name: "Semi-Furnished 2 BHK Villa in Hinjawadi",
-        description: "Semi-furnished 2 BHK villa near Hinjawadi IT Park. The property offers approximately 660 sq.ft. built-up area with two bedrooms, two bathrooms, balcony and parking.",
+        name: "Furnished 2 BHK Villa in Hinjawadi",
+        description: "Furnished 2 BHK villa near Hinjawadi IT Park. The property offers approximately 660 sq.ft. built-up area with two bedrooms, two bathrooms, balcony and parking.",
         originalPrice: 30000,
         price: 26000,
         category: "villa",
@@ -463,7 +463,7 @@ const properties = [
     },
     {
         id: 23,
-        name: "2 BHK Apartment in Wakad",
+        name: "Spacious 2 BHK Premium Apartment in Wakad",
         description: "Modern 2 BHK apartment in Wakad offering approximately 1000 sq.ft. area. The apartment includes two bedrooms, two bathrooms, kitchen, living room, balcony and reserved parking.",
         originalPrice: 30000,
         price: 25000,
@@ -484,7 +484,7 @@ const properties = [
     },
     {
         id: 24,
-        name: "3 BHK Apartment in Kalyani Nagar",
+        name: "Elegant 3 BHK Contemporary Apartment in Kalyani Nagar",
         description: "Spacious 3 BHK apartment in Kalyani Nagar with approximately 1400 sq.ft. area. Features three bedrooms, three bathrooms, modern kitchen, balconies and premium residential amenities.",
         originalPrice: 52000,
         price: 45000,
@@ -526,7 +526,7 @@ const properties = [
     },
     {
         id: 26,
-        name: "2 BHK Apartment in Hinjawadi Phase 1",
+        name: "2 BHK Apartment in Hinjawadi ",
         description: "Semi-furnished 2 BHK apartment in Hinjawadi Phase 1 with approximately 929 sq.ft. area. Located close to major IT offices and commercial facilities.",
         originalPrice: 30000,
         price: 26000,

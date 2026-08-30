@@ -143,10 +143,10 @@ function Navbar() {
         </button>
 
         <button
-          onClick={() => navigate("/card")}
+          onClick={() => navigate("/cart")}
         >
           <FiShoppingCart />
-          Card
+          Cart
         </button>
 
         <button
@@ -237,12 +237,12 @@ function Navbar() {
 
         <button
           onClick={() => {
-            navigate("/card");
+            navigate("/cart");
             closeMenu();
           }}
         >
           <FiShoppingCart />
-          Card
+          Cart
         </button>
 
         <button
