@@ -1442,3 +1442,296 @@
     opacity: 0.43;
     border-radius: 20px;
 }
+/* =========================================================
+   RESPONSIVE ONLY — ORIGINAL CSS ABOVE IS UNCHANGED
+   ========================================================= */
+
+@media (max-width: 1200px) {
+    .cart-header {
+        grid-template-columns: 1fr 0.7fr 1.2fr;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .cart-layout {
+        padding-left: 30px;
+        padding-right: 30px;
+        grid-template-columns: minmax(0, 1fr) 350px;
+        gap: 25px;
+    }
+
+    .cart-items {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .cart-header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 30px;
+    }
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .cart-summary {
+        position: static;
+        max-width: 600px;
+        margin: 10px auto 0;
+    }
+
+    .cart-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cart-property {
+        max-width: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .cart-page {
+        padding-top: 70px;
+        padding-bottom: 40px;
+        overflow-x: hidden;
+    }
+
+    .cart-header {
+        display: block;
+        padding: 30px 20px 35px;
+    }
+
+    .cart-header h1 {
+        font-size: clamp(38px, 11vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .cart-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .cart-layout {
+        display: block;
+        padding: 0 20px 40px;
+    }
+
+    .cart-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cart-property {
+        width: 100%;
+        max-width: none;
+    }
+
+    .cart-property-image {
+        height: clamp(190px, 55vw, 240px);
+    }
+
+    .cart-property-details {
+        padding: 18px;
+    }
+
+    .cart-property-details h2 {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .cart-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cart-summary {
+        width: 100%;
+        max-width: none;
+        padding: 24px 20px;
+        margin-top: 25px;
+    }
+
+    .cart-summary h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .cart-journey {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .empty-cart {
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        margin: 40px auto 60px;
+        padding: 40px 22px;
+    }
+
+    .empty-cart h2 {
+        font-size: 27px;
+    }
+
+    .empty-cart p {
+        max-width: 100%;
+    }
+
+    .cart-person-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .cart-person-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    /* Override the original single-card fixed width only on mobile */
+    .cart-items:has(.cart-property:only-child) {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .cart-items:has(.cart-property:only-child) .cart-property {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .cart-header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cart-layout {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cart-header h1 {
+        font-size: 37px;
+    }
+
+    .cart-property-image {
+        height: 190px;
+    }
+
+    .cart-property-details {
+        padding: 16px;
+    }
+
+    .cart-features {
+        gap: 8px;
+    }
+
+    .cart-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        padding: 22px 17px;
+    }
+
+    .summary-total strong {
+        font-size: 22px;
+    }
+
+    .empty-cart {
+        width: calc(100% - 30px);
+        padding: 35px 18px;
+    }
+
+    .empty-cart button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 340px) {
+    .cart-header h1 {
+        font-size: 34px;
+    }
+
+    .cart-property-image {
+        height: 170px;
+    }
+
+    .cart-price strong {
+        font-size: 17px;
+    }
+
+    .summary-buy-btn,
+    .cancel-order-btn,
+    .continue-shopping-btn {
+        font-size: 10px;
+    }
+}
+/* =========================================================
+   RESPONSIVE FIX — CART JOURNEY
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .cart-journey {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .cart-journey {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 18px;
+    }
+
+    .cart-journey .journey-heading {
+        padding-right: 0;
+    }
+
+    .cart-journey .cart-count {
+        position: static;
+        width: fit-content;
+        margin: 0 0 18px auto;
+    }
+
+    .journey-steps {
+        gap: 10px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+
+    .journey-step {
+        min-width: 72px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .cart-journey {
+        padding: 20px 15px;
+    }
+
+    .journey-heading strong {
+        font-size: 20px;
+    }
+
+    .journey-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .journey-arrow {
+        font-size: 14px;
+    }
+}
