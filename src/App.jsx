@@ -9,7 +9,8 @@ import NotFound from "./views/notfound/Notfound";
 import Home from "./views/home/Home";
 import Login from "./views/login/Login";
 import Property from "./views/property/property";
-import Cart from "./views/cart/cart";
+import PropertyDetail from "./views/property/property-detail";
+/*import Cart from "./views/cart/cart";*/
 
 function App() {
   return (
@@ -22,10 +23,17 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="*" element={<NotFound />} />
            <Route path="/property" element={<Property />} />
-           <Route
+         <Route
+                path="/property-detail"
+                element={<PropertyDetail />}
+            />
+{/*
+<Route
     path="/cart"
     element={<Cart />}
 />
+*/}
+
         <Route path="/login" element={<Login />} />
 
       </Routes>
