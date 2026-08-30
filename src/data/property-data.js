@@ -377,9 +377,383 @@ const properties = [
             "Security"
         ]
     },
-
-
-
-    
+{
+        id: 19,
+        name: "2 BHK Apartment in Pashan, Pune",
+        description: "Modern 2 BHK apartment in Pashan with approximately 1050 sq.ft. area. The apartment includes two bedrooms, two bathrooms, living room, kitchen, balcony and society parking.",
+        originalPrice: 32000,
+        price: 27500,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87"
+        ],
+        highlights: [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "1050 Sq.Ft.",
+            "Balcony",
+            "Parking"
+        ]
+    },
+    {
+        id: 20,
+        name: "2 BHK Apartment in Dhanori",
+        description: "Semi-furnished 2 BHK apartment in Dhanori with approximately 1010 sq.ft. area. The property offers spacious bedrooms, modern kitchen, balcony and society amenities.",
+        originalPrice: 32000,
+        price: 27000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+        ],
+        highlights: [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "1010 Sq.Ft.",
+            "Semi-Furnished",
+            "Society Amenities"
+        ]
+    },
+    {
+        id: 21,
+        name: "1 BHK Apartment in Hadapsar",
+        description: "Comfortable 1 BHK apartment in Hadapsar with approximately 800 sq.ft. built-up area. Suitable for professionals and small families with convenient access to commercial and transportation hubs.",
+        originalPrice: 22000,
+        price: 18000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+        ],
+        highlights: [
+            "1 Bedroom",
+            "1 Bathroom",
+            "800 Sq.Ft.",
+            "Family Friendly",
+            "Good Connectivity"
+        ]
+    },
+    {
+        id: 22,
+        name: "3 BHK Premium Apartment in Koregaon Park",
+        description: "Premium 3 BHK apartment in Koregaon Park with approximately 1350 sq.ft. area. The apartment features spacious rooms, modern bathrooms, kitchen, balcony, parking and premium society amenities.",
+        originalPrice: 60000,
+        price: 50000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+        ],
+        highlights: [
+            "3 Bedrooms",
+            "3 Bathrooms",
+            "1350 Sq.Ft.",
+            "Premium Location",
+            "Parking"
+        ]
+    },
+    {
+        id: 23,
+        name: "2 BHK Apartment in Wakad",
+        description: "Modern 2 BHK apartment in Wakad offering approximately 1000 sq.ft. area. The apartment includes two bedrooms, two bathrooms, kitchen, living room, balcony and reserved parking.",
+        originalPrice: 30000,
+        price: 25000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+        ],
+        highlights: [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "1000 Sq.Ft.",
+            "Balcony",
+            "Reserved Parking"
+        ]
+    },
+    {
+        id: 24,
+        name: "3 BHK Apartment in Kalyani Nagar",
+        description: "Spacious 3 BHK apartment in Kalyani Nagar with approximately 1400 sq.ft. area. Features three bedrooms, three bathrooms, modern kitchen, balconies and premium residential amenities.",
+        originalPrice: 52000,
+        price: 45000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
+        ],
+        highlights: [
+            "3 Bedrooms",
+            "3 Bathrooms",
+            "1400 Sq.Ft.",
+            "Premium Society",
+            "Multiple Balconies"
+        ]
+    },
+    {
+        id: 25,
+        name: "1 BHK Apartment in Viman Nagar",
+        description: "Fully furnished 1 BHK apartment in Viman Nagar with approximately 650 sq.ft. area. Ideal for working professionals, featuring modern furniture, kitchen, bedroom, bathroom and parking.",
+        originalPrice: 28000,
+        price: 23000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+        ],
+        highlights: [
+            "1 Bedroom",
+            "1 Bathroom",
+            "650 Sq.Ft.",
+            "Fully Furnished",
+            "Parking"
+        ]
+    },
+    {
+        id: 26,
+        name: "2 BHK Apartment in Hinjawadi Phase 1",
+        description: "Semi-furnished 2 BHK apartment in Hinjawadi Phase 1 with approximately 929 sq.ft. area. Located close to major IT offices and commercial facilities.",
+        originalPrice: 30000,
+        price: 26000,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+        ],
+        highlights: [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "929 Sq.Ft.",
+            "Near IT Park",
+            "Semi-Furnished"
+        ]
+    },
+    {
+        id: 27,
+        name: "2 BHK Apartment in Mahalunge",
+        description: "Comfortable 2 BHK apartment in Mahalunge with approximately 910 sq.ft. area. The property offers modern interiors, two bathrooms, balcony, parking and community amenities.",
+        originalPrice: 32000,
+        price: 27500,
+        category: "apartment",
+        images: [
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+        ],
+        highlights: [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "910 Sq.Ft.",
+            "Modern Interiors",
+            "Community Amenities"
+        ]
+    },
+    {
+        id: 28,
+        name: "1 BHK Flat for Rent in Hadapsar",
+        description: "Affordable 1 BHK flat available for rent in Hadapsar, Pune. Approximately 800 sq.ft. with semi-furnished interiors, one bedroom, one bathroom, kitchen, living room and parking.",
+        originalPrice: 22000,
+        price: 18000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+        ],
+        highlights: [
+            "1 BHK",
+            "800 Sq.Ft.",
+            "Semi-Furnished",
+            "₹18,000 Monthly Rent",
+            "Parking"
+        ]
+    },
+    {
+        id: 29,
+        name: "2 BHK Flat for Rent in Dhanori",
+        description: "2 BHK semi-furnished flat for rent in Dhanori with approximately 800 sq.ft. built-up area. The apartment is suitable for families and working professionals.",
+        originalPrice: 24000,
+        price: 20000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+        ],
+        highlights: [
+            "2 BHK",
+            "800 Sq.Ft.",
+            "Semi-Furnished",
+            "₹20,000 Monthly Rent",
+            "Family Preferred"
+        ]
+    },
+    {
+        id: 30,
+        name: "2 BHK Flat for Rent in Wakad",
+        description: "Modern 2 BHK apartment available for rent in Wakad. Approximately 1000 sq.ft. with two bedrooms, two bathrooms, kitchen, balcony, parking and society amenities.",
+        originalPrice: 30000,
+        price: 25000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+        ],
+        highlights: [
+            "2 BHK",
+            "1000 Sq.Ft.",
+            "₹25,000 Monthly Rent",
+            "Balcony",
+            "Parking"
+        ]
+    },
+    {
+        id: 31,
+        name: "3 BHK Apartment for Rent in Mundhwa",
+        description: "Spacious 3 BHK apartment available for rent in Mundhwa with approximately 1350 sq.ft. area. Features three bedrooms, three bathrooms, modern kitchen, balconies and parking.",
+        originalPrice: 40000,
+        price: 33000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+        ],
+        highlights: [
+            "3 BHK",
+            "1350 Sq.Ft.",
+            "₹33,000 Monthly Rent",
+            "3 Bathrooms",
+            "Parking"
+        ]
+    },
+    {
+        id: 32,
+        name: "2 BHK Apartment for Rent in Kharadi",
+        description: "Premium 2 BHK apartment for rent in Kharadi with approximately 1100 sq.ft. area. The apartment features modern interiors, two bathrooms, balcony and reserved parking.",
+        originalPrice: 48000,
+        price: 40000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+        ],
+        highlights: [
+            "2 BHK",
+            "1100 Sq.Ft.",
+            "₹40,000 Monthly Rent",
+            "Modern Interiors",
+            "Reserved Parking"
+        ]
+    },
+    {
+        id: 33,
+        name: "4 BHK Independent House for Rent in Hinjawadi",
+        description: "Spacious 4 BHK independent house for rent in Hinjawadi with approximately 2200 sq.ft. area. Suitable for large families with four bedrooms, bathrooms, large living spaces, kitchen and parking.",
+        originalPrice: 120000,
+        price: 100000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
+        ],
+        highlights: [
+            "4 BHK",
+            "2200 Sq.Ft.",
+            "₹1,00,000 Monthly Rent",
+            "Independent House",
+            "Large Family Home"
+        ]
+    },
+    {
+        id: 34,
+        name: "2 BHK Villa for Rent in Wagholi",
+        description: "Semi-furnished 2 BHK villa available for rent in Wagholi. Approximately 1230 sq.ft. property with two bedrooms, bathrooms, balcony, parking and gated community facilities.",
+        originalPrice: 28000,
+        price: 23000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
+            "https://images.unsplash.com/photo-1613977257363-707ba9348227",
+            "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+        ],
+        highlights: [
+            "2 BHK",
+            "1230 Sq.Ft.",
+            "₹23,000 Monthly Rent",
+            "Semi-Furnished",
+            "Gated Community"
+        ]
+    },
+    {
+        id: 35,
+        name: "3 BHK Villa for Rent in Bhugaon",
+        description: "Premium 3 BHK semi-furnished villa available for rent in Bhugaon with approximately 2444 sq.ft. area. Includes three bedrooms, bathrooms, balconies, parking and clubhouse access.",
+        originalPrice: 75000,
+        price: 65000,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
+            "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4"
+        ],
+        highlights: [
+            "3 BHK",
+            "2444 Sq.Ft.",
+            "₹65,000 Monthly Rent",
+            "Clubhouse",
+            "24/7 Security"
+        ]
+    },
+    {
+        id: 36,
+        name: "1 RK Apartment for Rent in Kharadi",
+        description: "Compact 1 RK apartment available for rent in Kharadi. Approximately 350 sq.ft. and suitable for students or working professionals looking for an affordable residence close to major employment hubs.",
+        originalPrice: 9000,
+        price: 7500,
+        category: "rent",
+        images: [
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+        ],
+        highlights: [
+            "1 RK",
+            "350 Sq.Ft.",
+            "₹7,500 Monthly Rent",
+            "Ideal for Professionals",
+            "Near IT Hubs"
+        ]
+    }
 ];
 export default properties;
