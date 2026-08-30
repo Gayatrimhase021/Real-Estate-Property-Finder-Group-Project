@@ -10,7 +10,7 @@ import Home from "./views/home/Home";
 import Login from "./views/login/Login";
 import Property from "./views/property/property";
 import PropertyDetail from "./views/property/property-detail";
-/*import Cart from "./views/cart/cart";*/
+import Cart from "./views/cart/cart";
 
 function App() {
   return (
@@ -27,12 +27,12 @@ function App() {
                 path="/property-detail"
                 element={<PropertyDetail />}
             />
-{/*
+
 <Route
     path="/cart"
     element={<Cart />}
 />
-*/}
+
 
         <Route path="/login" element={<Login />} />
 

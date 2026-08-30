@@ -475,9 +475,9 @@ alert("Successfully added to Wishlist ❤️");
 
            <button
         className="view-details-btn"
-        onClick={() => navigate(`/property/${id}`)}
+        onClick={handleWishlist}
       >
-        View Details
+        Add to wishlist
       </button>
     </div>
 
