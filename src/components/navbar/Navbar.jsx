@@ -136,7 +136,7 @@ function Navbar() {
         </button>
 
         <button
-          onClick={() => navigate("/properties")}
+          onClick={() => navigate("/property")}
         >
           <FiHome />
           Properties
@@ -227,7 +227,7 @@ function Navbar() {
 
         <button
           onClick={() => {
-            navigate("/properties");
+            navigate("/property");
             closeMenu();
           }}
         >

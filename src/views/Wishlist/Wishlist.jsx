@@ -461,7 +461,7 @@ const Wishlist = () => {
             </p>
 
             <Link
-              to="/properties"
+              to="/property"
               className="browse-btn"
             >
 
