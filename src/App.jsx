@@ -7,22 +7,20 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import NotFound from "./views/notfound/Notfound";
 import Home from "./views/home/Home";
+import Login from "./views/login/Login";
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
+      
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/wishlist" element={<Wishlist />} />
-      </Routes>
-
-      <Navbar />
-
-      <Routes>
-
-        <Route path="/" element={<Home />} />
-
         <Route path="*" element={<NotFound />} />
+
+        <Route path="/login" element={<Login />} />
 
       </Routes>
 

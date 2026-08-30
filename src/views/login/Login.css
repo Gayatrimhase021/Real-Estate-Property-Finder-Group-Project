@@ -1,0 +1,461 @@
+/* ============================
+   AUTH PAGE (Login / Register)
+   Theme matched to existing site:
+   - accent orange: #ff8533 (hover #d6691c / #662a03)
+   - navy heading: #17324d
+   - Playfair Display (headings) + Poppins (labels/buttons) + Cambria (base)
+   ============================ */
+
+/* 👇 Change this ONE value to match your actual Navbar's real height in px */
+:root {
+  --navbar-height: 90px;
+}
+
+.auth-page {
+  width: 100%;
+  /* pushes content below the fixed/sticky navbar so it never overlaps */
+  min-height: calc(100vh - var(--navbar-height));
+  margin-top: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f9f8f8;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  z-index: 1; /* keep it below the navbar's own z-index */
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 960px;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- LEFT: brand panel ---------- */
+
+.auth-brand-panel {
+  position: relative;
+  background: linear-gradient(160deg, #ff8533 0%, #b34700 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 40px;
+  overflow: hidden;
+}
+
+.auth-brand-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.auth-brand-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: left;
+}
+
+.auth-brand-small {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  opacity: 0.9;
+}
+
+.auth-brand-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.auth-brand-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 320px;
+  margin: 0;
+}
+
+/* ---------- RIGHT: form panel ---------- */
+
+.auth-form-panel {
+  padding: 48px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tabs */
+
+.auth-tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f4f0ec;
+  border-radius: 30px;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.auth-tab {
+  position: relative;
+  z-index: 2;
+  border: none;
+  background: transparent;
+  padding: 11px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.auth-tab.active {
+  color: #ffffff;
+}
+
+.auth-tab-slider {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  width: calc(50% - 5px);
+  border-radius: 26px;
+  background: #ff8533;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.auth-tab-slider.left {
+  transform: translateX(0);
+}
+
+.auth-tab-slider.right {
+  transform: translateX(calc(100% + 5px));
+}
+
+/* Form fields */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-field label {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #17324d;
+  margin-bottom: 6px;
+}
+
+.auth-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 16px;
+  border: 1px solid #e2d8ce;
+  border-radius: 27px;
+  background: #fdfcfc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-input-wrap:focus-within {
+  border-color: #ff8533;
+  box-shadow: 0 0 0 3px rgba(255, 133, 51, 0.15);
+}
+
+.auth-input-wrap img,
+.auth-input-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.auth-input-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.auth-eye-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-eye-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.auth-social-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.auth-error {
+  display: block;
+  margin-top: 5px;
+  margin-left: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11.5px;
+  color: #d32f2f;
+}
+
+.auth-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-size: 12.5px;
+  color: #555;
+  margin-top: -4px;
+}
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.auth-link {
+  color: #ff8533;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Submit button — same style as agent-primary-btn */
+
+.auth-submit-btn {
+  height: 50px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 27px;
+  background: #ff8533;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background: #662a03;
+  transform: translateY(-2px);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Divider */
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 22px 0;
+  color: #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e7dbdb;
+}
+
+.auth-divider span {
+  padding: 0 12px;
+}
+
+/* Social button */
+
+.auth-social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-social-btn {
+  height: 48px;
+  border: 1px solid #e2a47b;
+  border-radius: 27px;
+  background: #ffffff;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.auth-social-btn:hover {
+  border-color: #ff8533;
+  background: #fff6ef;
+}
+
+/* Switch link */
+
+.auth-switch-text {
+  text-align: center;
+  margin-top: 24px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #666;
+}
+
+.auth-switch-link {
+  border: none;
+  background: transparent;
+  color: #ff8533;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+
+.auth-switch-link:hover {
+  text-decoration: underline;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 860px) {
+  .auth-card {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+
+  .auth-brand-panel {
+    padding: 36px 30px;
+  }
+
+  .auth-brand-content h1 {
+    font-size: 28px;
+  }
+
+  .auth-form-panel {
+    padding: 38px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 20px 12px;
+  }
+
+  .auth-card {
+    border-radius: 18px;
+  }
+
+  .auth-brand-panel {
+    padding: 28px 22px;
+  }
+
+  .auth-form-panel {
+    padding: 30px 22px;
+  }
+}
+
+/* ============ DARK MODE ============ */
+/* Mirrors body.dark-mode pattern used across the rest of the site */
+
+body.dark-mode .auth-page {
+  background: #121212;
+}
+
+body.dark-mode .auth-card {
+  background: #1e1e1e;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .auth-tabs {
+  background: #2a2a2a;
+}
+
+body.dark-mode .auth-tab {
+  color: #aaaaaa;
+}
+
+body.dark-mode .auth-field label {
+  color: #ffffff;
+}
+
+body.dark-mode .auth-input-wrap {
+  background: #242424;
+  border-color: #444444;
+}
+
+body.dark-mode .auth-input-wrap input {
+  color: #ffffff;
+}
+
+body.dark-mode .auth-row-between {
+  color: #aaaaaa;
+}
+
+body.dark-mode .auth-divider {
+  color: #777;
+}
+
+body.dark-mode .auth-divider::before,
+body.dark-mode .auth-divider::after {
+  background: #333333;
+}
+
+body.dark-mode .auth-social-btn {
+  background: #242424;
+  color: #eeeeee;
+  border-color: #444444;
+}
+
+body.dark-mode .auth-switch-text {
+  color: #aaaaaa;
+}

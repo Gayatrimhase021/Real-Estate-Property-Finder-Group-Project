@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import "./About.css";
+import { useEffect } from "react";
 
 import TeamCard from "../../components/TeamCard/TeamCard";
+import TeamCard from "../../components/teamcard/teamcard";
 
 import member1 from "../../assets/member1.jpg";
 import member2 from "../../assets/member2.jpg";
@@ -27,7 +30,17 @@ import {
 } from "lucide-react";
 
 const About = () => {
+
+  useEffect(() => {
+    if (window.location.hash === "#consultation") {
+      document.getElementById("consultation")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   return (
+
     <div className="about-page">
 
       <section className="about-hero">
@@ -437,7 +450,7 @@ const About = () => {
 
       </section>
 
-      <section className="contact-section">
+      <section className="contact-section" id="consultation">
 
         <div className="contact-heading">
 
@@ -488,7 +501,7 @@ const About = () => {
             </a>
 
             <a
-              href="mailto:support@homefinder.com"
+              href="mailto:tanishkaadhav30@gmail.com"
               className="contact-item"
             >
 
@@ -625,6 +638,9 @@ const About = () => {
           Browse Properties
            <ArrowRight size={18} />
         </Link>
+
+        </Link>
+
 
       </section>
 

@@ -18,6 +18,7 @@ body.dark-mode.home {
     linear-gradient(rgba(15, 23, 42, 0.78),
       rgba(15, 23, 42, 0.78)),
     url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover;
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center / cover;
 }
 
 .about-hero-content {
@@ -46,7 +47,7 @@ body.dark-mode.home {
 .how-heading h2 span,
 .team-heading h2 span,
 .contact-heading h2 span {
-  color: #f59e0b;
+  color: #f77626;
 }
 
 .about-hero p {
@@ -63,7 +64,7 @@ body.dark-mode.home {
   border: none;
   padding: 14px 25px;
   border-radius: 8px;
-  background: #f59e0b;
+  background: #ff8533;
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -81,7 +82,7 @@ body.dark-mode.home {
 .about-btn:hover,
 .about-cta button:hover,
 .contact-btn:hover {
-  background: #d97706;
+  background: #662a03;
   transform: translateY(-2px);
 }
 
@@ -140,6 +141,7 @@ body.dark-mode.home {
   border-radius: 25px;
   background:
     url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80") center/cover;
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80") center / cover;
   position: relative;
 }
 
@@ -156,6 +158,7 @@ body.dark-mode.home {
 
 .section-label {
   color: #f59e0b;
+  color: #f87e1a;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -228,12 +231,15 @@ body.dark-mode.home {
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #a4b4c7;
 }
 
 .stat-card h2 {
   margin: 0;
   font-size: 35px;
-  color: #f59e0b;
+  color: #f39819;
 }
 
 .stat-card p {
@@ -241,6 +247,9 @@ body.dark-mode.home {
   color: #6b7280;
 }
 
+.stat-card:hover{
+border: 1px solid #f39819;
+}
 .why-us {
   padding: 90px 8%;
 }
@@ -268,6 +277,8 @@ body.dark-mode.home {
 .why-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .why-icon {
@@ -317,7 +328,9 @@ body.dark-mode.home {
   border-radius: 18px;
   border: 1px solid #e5e7eb;
 }
-
+.step-card:hover {
+border: 1px solid #f39819;
+}
 .step-number {
   position: absolute;
   top: 15px;
@@ -461,7 +474,7 @@ body.dark-mode.home {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #f59e0b;
+  border-color: #f5780b;
 }
 
 .form-group textarea {
@@ -579,4 +592,144 @@ body.dark-mode.home {
   .about-cta h2 {
     font-size: 28px;
   }
+}
+
+/* =========================
+   ABOUT PAGE DARK MODE
+========================= */
+
+body.dark-mode .about-page {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .about-intro,
+body.dark-mode .why-us,
+body.dark-mode .team-section {
+  background: #121212;
+}
+
+body.dark-mode .about-stats,
+body.dark-mode .how-section,
+body.dark-mode .contact-section {
+  background: #181818;
+}
+
+/* Headings */
+
+body.dark-mode .about-text h2,
+body.dark-mode .why-heading h2,
+body.dark-mode .how-heading h2,
+body.dark-mode .team-heading h2,
+body.dark-mode .contact-heading h2 {
+  color: #ffffff;
+}
+
+/* Paragraphs */
+
+body.dark-mode .about-text>p,
+body.dark-mode .why-heading>p,
+body.dark-mode .team-heading>p,
+body.dark-mode .contact-heading>p,
+body.dark-mode .feature-item p,
+body.dark-mode .why-card p,
+body.dark-mode .step-card p,
+body.dark-mode .contact-info>p,
+body.dark-mode .contact-item p {
+  color: #cfcfcf;
+}
+
+/* Feature */
+
+body.dark-mode .feature-item h3 {
+  color: #ffffff;
+}
+
+/* Stats */
+
+body.dark-mode .stat-card {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .stat-card p {
+  color: #cfcfcf;
+}
+
+/* Why Cards */
+
+body.dark-mode .why-card {
+  background: #1e1e1e;
+  border-color: #333333;
+}
+
+body.dark-mode .why-card h3 {
+  color: #ffffff;
+}
+
+/* How It Works */
+
+body.dark-mode .step-card {
+  background: #1e1e1e;
+  border-color: #333333;
+}
+
+body.dark-mode .step-card h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .step-number {
+  color: #666666;
+}
+
+/* Contact */
+
+body.dark-mode .contact-container {
+  background: #1e1e1e;
+  border-color: #333333;
+}
+
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-item h4 {
+  color: #ffffff;
+}
+
+/* Form */
+
+body.dark-mode .form-group label {
+  color: #ffffff;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background: #2a2a2a;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+  color: #999999;
+}
+
+/* Icons */
+
+body.dark-mode .feature-icon,
+body.dark-mode .why-icon,
+body.dark-mode .step-icon,
+body.dark-mode .contact-icon {
+  background: #2a2115;
+  color: #f5650b;
+}
+
+/* Image Card */
+
+body.dark-mode .about-image-card {
+  background: #1e1e1e;
+}
+
+/* CTA */
+
+body.dark-mode .about-cta {
+  background: #0d0d0d;
 }
