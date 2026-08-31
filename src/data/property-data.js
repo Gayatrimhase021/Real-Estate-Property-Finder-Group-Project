@@ -28,7 +28,7 @@ const properties = [
         price: 13200000,
         category: "home",
         images: [
-            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+            "https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
             "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
             "https://images.unsplash.com/photo-1600585154526-990dced4db0d"
@@ -133,7 +133,7 @@ const properties = [
         price: 9200000,
         category: "home",
         images: [
-            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://plus.unsplash.com/premium_photo-1746888841272-f4df63c840a2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
@@ -154,7 +154,7 @@ const properties = [
         price: 16500000,
         category: "home",
         images: [
-            "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+            "https://plus.unsplash.com/premium_photo-1747371476846-1af8fbc9f3c3?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
             "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
             "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87"
@@ -175,7 +175,7 @@ const properties = [
         price: 6900000,
         category: "home",
         images: [
-            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://plus.unsplash.com/premium_photo-1747846129339-4ccad287c92a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D",
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
             "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
@@ -217,7 +217,7 @@ const properties = [
         price: 65000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://media.istockphoto.com/id/1293762741/photo/modern-living-room-interior-3d-render.webp?a=1&b=1&s=612x612&w=0&k=20&c=Nk1uLgimD0AG9ADjHPx1iLvhZnm28YW6VRZr7uGwvS0=",
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
             "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
@@ -259,7 +259,7 @@ const properties = [
         price: 35000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+            "https://media.istockphoto.com/id/848549286/photo/dream-home-luxury-house-success.webp?a=1&b=1&s=612x612&w=0&k=20&c=mw4NBCHDgvr8zmcd5ydaJPilQxYCnOxA8OS73fFX9BA=",
             "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
             "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
             "https://images.unsplash.com/photo-1613977257363-707ba9348227"
@@ -280,7 +280,7 @@ const properties = [
         price: 35000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+            "https://media.istockphoto.com/id/1150545984/photo/upscale-modern-mansion-with-pool.webp?a=1&b=1&s=612x612&w=0&k=20&c=X-6hpPGrFkLqvKnSWZJZ-hoJFcQ0iOMY9lw5VgFA_mc=",
             "https://images.unsplash.com/photo-1613977257363-707ba9348227",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
             "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4"
@@ -301,7 +301,7 @@ const properties = [
         price: 80000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+            "https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHZpbGxhfGVufDB8fDB8fHww",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
             "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
@@ -322,7 +322,7 @@ const properties = [
         price: 26000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://media.istockphoto.com/id/475976182/photo/modern-architecture-design-84-for-house-bungalow.webp?a=1&b=1&s=612x612&w=0&k=20&c=6qermG-QoDRK1pyRKrUjJjL65MlvFeuX9DRpwtsWzZo=",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
             "https://images.unsplash.com/photo-1613977257363-707ba9348227",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
@@ -343,7 +343,7 @@ const properties = [
         price: 42000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://plus.unsplash.com/premium_photo-1757976211213-6db08396f3d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM3fHx8ZW58MHx8fHx8",
             "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4",
             "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
             "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
@@ -364,7 +364,7 @@ const properties = [
         price: 46000,
         category: "villa",
         images: [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1787704113747-c1a65d1a6a62?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
             "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
             "https://images.unsplash.com/photo-1613977257363-707ba9348227"
@@ -427,7 +427,7 @@ const properties = [
         price: 18000,
         category: "apartment",
         images: [
-            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://media.istockphoto.com/id/1159873271/photo/residential-area-in-the-city-modern-apartment-buildings.webp?a=1&b=1&s=612x612&w=0&k=20&c=UPGYUizgpn2HOy61jZzw2XqjrJ3CsOzsgFHNhZJBnKA=",
             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
             "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
@@ -469,7 +469,7 @@ const properties = [
         price: 25000,
         category: "apartment",
         images: [
-            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://media.istockphoto.com/id/2170236823/photo/new-suburban-houses.webp?a=1&b=1&s=612x612&w=0&k=20&c=YQFoNjBQJTvzyT0oH2Zr6pUvrzka1dQeU1A3lKjroZQ=",
             "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
             "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
@@ -490,7 +490,7 @@ const properties = [
         price: 45000,
         category: "apartment",
         images: [
-            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+            "https://plus.unsplash.com/premium_photo-1746246341978-f032a218d2e7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI0fHx8ZW58MHx8fHx8",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
             "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
@@ -511,7 +511,7 @@ const properties = [
         price: 23000,
         category: "apartment",
         images: [
-            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://images.unsplash.com/photo-1776500588080-edb1939e2d9c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMwfHx8ZW58MHx8fHx8",
             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
             "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
@@ -553,7 +553,7 @@ const properties = [
         price: 27500,
         category: "apartment",
         images: [
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://plus.unsplash.com/premium_photo-1748729621216-573f9867e6ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDYwfHx8ZW58MHx8fHx8",
             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
             "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
@@ -574,7 +574,7 @@ const properties = [
         price: 18000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://media.istockphoto.com/id/147205632/photo/modern-home-with-swimming-pool.webp?a=1&b=1&s=612x612&w=0&k=20&c=auqvR6pRnKN7ttKapti20AGpJNYBWk4j-M6rRAzXwco=",
             "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
             "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
@@ -595,7 +595,7 @@ const properties = [
         price: 20000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://media.istockphoto.com/id/1337482310/photo/large-modern-contemporary-house-in-wood-and-concrete-at-sunset.webp?a=1&b=1&s=612x612&w=0&k=20&c=95-rYSt9EdjksgcxNP8l_XFcPplw7JwX9QrwDib8CD8=",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
             "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
@@ -616,7 +616,7 @@ const properties = [
         price: 25000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+            "https://media.istockphoto.com/id/1088802554/photo/modern-house.webp?a=1&b=1&s=612x612&w=0&k=20&c=iUfrz1By0ZG1PuxUdHv7U1XQhwF90TRBD0xbkS9Aogg=",
             "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
             "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
             "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
@@ -637,7 +637,7 @@ const properties = [
         price: 33000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+            "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM4fHx8ZW58MHx8fHx8",
             "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
@@ -658,7 +658,7 @@ const properties = [
         price: 40000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+            "https://images.unsplash.com/photo-1769780265587-037ee842c0b0?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
             "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
             "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
@@ -679,7 +679,7 @@ const properties = [
         price: 100000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+            "https://images.unsplash.com/photo-1678575326996-a1bf09b86158?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
             "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
@@ -721,7 +721,7 @@ const properties = [
         price: 65000,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+            "https://plus.unsplash.com/premium_photo-1746888841338-05a8279d4636?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
             "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
             "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4"
@@ -742,7 +742,7 @@ const properties = [
         price: 7500,
         category: "rent",
         images: [
-            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            "https://plus.unsplash.com/premium_photo-1747978775482-3dd3c652d4ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"

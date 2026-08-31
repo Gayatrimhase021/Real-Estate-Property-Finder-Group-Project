@@ -12,7 +12,11 @@ import {
     FaPlus,
     FaHouse,
     FaMagnifyingGlass,
-    FaCartShopping
+    FaCartShopping,
+    FaComments,
+    FaShieldHalved,
+    FaLightbulb,
+    FaHouseChimney
 } from "react-icons/fa6";
 
 import properties from "./../../data/property-data";
@@ -1292,228 +1296,314 @@ function PropertyDetail() {
                 {/* =================================================
                     CUSTOMER REVIEWS
                 ================================================= */}
+<section className="property-reviews">
 
-                <section className="property-reviews">
+    {/* =====================================================
+        SECTION TITLE
+    ===================================================== */}
 
+    <h2>
+        Customer Reviews
+    </h2>
 
-                    <h2>
-                        Customer Reviews
-                    </h2>
 
+    {/* =====================================================
+        MAIN LEFT + RIGHT LAYOUT
+    ===================================================== */}
 
-                    {/* RATING */}
+    <div className="review-main-layout">
 
-                    <div className="rating-section">
 
-                        <h3>
-                            Rate This Property
-                        </h3>
+        {/* =================================================
+            LEFT SIDE — REVIEW
+        ================================================= */}
 
+        <div className="review-left">
 
-                        <div className="rating-stars">
 
-                            {[1, 2, 3, 4, 5].map(
+            {/* ================= RATING ================= */}
 
-                                (
-                                    rating
-                                ) => (
+            <div className="rating-section">
 
-                                    <button
-                                        key={
-                                            rating
-                                        }
-                                        type="button"
-                                        className={
-                                            rating <= selectedRating
-                                                ? "rating-star-button selected"
-                                                : "rating-star-button"
-                                        }
-                                        onClick={() =>
-                                            rateProperty(
-                                                rating
-                                            )
-                                        }
-                                    >
+                <h3>
+                    Rate This Property
+                </h3>
 
-                                        {rating <= selectedRating ? (
 
-                                            <FaStar />
+                <div className="rating-stars">
 
-                                        ) : (
+                    {[1, 2, 3, 4, 5].map(
 
-                                            <FaRegStar />
+                        (rating) => (
 
-                                        )}
+                            <button
+                                key={rating}
+                                type="button"
+                                className={
+                                    rating <= selectedRating
+                                        ? "rating-star-button selected"
+                                        : "rating-star-button"
+                                }
+                                onClick={() =>
+                                    rateProperty(rating)
+                                }
+                            >
 
-                                    </button>
+                                {rating <= selectedRating ? (
 
-                                )
+                                    <FaStar />
 
-                            )}
+                                ) : (
 
-                        </div>
+                                    <FaRegStar />
 
+                                )}
 
-                        {selectedRating > 0 && (
+                            </button>
 
-                            <p>
+                        )
 
-                                You rated this property{" "}
+                    )}
 
-                                <strong>
-                                    {selectedRating}
-                                </strong>
+                </div>
 
-                                {" "}out of 5
 
-                            </p>
+                {selectedRating > 0 && (
 
-                        )}
+                    <p>
 
-                    </div>
+                        You rated this property{" "}
 
+                        <strong>
+                            {selectedRating}
+                        </strong>
 
-                    {/* REVIEW FORM */}
+                        {" "}out of 5
 
-                    <div className="review-form">
+                    </p>
 
-                        <textarea
-                            value={
-                                reviewText
-                            }
-                            onChange={
-                                (e) =>
-                                    setReviewText(
-                                        e.target.value
-                                    )
-                            }
-                            placeholder="Write your review..."
-                        />
+                )}
 
+            </div>
 
-                        <button
-                            onClick={
-                                submitReview
-                            }
-                        >
 
-                            Submit Review
+            {/* ================= REVIEW FORM ================= */}
 
-                        </button>
+            <div className="review-form">
 
-                    </div>
+                <textarea
+                    value={reviewText}
+                    onChange={(e) =>
+                        setReviewText(
+                            e.target.value
+                        )
+                    }
+                    placeholder="Write your review..."
+                />
 
 
-                    {/* REVIEWS */}
+                <button
+                    onClick={submitReview}
+                >
 
-                    <div className="reviews-container">
+                    Submit Review
 
+                </button>
 
-                        {reviews.length === 0 ? (
+            </div>
 
-                            <p className="no-reviews">
 
-                                No reviews yet.
-                                Be the first to review this property.
+            {/* ================= EXISTING REVIEWS ================= */}
 
-                            </p>
+            <div className="reviews-container">
 
-                        ) : (
+                {reviews.length === 0 ? (
 
-                            reviews.map(
+                    <p className="no-reviews">
 
-                                (
-                                    review,
-                                    index
-                                ) => (
+                        No reviews yet.
+                        Be the first to review this property.
 
-                                    <div
-                                        className="review-card"
-                                        key={
-                                            index
-                                        }
-                                    >
+                    </p>
 
+                ) : (
 
-                                        <div className="review-card-header">
+                    reviews.map(
 
+                        (review, index) => (
 
-                                            <div>
+                            <div
+                                className="review-card"
+                                key={index}
+                            >
 
-                                                <h4>
 
-                                                    {
-                                                        review.name
-                                                    }
+                                <div className="review-card-header">
 
-                                                </h4>
 
+                                    <div>
 
-                                                <div className="review-stars">
+                                        <h4>
 
-                                                    {[1, 2, 3, 4, 5].map(
+                                            {review.name}
 
-                                                        star => (
+                                        </h4>
 
-                                                            star <= review.rating ? (
 
-                                                                <FaStar
-                                                                    key={
-                                                                        star
-                                                                    }
-                                                                />
+                                        <div className="review-stars">
 
-                                                            ) : (
+                                            {[1, 2, 3, 4, 5].map(
 
-                                                                <FaRegStar
-                                                                    key={
-                                                                        star
-                                                                    }
-                                                                />
+                                                star => (
 
-                                                            )
+                                                    star <= review.rating ? (
 
-                                                        )
+                                                        <FaStar
+                                                            key={star}
+                                                        />
 
-                                                    )}
+                                                    ) : (
 
-                                                </div>
+                                                        <FaRegStar
+                                                            key={star}
+                                                        />
 
-                                            </div>
+                                                    )
 
+                                                )
 
-                                            <small>
-
-                                                {
-                                                    review.date
-                                                }
-
-                                            </small>
+                                            )}
 
                                         </div>
 
-
-                                        <p>
-
-                                            {
-                                                review.text
-                                            }
-
-                                        </p>
-
-
                                     </div>
 
-                                )
 
-                            )
+                                    <small>
 
-                        )}
+                                        {review.date}
+
+                                    </small>
+
+                                </div>
+
+
+                                <p>
+
+                                    {review.text}
+
+                                </p>
+
+
+                            </div>
+
+                        )
+
+                    )
+
+                )}
+
+            </div>
+
+        </div>
+
+
+        {/* =================================================
+            RIGHT SIDE — IMAGE + CONFIDENCE
+        ================================================= */}
+
+        <div className="review-right">
+
+
+            {/* ================= PROPERTY IMAGE ================= */}
+
+            <div className="review-property-image">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVN8qu2UTAb8D3Zb84I17b8en83iOrS-eRdUdJ1w6eI5R1Ykb2spLOKjst&s=10"
+                    alt="Property"
+                />
+
+            </div>
+
+
+            {/* ================= TITLE ================= */}
+
+            <div className="review-confidence">
+
+
+                <h3>
+                    Choose With Confidence
+                </h3>
+
+
+                {/* ================= 4 POINTS ================= */}
+
+                <div className="review-benefits-grid">
+
+
+                    {/* POINT 1 */}
+
+                    <div className="review-benefit">
+
+                        <FaComments />
+
+                        <span>
+                            Real Stories
+                        </span>
 
                     </div>
 
 
-                </section>
+                    {/* POINT 2 */}
+
+                    <div className="review-benefit">
+
+                        <FaShieldHalved />
+
+                        <span>
+                            Honest Opinions
+                        </span>
+
+                    </div>
+
+
+                    {/* POINT 3 */}
+
+                    <div className="review-benefit">
+
+                        <FaLightbulb />
+
+                        <span>
+                            Clear Insights
+                        </span>
+
+                    </div>
+
+
+                    {/* POINT 4 */}
+
+                    <div className="review-benefit">
+
+                        <FaHouseChimney />
+
+                        <span>
+                            Better Choices
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
             </div>

@@ -69,53 +69,49 @@ function Property() {
             );
         }
     }, []);
-    useEffect(() => {
-        let result =
-            [...properties];
-        if (
-            selectedCategory !== "all"
-        ) {
-            result =
-                result.filter(
-                    property =>
-                        property.category ===
-                        selectedCategory
-                );
-        }
-        if (
-            search.trim() !== ""
-        ) {
-            const keyword =
-                search.toLowerCase();
-            result =
-                result.filter(
-                    property =>
-                        property.name
-                            .toLowerCase()
-                            .includes(
-                                keyword
-                            )
-                        ||
-                        property.description
-                            ?.toLowerCase()
-                            .includes(
-                                keyword
-                            )
-                        ||
-                        property.category
-                            ?.toLowerCase()
-                            .includes(
-                                keyword
-                            )
-                );
-        }
-        setDisplayedProperties(
-            result
+   useEffect(() => {
+
+    let result = [...properties];
+
+    const keyword = search.trim().toLowerCase();
+
+    // SEARCH HAS PRIORITY
+    if (keyword !== "") {
+
+        result = result.filter(property => {
+
+            const name =
+                property.name?.toLowerCase() || "";
+
+            const description =
+                property.description?.toLowerCase() || "";
+
+            const category =
+                property.category?.toLowerCase() || "";
+
+            return (
+                name.includes(keyword) ||
+                description.includes(keyword) ||
+                category.includes(keyword)
+            );
+
+        });
+
+    }
+
+    // CATEGORY FILTER ONLY WHEN NOT SEARCHING
+    else if (selectedCategory !== "all") {
+
+        result = result.filter(property =>
+            property.category?.toLowerCase() ===
+            selectedCategory?.toLowerCase()
         );
-    }, [
-        selectedCategory,
-        search
-    ]);
+
+    }
+
+    setDisplayedProperties(result);
+
+}, [selectedCategory, search]);
     const showProperties = (
         category
     ) => {
