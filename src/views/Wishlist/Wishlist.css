@@ -4,7 +4,7 @@
 
 .wishlist-page {
   min-height: 100vh;
-  background: #f8f7f5;
+  background: #f9f8f8;
 }
 
 
@@ -56,13 +56,13 @@
   justify-content: center;
 
   box-shadow:
-    0 8px 20px rgba(230, 154, 60, 0.3);
+    0 8px 20px rgba(255, 133, 51, 0.3);
 }
 
 .hero-label {
   margin: 0 0 12px;
 
-  color: #c88937;
+  color: #ff8533;
 
   font-size: 12px;
 
@@ -88,7 +88,7 @@
 .hero-description {
   margin: 18px 0 0;
 
-  color: #e5e7eb;
+  color: #eeeeee;
 
   font-size: 16px;
 }
@@ -119,7 +119,7 @@
 .saved-label {
   margin: 0 0 10px;
 
-  color: #b67a35;
+  color: #ff8533;
 
   font-size: 12px;
 
@@ -131,7 +131,7 @@
 .saved-header h2 {
   margin: 0;
 
-  color: #27364b;
+  color: #17324d;
 
   font-size: 38px;
 
@@ -145,7 +145,7 @@
 
   gap: 8px;
 
-  color: #a36d32;
+  color: #ff8533;
 
   font-size: 14px;
 
@@ -174,7 +174,7 @@
 
   background: #ffffff;
 
-  border: 1px solid #e4e1dc;
+  border: 1px solid #e7dbdb;
 
   border-radius: 12px;
 
@@ -186,7 +186,7 @@
 
   padding: 0 18px;
 
-  color: #778090;
+  color: #777777;
 }
 
 .search-box input {
@@ -200,11 +200,11 @@
 
   font-size: 15px;
 
-  color: #374151;
+  color: #333333;
 }
 
 .search-box input::placeholder {
-  color: #9ca3af;
+  color: #999999;
 }
 
 .dropdown-container {
@@ -216,7 +216,7 @@
 
   height: 58px;
 
-  border: 1px solid #e4e1dc;
+  border: 1px solid #e7dbdb;
 
   border-radius: 12px;
 
@@ -230,7 +230,7 @@
 
   padding: 0 18px;
 
-  color: #3f4652;
+  color: #444444;
 
   font-size: 15px;
 
@@ -246,7 +246,7 @@
 
   height: 58px;
 
-  border: 1px solid #e4e1dc;
+  border: 1px solid #e7dbdb;
 
   border-radius: 12px;
 
@@ -260,7 +260,7 @@
 
   padding: 0 18px;
 
-  color: #3f4652;
+  color: #444444;
 
   font-size: 15px;
 
@@ -285,7 +285,7 @@
 
   background: #ffffff;
 
-  border: 1px solid #e4e1dc;
+  border: 1px solid #e7dbdb;
 
   border-radius: 10px;
 
@@ -324,7 +324,7 @@
 
   text-align: left;
 
-  color: #4b5563;
+  color: #666666;
 
   font-size: 14px;
 
@@ -332,9 +332,9 @@
 }
 
 .dropdown-menu button:hover {
-  background: #fff5e8;
+  background: #fff1e7;
 
-  color: #d97706;
+  color: #662a03;
 }
 
 .rotate-icon {
@@ -360,7 +360,7 @@
 .wishlist-property-card {
   background: #ffffff;
 
-  border: 1px solid #ece9e4;
+  border: 1px solid #e7dbdb;
 
   border-radius: 14px;
 
@@ -436,7 +436,7 @@
 }
 
 .wishlist-property-type {
-  color: #b67a35 !important;
+  color: #ff8533 !important;
 
   font-size: 11px !important;
 
@@ -449,7 +449,7 @@
 .wishlist-property-info h3 {
     margin: 5px 0 7px;
     font-size: 17px;
-    color: #27364b;
+    color: #17324d;
 
     white-space: nowrap;
     overflow: hidden;
@@ -461,7 +461,7 @@
 
   font-size: 13px;
 
-  color: #7b8797;
+  color: #777777;
 }
 
 .wishlist-property-info strong {
@@ -469,7 +469,7 @@
 
   margin-top: 9px;
 
-  color: #c9824b;
+  color: #e65c00;
 
   font-size: 15px;
 }
@@ -488,7 +488,7 @@
 
   background: #ffffff;
 
-  border: 1px solid #ece9e4;
+  border: 1px solid #e7dbdb;
 
   border-radius: 16px;
 
@@ -521,7 +521,7 @@
 .empty-wishlist-card h3 {
   margin: 0 0 15px;
 
-  color: #334155;
+  color: #17324d;
 
   font-size: 34px;
 
@@ -531,7 +531,7 @@
 .empty-wishlist-card p {
   margin: 0 0 28px;
 
-  color: #7b8797;
+  color: #777777;
 
   font-size: 16px;
 }
@@ -552,7 +552,7 @@
 
   padding: 15px 30px;
 
-  background: #e69a3c;
+  background: #ff8533;
 
   color: #ffffff;
 
@@ -568,12 +568,12 @@
 }
 
 .browse-btn:hover {
-  background: #cf8226;
+  background: #662a03;
 
   transform: translateY(-2px);
 
   box-shadow:
-    0 8px 20px rgba(230, 154, 60, 0.3);
+    0 8px 20px rgba(255, 133, 51, 0.3);
 }
 
 
@@ -595,11 +595,11 @@ body.dark-mode .saved-header h2 {
 }
 
 body.dark-mode .saved-label {
-  color: #e8a85c;
+  color: #ff8533;
 }
 
 body.dark-mode .property-count {
-  color: #e8a85c;
+  color: #ff8533;
 }
 
 
@@ -664,9 +664,9 @@ body.dark-mode .dropdown-menu button {
 }
 
 body.dark-mode .dropdown-menu button:hover {
-  background: #2a2118;
+  background: #fff1e7;
 
-  color: #e69a3c;
+  color: #ff8533;
 }
 
 
@@ -714,13 +714,13 @@ body.dark-mode .empty-wishlist-card p {
 /* Browse */
 
 body.dark-mode .browse-btn {
-  background: #e69a3c;
+  background: #ff8533;
 
   color: #ffffff;
 }
 
 body.dark-mode .browse-btn:hover {
-  background: #cf8226;
+  background: #662a03;
 }
 
 

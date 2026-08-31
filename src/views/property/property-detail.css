@@ -1,24 +1,24 @@
 
 :root {
     /* Refined Color Palette */
-    --pd-bg: #faf9f6;
+    --pd-bg: #f9f8f8;
     --pd-surface: #ffffff;
-    --pd-surface-accent: #f4f2ee;
+    --pd-surface-accent: #f1f1f1;
 
-    --pd-ink: #1c1917;
-    --pd-ink-soft: #44403c;
-    --pd-text: #57534e;
-    --pd-muted: #8c857b;
+    --pd-ink: #222222;
+    --pd-ink-soft: #444444;
+    --pd-text: #666666;
+    --pd-muted: #777777;
 
     --pd-border: rgba(28, 25, 23, 0.08);
     --pd-border-strong: rgba(28, 25, 23, 0.18);
 
     /* Luxury Accents */
-    --pd-gold: #ab8248;
-    --pd-gold-hover: #8e6833;
-    --pd-gold-soft: rgba(171, 130, 72, 0.08);
-    --pd-green: #2e6f40;
-    --pd-red: #c94a4a;
+    --pd-gold: #ff8533;
+    --pd-gold-hover: #662a03;
+    --pd-gold-soft: rgba(255, 133, 51, 0.08);
+    --pd-green: #b34700;
+    --pd-red: #e65c00;
 
     /* Typography Hierarchy */
     --pd-display: 'Cinzel', Georgia, serif;
@@ -115,7 +115,7 @@ margin-top:100px;
 }
 
 .back-button:hover {
-    color: var(--pd-gold);
+    color: #ff8533;
     transform: translateX(-3px);
 }
 
@@ -231,13 +231,13 @@ margin-top:100px;
 .detail-wishlist:hover {
     background: var(--pd-surface);
 
-    color: var(--pd-red);
+    color: #e65c00;
 
     transform: scale(1.08);
 }
 
 .detail-wishlist.wishlisted {
-    color: var(--pd-red);
+    color: #e65c00;
 
     background: var(--pd-surface);
 }
@@ -257,11 +257,11 @@ margin-top:100px;
 }
 
 .image-arrow:hover {
-    background: var(--pd-ink);
+    background: #662a03;
 
     color: var(--pd-surface);
 
-    border-color: var(--pd-ink);
+    border-color: #662a03;
 
     transform:
         translateY(-50%)
@@ -319,7 +319,7 @@ margin-top:100px;
 .property-thumbnail.active {
     opacity: 1;
 
-    border-color: var(--pd-gold);
+    border-color: #ff8533;
 }
 
 .property-thumbnail img {
@@ -352,7 +352,7 @@ margin-top:100px;
 
     letter-spacing: 2px;
 
-    color: var(--pd-gold);
+    color: #ff8533;
 
     margin-bottom: 8px;
 }
@@ -438,7 +438,7 @@ margin-top:100px;
 
     border-radius: 100px;
 
-    background: rgba(46, 111, 64, 0.08);
+    background: rgba(255, 133, 51, 0.08);
 
     color: var(--pd-green);
 }
@@ -504,7 +504,7 @@ margin-top:100px;
 
     border-radius: 50%;
 
-    background-color: var(--pd-gold);
+    background-color: #ff8533;
 }
 
 
@@ -564,7 +564,7 @@ gap:40px;
 }
 
 .quantity-control button:hover {
-    background: var(--pd-surface-accent);
+    background: #fff1e7;
 }
 
 .quantity-control span {
@@ -653,12 +653,12 @@ gap:40px;
 }
 
 .detail-wishlist-button:hover {
-    border-color: var(--pd-red);
+    border-color: #e65c00;
 
-    color: var(--pd-red);
+    color: #e65c00;
 
     background:
-        rgba(201, 74, 74, 0.05);
+        rgba(230, 92, 0, 0.05);
 
     transform: translateY(-1px);
 }
@@ -668,23 +668,23 @@ gap:40px;
 
 .detail-wishlist-button.active,
 .detail-wishlist-button.wishlisted {
-    border-color: var(--pd-red) !important;
+    border-color: #e65c00 !important;
 
     background:
-        rgba(201, 74, 74, 0.08) !important;
+        rgba(230, 92, 0, 0.08) !important;
 
-    color: var(--pd-red) !important;
+    color: #e65c00 !important;
 }
 
 .detail-wishlist-button.active svg,
 .detail-wishlist-button.wishlisted svg,
 .detail-wishlist-button.active path,
 .detail-wishlist-button.wishlisted path {
-    fill: var(--pd-red) !important;
+    fill: #e65c00 !important;
 
-    stroke: var(--pd-red) !important;
+    stroke: #e65c00 !important;
 
-    color: var(--pd-red) !important;
+    color: #e65c00 !important;
 }
 
 
@@ -693,9 +693,9 @@ gap:40px;
    ========================================================= */
 
 .buy-now-button {
-    border: 1.5px solid var(--pd-ink);
+    border: 1.5px solid #ff8533;
 
-    background: var(--pd-ink);
+    background: #ff8533;
 
     color: #ffffff;
 
@@ -704,15 +704,15 @@ gap:40px;
 }
 
 .buy-now-button:hover {
-    background: var(--pd-gold);
+    background: #662a03;
 
-    border-color: var(--pd-gold);
+    border-color: #662a03;
 
     transform: translateY(-1px);
 
     box-shadow:
         0 6px 20px
-        rgba(171, 130, 72, 0.25);
+        rgba(255, 133, 51, 0.25);
 }
 
 
@@ -794,13 +794,13 @@ gap:40px;
     box-shadow: var(--pd-shadow-hover);
 
     border-color:
-        rgba(171, 130, 72, 0.3);
+        rgba(255, 133, 51, 0.3);
 }
 
 .why-shop-icon {
     font-size: 20px;
 
-    color: var(--pd-gold);
+    color: #ff8533;
 
     margin-bottom: 8px;
 }
@@ -851,7 +851,7 @@ gap:40px;
 
 .rating-star-button.selected,
 .rating-star-button:hover {
-    color: var(--pd-gold);
+    color: #ff8533;
 }
 
 
@@ -879,7 +879,7 @@ gap:40px;
 }
 
 .review-form textarea:focus {
-    border-color: var(--pd-gold);
+    border-color: #ff8533;
 
     box-shadow:
         0 0 0 3px
@@ -897,7 +897,7 @@ margin-bottom:30px;
     position: relative;
     top: 15px;
     left:0px;
-    background: var(--pd-ink);
+    background: #ff8533;
 
     color: var(--pd-surface);
 
@@ -915,7 +915,7 @@ margin-bottom:30px;
 }
 
 .review-form button:hover {
-    background: var(--pd-gold);
+    background: #662a03;
 }
 
 
@@ -1033,7 +1033,7 @@ margin-bottom:30px;
 
     background: transparent;
 
-    color: var(--pd-gold);
+    color: #ff8533;
 
     font-size: 12px;
     font-weight: 600;
@@ -1053,13 +1053,13 @@ margin-bottom:30px;
 
     flex-shrink: 0;
 
-    color: var(--pd-gold);
+    color: #ff8533;
 
     transition: color 0.25s ease;
 }
 
 .review-benefit:hover {
-    background: var(--pd-gold);
+    background: #ff8533;
     color: #fff;
 
     transform: translateY(-2px);
