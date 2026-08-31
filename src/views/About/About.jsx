@@ -60,7 +60,7 @@ const About = () => {
             your lifestyle and budget.
           </p>
 
-          <Link to="/properties" className="about-btn">
+          <Link to="/property" className="about-btn">
             Explore Properties
             <ArrowRight size={18} />
           </Link>

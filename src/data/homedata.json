@@ -79,7 +79,7 @@
       "image": "villaone.jpeg",
       "type": "Villa",
       "city": "Pune",
-      "price": "₹59,15,335",
+      "price": "₹ 59,15,335",
       "rating": "4.3"
     },
     {
@@ -88,7 +88,7 @@
       "image": "rowbanglotwo.jpeg",
       "type": "House",
       "city": "Nashik",
-      "price": "₹62,00,000",
+      "price": "₹ 62,00,000",
       "rating": "4.5"
     },
     {
@@ -97,7 +97,7 @@
       "image": "villathree.jpeg",
       "type": "villa",
       "city": "Nagpur",
-      "price": "₹38,50,000",
+      "price": "₹ 38,50,000",
       "rating": "4.1"
     }
   ],
