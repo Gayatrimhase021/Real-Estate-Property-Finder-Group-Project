@@ -1100,4 +1100,118 @@ margin-bottom:30px;
         width: 13px;
         height: 13px;
     }
+}/* ================================
+   REVIEW SECTION RESPONSIVENESS
+   ================================ */
+
+@media (max-width: 900px) {
+
+    .property-reviews {
+        width: 100%;
+    }
+
+    .review-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review-property-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .review-benefits-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .property-reviews {
+        width: 100%;
+    }
+
+    .review-main-layout {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .review-main-layout > div {
+        width: 100%;
+    }
+
+    .review-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review-property-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .review-property-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .review-benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .property-reviews {
+        width: 100%;
+    }
+
+    .review-main-layout {
+        gap: 20px;
+    }
+
+    .review-form textarea {
+        width: 100%;
+        min-height: 90px;
+    }
+
+    .review-form button {
+        max-width: 100%;
+    }
+
+    .review-property-image img {
+        max-width: 260px;
+    }
+
+    .review-benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .review-benefit {
+        min-width: 0;
+        white-space: normal;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .review-benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .review-benefit {
+        font-size: 10px;
+    }
+
+    .review-property-image img {
+        max-width: 230px;
+    }
 }
