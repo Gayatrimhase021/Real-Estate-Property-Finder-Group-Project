@@ -136,17 +136,17 @@ function Navbar() {
         </button>
 
         <button
-          onClick={() => navigate("/properties")}
+          onClick={() => navigate("/property")}
         >
           <FiHome />
           Properties
         </button>
 
         <button
-          onClick={() => navigate("/card")}
+          onClick={() => navigate("/cart")}
         >
           <FiShoppingCart />
-          Card
+          Cart
         </button>
 
         <button
@@ -227,7 +227,7 @@ function Navbar() {
 
         <button
           onClick={() => {
-            navigate("/properties");
+            navigate("/property");
             closeMenu();
           }}
         >
@@ -237,12 +237,12 @@ function Navbar() {
 
         <button
           onClick={() => {
-            navigate("/card");
+            navigate("/cart");
             closeMenu();
           }}
         >
           <FiShoppingCart />
-          Card
+          Cart
         </button>
 
         <button

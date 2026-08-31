@@ -92,7 +92,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 0 14px;
-  background: ;
+ 
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
@@ -584,7 +584,7 @@ body {
   padding: 0 15px;
   outline: none;
   font-size: 15px;
-  color: #f48a1f;
+  color: #3d3933;
   cursor: pointer;
 }
 
@@ -592,8 +592,8 @@ body {
   height: 52px;
   border: none;
   border-radius: 28px;
-  background: white;
-  color: #ff8533;
+  color: white;
+  background: #3d3933;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -606,11 +606,11 @@ body {
 }
 
 .map-search-btn:hover {
-  background: #662a03;
+  background: white;
   transform: translateY(-2px);
-  border: 1px solid #e65c00;
+  border: 1px solid #3d3933;
   transition: all 0.3s ease;
-  color: white;
+  color: #3d3933;
 }
 
 /* MAP */
@@ -669,7 +669,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff1e7;
+  background: #eee4d5;
   border-radius: 50%;
   font-size: 26px;
 }
@@ -677,7 +677,7 @@ body {
 .agent-icon svg {
   width: 26px;
   height: 26px;
-  color: #78350b;
+  color: #d57235;
 }
 
 
@@ -738,7 +738,7 @@ body {
   padding: 13px 24px;
   border: none;
   border-radius: 6px;
-  background: #ff8533;
+  background: #3d3933;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -753,18 +753,20 @@ body {
 }
 
 .agent-primary-btn:hover {
-  background: #d6691c;
+  background: white;
+  border:1px solid #3d3933;
   transform: translateY(-2px);
+  color:#3d3933;
 }
 
 /* SECONDARY BUTTON */
 
 .agent-secondary-btn {
   padding: 13px 24px;
-  border: 1px solid #b34700;
+  border: 1px solid #3d3933;
   border-radius: 6px;
   background: #ffffff;
-  color: #b34700;
+  color: #3d3933;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -778,7 +780,7 @@ body {
 }
 
 .agent-secondary-btn:hover {
-  background: #b34700;
+  background: #5b554d;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -1477,4 +1479,108 @@ body.dark-mode .agent-card {
 
 body.dark-mode .agent-video {
   background: #222222;
+}
+.property-content {
+  padding: 22px 22px 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 235px;
+  box-sizing: border-box;
+}
+
+/* PROPERTY TITLE */
+.property-content h3 {
+  margin: 0 0 7px;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #292722;
+  letter-spacing: -0.2px;
+}
+
+.property-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.property-type {
+  margin: 0;
+  padding: 5px 11px;
+  border-radius: 20px;
+  background: #f4f1eb;
+  color: #756f65;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.property-city {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #77736d;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.property-city svg {
+  width: 15px;
+  height: 15px;
+}
+
+.property-rating {
+  margin: 0;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #faf7f1;
+  color: #5f5a52;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+/* PRICE */
+.property-price {
+  margin: 0 0 9px;
+  color: #292722;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+
+/* VIEW DETAILS BUTTON */
+.view-details-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 12px 18px;
+  border: 1px solid #292722;
+  border-radius: 9px;
+  background: #292722;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* BUTTON HOVER */
+.view-details-btn:hover {
+  background: #ffffff;
+  color: #292722;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(41, 39, 34, 0.14);
+}
+
+/* BUTTON CLICK */
+.view-details-btn:active {
+  transform: translateY(0);
 }

@@ -87,7 +87,7 @@ export default function AuthPage() {
         localStorage.removeItem("rememberedEmail");
       }
       window.dispatchEvent(new Event("loginStatusChanged"))
-      navigate("/properties");
+      navigate("/property");
     } finally {
       setSubmitting(false);
     }
