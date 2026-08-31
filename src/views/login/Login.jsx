@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
+// Image imports
+import userIcon from "../../assets/user.svg";
+import gmailIcon from "../../assets/gmail.png";
+import lockIcon from "../../assets/lock.png";
+import passShowIcon from "../../assets/passShow.png";
+import passHideIcon from "../../assets/passHide.png";
+import googleLogo from "../../assets/GoogleLogo.png";
+
 export default function AuthPage() {
   const [mode, setMode] = useState("login");
   const navigate = useNavigate();
@@ -100,10 +108,9 @@ export default function AuthPage() {
 
   // Google login/signup button click handler
   const handleGoogleAuth = () => {
-
     const googleUser = {
       name: "Google User",
-      email: `googleuser${Date.now()}@gmail.com`, 
+      email: `googleuser${Date.now()}@gmail.com`,
       via: "google",
       loggedInAt: new Date().toISOString(),
     };
@@ -120,7 +127,7 @@ export default function AuthPage() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        {/* LEFT — brand / promo panel (reuses hero-style orange overlay) */}
+        {/* LEFT — brand / promo panel */}
         <div className="auth-brand-panel">
           <div className="auth-brand-overlay" />
           <div className="auth-brand-content">
@@ -160,11 +167,7 @@ export default function AuthPage() {
               <div className="auth-field">
                 <label htmlFor="name">Full Name</label>
                 <div className="auth-input-wrap">
-                  <img
-                    src="./../../public/user.png"
-                    alt=""
-                    className="auth-input-icon"
-                  />
+                  <img src={userIcon} alt="" className="auth-input-icon" />
                   <input
                     id="name"
                     name="name"
@@ -183,11 +186,7 @@ export default function AuthPage() {
             <div className="auth-field">
               <label htmlFor="email">Email</label>
               <div className="auth-input-wrap">
-                <img
-                  src="./../../public/gmail.png"
-                  alt=""
-                  className="auth-input-icon"
-                />
+                <img src={gmailIcon} alt="" className="auth-input-icon" />
                 <input
                   id="email"
                   name="email"
@@ -205,11 +204,7 @@ export default function AuthPage() {
             <div className="auth-field">
               <label htmlFor="password">Password</label>
               <div className="auth-input-wrap">
-                <img
-                  src="./../../public/lock.png"
-                  alt=""
-                  className="auth-input-icon"
-                />
+                <img src={lockIcon} alt="" className="auth-input-icon" />
                 <input
                   id="password"
                   name="password"
@@ -225,11 +220,7 @@ export default function AuthPage() {
                   aria-label="Toggle password visibility"
                 >
                   <img
-                    src={
-                      showPassword
-                        ? "./../../public/passHide.png"
-                        : "./../../public/passShow.png"
-                    }
+                    src={showPassword ? passHideIcon : passShowIcon}
                     alt=""
                     className="auth-eye-icon"
                   />
@@ -244,11 +235,7 @@ export default function AuthPage() {
               <div className="auth-field">
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <div className="auth-input-wrap">
-                  <img
-                    src="./../../public/lock.png"
-                    alt=""
-                    className="auth-input-icon"
-                  />
+                  <img src={lockIcon} alt="" className="auth-input-icon" />
                   <input
                     id="confirmPassword"
                     name="confirmPassword"
@@ -304,7 +291,7 @@ export default function AuthPage() {
               onClick={handleGoogleAuth}
             >
               <img
-                src="./../../public/googleLogo.png"
+                src={googleLogo}
                 alt="Google"
                 className="auth-social-icon"
               />
