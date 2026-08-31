@@ -32,31 +32,27 @@ function Cart() {
     useEffect(() => {
 
         const currentUser =
-            JSON.parse(
-                localStorage.getItem("currentUser")
-            );
+    JSON.parse(
+        localStorage.getItem("currentUser")
+    );
 
-        if (!currentUser) {
+if (!currentUser) {
+    setCart([]);
+    return;
+}
 
-            alert("Please Login First");
+const cartKey =
+    "cart_" + currentUser.mobile;
 
-            navigate("/login");
+const savedCart =
+    JSON.parse(
+        localStorage.getItem(cartKey)
+    ) || [];
 
-            return;
-        }
+setCart(savedCart);
 
-        const cartKey =
-            "cart_" + currentUser.mobile;
-
-        const savedCart =
-            JSON.parse(
-                localStorage.getItem(cartKey)
-            ) || [];
-
-        setCart(savedCart);
-
-    }, [navigate]);
-
+        }, [navigate]);
+      
 
     // ==========================================
     // REMOVE ONE PROPERTY
@@ -68,10 +64,11 @@ function Cart() {
             JSON.parse(
                 localStorage.getItem("currentUser")
             );
-
-        if (!currentUser) {
-            return;
-        }
+if (!currentUser) {
+    alert("Please login first to remove a property.");
+    navigate("/login");
+    return;
+}
 
         const updatedCart =
             cart.filter(
@@ -97,39 +94,45 @@ function Cart() {
     // ==========================================
 
     const buyNow = (property) => {
+    const currentUser =
+        JSON.parse(localStorage.getItem("currentUser"));
 
-        alert(
-            `${property.name} purchased successfully! 🎉`
-        );
+    if (!currentUser) {
+        alert("Please login first to purchase a property.");
+        navigate("/login");
+        return;
+    }
 
-    };
+    alert(`${property.name} purchased successfully! 🎉`);
+};
 
 
     // ==========================================
     // CANCEL ORDER
     // ==========================================
+const cancelOrder = () => {
 
-    const cancelOrder = () => {
+    const currentUser =
+        JSON.parse(
+            localStorage.getItem("currentUser")
+        );
 
-        const currentUser =
-            JSON.parse(
-                localStorage.getItem("currentUser")
-            );
+    if (!currentUser) {
+        alert("Please login first to cancel your order.");
+        navigate("/login");
+        return;
+    }
 
-        if (!currentUser) {
-            return;
-        }
+    const cartKey =
+        "cart_" + currentUser.mobile;
 
-        const cartKey =
-            "cart_" + currentUser.mobile;
+    localStorage.removeItem(cartKey);
 
-        localStorage.removeItem(cartKey);
+    setCart([]);
 
-        setCart([]);
-
-        alert("Order cancelled successfully.");
-
-    };
+    alert("Order cancelled successfully.");
+};
+        
 
 
     // ==========================================
